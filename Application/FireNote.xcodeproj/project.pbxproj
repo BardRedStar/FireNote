@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		844F96FC247B943D008E0BC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844F96FB247B943D008E0BC6 /* Assets.xcassets */; };
 		844F96FF247B943D008E0BC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844F96FD247B943D008E0BC6 /* LaunchScreen.storyboard */; };
 		844F970A247B943D008E0BC6 /* FireNoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F9709247B943D008E0BC6 /* FireNoteTests.swift */; };
+		CCCACB5A3F2A3CDAB14C3ED3 /* Pods_FireNoteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B1F91E44AEC508567D5DF9 /* Pods_FireNoteTests.framework */; };
+		F33DA4A49165E869ED35E8BA /* Pods_FireNote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26555B66BEAC24128FC4E192 /* Pods_FireNote.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		26555B66BEAC24128FC4E192 /* Pods_FireNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireNote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		407F1EA1C30867388D06C8FF /* Pods-FireNoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireNoteTests.debug.xcconfig"; path = "Target Support Files/Pods-FireNoteTests/Pods-FireNoteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		69B1F91E44AEC508567D5DF9 /* Pods_FireNoteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireNoteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		844F96EF247B9439008E0BC6 /* FireNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		844F96F2247B9439008E0BC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		844F96F4247B9439008E0BC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +43,9 @@
 		844F9705247B943D008E0BC6 /* FireNoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FireNoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		844F9709247B943D008E0BC6 /* FireNoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireNoteTests.swift; sourceTree = "<group>"; };
 		844F970B247B943D008E0BC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFEFDE683EFB306B8735176C /* Pods-FireNoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireNoteTests.release.xcconfig"; path = "Target Support Files/Pods-FireNoteTests/Pods-FireNoteTests.release.xcconfig"; sourceTree = "<group>"; };
+		CB72BE2B8C5EA4D8C3B79E9C /* Pods-FireNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireNote.debug.xcconfig"; path = "Target Support Files/Pods-FireNote/Pods-FireNote.debug.xcconfig"; sourceTree = "<group>"; };
+		D104B811843826227E5A89FA /* Pods-FireNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireNote.release.xcconfig"; path = "Target Support Files/Pods-FireNote/Pods-FireNote.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F33DA4A49165E869ED35E8BA /* Pods_FireNote.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +61,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCCACB5A3F2A3CDAB14C3ED3 /* Pods_FireNoteTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20CE3FBCFA42B5D3A35DE7F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26555B66BEAC24128FC4E192 /* Pods_FireNote.framework */,
+				69B1F91E44AEC508567D5DF9 /* Pods_FireNoteTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		844F96E6247B9439008E0BC6 = {
 			isa = PBXGroup;
 			children = (
 				844F96F1247B9439008E0BC6 /* FireNote */,
 				844F9708247B943D008E0BC6 /* FireNoteTests */,
 				844F96F0247B9439008E0BC6 /* Products */,
+				EA0AC5C7DCEA1D0DD21CFD49 /* Pods */,
+				20CE3FBCFA42B5D3A35DE7F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +120,17 @@
 			path = FireNoteTests;
 			sourceTree = "<group>";
 		};
+		EA0AC5C7DCEA1D0DD21CFD49 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CB72BE2B8C5EA4D8C3B79E9C /* Pods-FireNote.debug.xcconfig */,
+				D104B811843826227E5A89FA /* Pods-FireNote.release.xcconfig */,
+				407F1EA1C30867388D06C8FF /* Pods-FireNoteTests.debug.xcconfig */,
+				BFEFDE683EFB306B8735176C /* Pods-FireNoteTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +138,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 844F970E247B943D008E0BC6 /* Build configuration list for PBXNativeTarget "FireNote" */;
 			buildPhases = (
+				4E3406AC9F9E3B3E417E689C /* [CP] Check Pods Manifest.lock */,
+				844F9714247B96A4008E0BC6 /* Lint */,
+				844F9715247B96B1008E0BC6 /* Format */,
 				844F96EB247B9439008E0BC6 /* Sources */,
 				844F96EC247B9439008E0BC6 /* Frameworks */,
 				844F96ED247B9439008E0BC6 /* Resources */,
+				6976BC3BF68FE046074D202C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +159,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 844F9711247B943D008E0BC6 /* Build configuration list for PBXNativeTarget "FireNoteTests" */;
 			buildPhases = (
+				37F775B35027B1E333E731B6 /* [CP] Check Pods Manifest.lock */,
 				844F9701247B943D008E0BC6 /* Sources */,
 				844F9702247B943D008E0BC6 /* Frameworks */,
 				844F9703247B943D008E0BC6 /* Resources */,
@@ -194,6 +231,107 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		37F775B35027B1E333E731B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FireNoteTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E3406AC9F9E3B3E417E689C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FireNote-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6976BC3BF68FE046074D202C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FireNote/Pods-FireNote-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FireNote/Pods-FireNote-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FireNote/Pods-FireNote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		844F9714247B96A4008E0BC6 /* Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Lint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./scripts/lint\n";
+			showEnvVarsInLog = 0;
+		};
+		844F9715247B96B1008E0BC6 /* Format */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Format;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./scripts/format\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		844F96EB247B9439008E0BC6 /* Sources */ = {
@@ -360,6 +498,7 @@
 		};
 		844F970F247B943D008E0BC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB72BE2B8C5EA4D8C3B79E9C /* Pods-FireNote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -378,6 +517,7 @@
 		};
 		844F9710247B943D008E0BC6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D104B811843826227E5A89FA /* Pods-FireNote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,6 +536,7 @@
 		};
 		844F9712247B943D008E0BC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 407F1EA1C30867388D06C8FF /* Pods-FireNoteTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -418,6 +559,7 @@
 		};
 		844F9713247B943D008E0BC6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFEFDE683EFB306B8735176C /* Pods-FireNoteTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

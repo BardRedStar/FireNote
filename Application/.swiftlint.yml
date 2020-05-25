@@ -1,0 +1,38 @@
+excluded:
+  - Pods
+
+# rules configuration
+indentation: 4 # 4 spaces
+line_length:
+  warning:
+    140
+  error:
+    200
+  ignores_urls:
+    true
+file_length:
+  - 1000
+  - 2500
+type_body_length:
+  - 1000 # warning
+  - 1500 # error
+function_body_length:
+  - 200 # warning
+  - 400 # error
+function_parameter_count:
+  - 6 # warning
+  - 10 # error
+cyclomatic_complexity:
+  - 20 # warning
+  - 40 # error
+large_tuple:
+  - 3 # warning
+  - 5 # error
+identifier_name:
+  min_length:
+    warning: 2
+
+disabled_rules:
+  - force_cast
+  - force_try
+  - nesting

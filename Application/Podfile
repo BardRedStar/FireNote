@@ -1,0 +1,25 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '13.0'
+
+inhibit_all_warnings!
+
+target 'FireNote' do
+  use_frameworks!
+
+  # Pods for FireNote
+
+  pod 'SwiftLint', '~> 0.38'
+  pod 'SwiftFormat/CLI', '~> 0.43'
+
+  pod 'Reusable'
+  pod 'Cartography'
+  pod 'Kingfisher'
+  pod 'TPKeyboardAvoiding'
+  pod 'SwiftKeychainWrapper'
+
+  target 'FireNoteTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

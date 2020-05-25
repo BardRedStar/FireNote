@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if ./Pods/SwiftFormat/CommandLineTool/swiftformat --version >/dev/null; then
+    git diff --diff-filter=d --name-only | grep -e '\(.*\).swift$' | while read line; do
+        ./Pods/SwiftFormat/CommandLineTool/swiftformat  --config .swiftformat "../${line}";
+    done
+fi
+

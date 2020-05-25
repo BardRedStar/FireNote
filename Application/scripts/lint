@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+if ./Pods/SwiftLint/swiftlint version >/dev/null; then
+    ./Pods/SwiftLint/swiftlint $1
+else
+    echo "warning: Apparently, there is no SwiftLint in the Pods directory"
+fi
