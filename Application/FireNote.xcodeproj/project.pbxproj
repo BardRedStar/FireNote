@@ -100,10 +100,15 @@
 		844F96F1247B9439008E0BC6 /* FireNote */ = {
 			isa = PBXGroup;
 			children = (
+				844F971C247B97DA008E0BC6 /* UI Components */,
+				844F971B247B97D4008E0BC6 /* Coordinator */,
+				844F971A247B97CF008E0BC6 /* Session */,
+				844F9719247B97C9008E0BC6 /* Network */,
+				844F9718247B97C3008E0BC6 /* Modules */,
+				844F9717247B97BE008E0BC6 /* Extensions */,
+				844F9716247B97AD008E0BC6 /* Utils */,
 				844F96F2247B9439008E0BC6 /* AppDelegate.swift */,
 				844F96F4247B9439008E0BC6 /* SceneDelegate.swift */,
-				844F96F6247B9439008E0BC6 /* ViewController.swift */,
-				844F96F8247B9439008E0BC6 /* Main.storyboard */,
 				844F96FB247B943D008E0BC6 /* Assets.xcassets */,
 				844F96FD247B943D008E0BC6 /* LaunchScreen.storyboard */,
 				844F9700247B943D008E0BC6 /* Info.plist */,
@@ -118,6 +123,73 @@
 				844F970B247B943D008E0BC6 /* Info.plist */,
 			);
 			path = FireNoteTests;
+			sourceTree = "<group>";
+		};
+		844F9716247B97AD008E0BC6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		844F9717247B97BE008E0BC6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		844F9718247B97C3008E0BC6 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				844F971F247B98AC008E0BC6 /* Auth */,
+				844F971E247B9828008E0BC6 /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		844F9719247B97C9008E0BC6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		844F971A247B97CF008E0BC6 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		844F971B247B97D4008E0BC6 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		844F971C247B97DA008E0BC6 /* UI Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "UI Components";
+			sourceTree = "<group>";
+		};
+		844F971E247B9828008E0BC6 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				844F96F6247B9439008E0BC6 /* ViewController.swift */,
+				844F96F8247B9439008E0BC6 /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		844F971F247B98AC008E0BC6 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		EA0AC5C7DCEA1D0DD21CFD49 /* Pods */ = {
