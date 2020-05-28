@@ -7,6 +7,7 @@ target 'FireNote' do
   use_frameworks!
 
   # Pods for FireNote
+  pod 'Firebase/Analytics'
 
   pod 'SwiftLint', '~> 0.38'
   pod 'SwiftFormat/CLI', '~> 0.43'
@@ -16,6 +17,11 @@ target 'FireNote' do
   pod 'Kingfisher'
   pod 'TPKeyboardAvoiding'
   pod 'SwiftKeychainWrapper'
+  pod 'R.swift'
+
+  # Firebase authentication
+  pod 'FirebaseUI/Auth'
+  pod 'FirebaseUI/Google'
 
   target 'FireNoteTests' do
     inherit! :search_paths

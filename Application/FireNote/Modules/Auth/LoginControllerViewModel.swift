@@ -6,4 +6,4 @@
 //  Copyright © 2020 Denis Kovalev. All rights reserved.
 //
 
-import Foundation
+class LoginControllerViewModel {}

@@ -1,4 +1,5 @@
 //
+import Reusable
 //  SplashViewController.swift
 //  FireNote
 //
@@ -6,10 +7,9 @@
 //  Copyright © 2020 Denis Kovalev. All rights reserved.
 //
 import UIKit
-import Reusable
 
+/// A controller class for splash screen
 class SplashViewController: UIViewController, StoryboardBased {
-
     // MARK: - Output
 
     var onFinish: (() -> Void)?

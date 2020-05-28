@@ -6,8 +6,5 @@
 //  Copyright © 2020 Denis Kovalev. All rights reserved.
 //
 
-import Foundation
-
-class SplashControllerViewModel {
-    
-}
+/// A class to operate with data for splash screen
+class SplashControllerViewModel {}
