@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7AP-hi-ib8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Baloo2-Medium.ttf">
+            <string>Baloo2-Medium</string>
+        </array>
+        <array key="Baloo2-Regular.ttf">
+            <string>Baloo2-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="jlL-AN-7tT">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="7AP-hi-ib8" customClass="LoginViewController" customModule="FireNote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5qE-ge-Ipt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UUV-y3-LkF" customClass="TPKeyboardAvoidingScrollView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2rH-qg-7Zk" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfI-cS-kYH">
+                                                <rect key="frame" x="20" y="180" width="374" height="55.5"/>
+                                                <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="35"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IBm-Ox-TQc" userLabel="Fields View">
+                                                <rect key="frame" x="20" y="260.5" width="374" height="187"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XsN-em-hDI">
+                                                        <rect key="frame" x="0.0" y="10" width="42" height="28.5"/>
+                                                        <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g1P-Kl-qWO" customClass="PrimaryTextField" customModule="FireNote" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="43.5" width="374" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="uiG-8E-gLe"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="16"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUc-0l-1ev">
+                                                        <rect key="frame" x="0.0" y="103.5" width="74.5" height="28.5"/>
+                                                        <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jVp-KT-yfs" customClass="PasswordTextField" customModule="FireNote" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="137" width="374" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="vzW-d3-4l8"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="16"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="jVp-KT-yfs" secondAttribute="bottom" constant="10" id="7Vv-O7-GIf"/>
+                                                    <constraint firstItem="jVp-KT-yfs" firstAttribute="leading" secondItem="IBm-Ox-TQc" secondAttribute="leading" id="9B2-Fe-fT3"/>
+                                                    <constraint firstAttribute="trailing" secondItem="g1P-Kl-qWO" secondAttribute="trailing" id="9mp-bG-Ut1"/>
+                                                    <constraint firstItem="yUc-0l-1ev" firstAttribute="leading" secondItem="IBm-Ox-TQc" secondAttribute="leading" id="LjV-Uc-SqF"/>
+                                                    <constraint firstAttribute="trailing" secondItem="jVp-KT-yfs" secondAttribute="trailing" id="TK0-ni-m6v"/>
+                                                    <constraint firstItem="yUc-0l-1ev" firstAttribute="top" secondItem="g1P-Kl-qWO" secondAttribute="bottom" constant="20" id="a2I-rH-hTF"/>
+                                                    <constraint firstItem="XsN-em-hDI" firstAttribute="leading" secondItem="IBm-Ox-TQc" secondAttribute="leading" id="bVN-Kj-3Fu"/>
+                                                    <constraint firstItem="g1P-Kl-qWO" firstAttribute="top" secondItem="XsN-em-hDI" secondAttribute="bottom" constant="5" id="exR-Z2-Q9U"/>
+                                                    <constraint firstItem="g1P-Kl-qWO" firstAttribute="leading" secondItem="IBm-Ox-TQc" secondAttribute="leading" id="j3g-XV-dOX"/>
+                                                    <constraint firstItem="jVp-KT-yfs" firstAttribute="top" secondItem="yUc-0l-1ev" secondAttribute="bottom" constant="5" id="wsR-th-sVB"/>
+                                                    <constraint firstItem="XsN-em-hDI" firstAttribute="top" secondItem="IBm-Ox-TQc" secondAttribute="top" constant="10" id="zpf-8K-Poo"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGT-ta-0m0">
+                                                <rect key="frame" x="20" y="457.5" width="374" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Blx-a4-bcD"/>
+                                                </constraints>
+                                                <state key="normal" title="LOGIN"/>
+                                                <connections>
+                                                    <action selector="loginAction:" destination="7AP-hi-ib8" eventType="touchUpInside" id="Ilt-M5-4Sa"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bd0-jY-azI" userLabel="Register account View">
+                                                <rect key="frame" x="53.5" y="743" width="307.5" height="55"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account yet?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzv-5e-dRN">
+                                                        <rect key="frame" x="0.0" y="14" width="194.5" height="27"/>
+                                                        <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqx-qp-cUY">
+                                                        <rect key="frame" x="204.5" y="8" width="103" height="39"/>
+                                                        <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="17"/>
+                                                        <state key="normal" title="Create it easy!"/>
+                                                        <connections>
+                                                            <action selector="registerAction:" destination="7AP-hi-ib8" eventType="touchUpInside" id="PbT-Qs-uN5"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="nzv-5e-dRN" firstAttribute="centerY" secondItem="cqx-qp-cUY" secondAttribute="centerY" id="5my-5Y-Gcj"/>
+                                                    <constraint firstItem="cqx-qp-cUY" firstAttribute="top" secondItem="bd0-jY-azI" secondAttribute="top" constant="8" id="6fm-f5-myI"/>
+                                                    <constraint firstItem="cqx-qp-cUY" firstAttribute="leading" secondItem="nzv-5e-dRN" secondAttribute="trailing" constant="10" id="NMx-jC-0nY"/>
+                                                    <constraint firstAttribute="trailing" secondItem="cqx-qp-cUY" secondAttribute="trailing" id="deI-SZ-mUL"/>
+                                                    <constraint firstItem="nzv-5e-dRN" firstAttribute="leading" secondItem="bd0-jY-azI" secondAttribute="leading" id="r6F-Of-wtg"/>
+                                                    <constraint firstAttribute="bottom" secondItem="cqx-qp-cUY" secondAttribute="bottom" constant="8" id="yxV-Dq-wzg"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bd0-jY-azI" secondAttribute="trailing" constant="10" id="Bmj-WC-fHS"/>
+                                            <constraint firstItem="pfI-cS-kYH" firstAttribute="leading" secondItem="2rH-qg-7Zk" secondAttribute="leading" constant="20" id="Gcg-3s-be0"/>
+                                            <constraint firstAttribute="bottom" secondItem="bd0-jY-azI" secondAttribute="bottom" constant="20" id="MK7-rV-xX8"/>
+                                            <constraint firstItem="IBm-Ox-TQc" firstAttribute="leading" secondItem="2rH-qg-7Zk" secondAttribute="leading" constant="20" id="MtT-GX-8nY"/>
+                                            <constraint firstItem="IBm-Ox-TQc" firstAttribute="top" secondItem="pfI-cS-kYH" secondAttribute="bottom" constant="25" id="OfW-j1-gV3"/>
+                                            <constraint firstItem="bd0-jY-azI" firstAttribute="centerX" secondItem="2rH-qg-7Zk" secondAttribute="centerX" id="RiT-0l-MDe"/>
+                                            <constraint firstAttribute="trailing" secondItem="pfI-cS-kYH" secondAttribute="trailing" constant="20" id="UQN-wr-oop"/>
+                                            <constraint firstItem="bGT-ta-0m0" firstAttribute="top" secondItem="IBm-Ox-TQc" secondAttribute="bottom" constant="10" id="XxE-aP-ZfN"/>
+                                            <constraint firstItem="pfI-cS-kYH" firstAttribute="top" secondItem="2rH-qg-7Zk" secondAttribute="top" constant="180" id="hlw-ky-UDq"/>
+                                            <constraint firstItem="bd0-jY-azI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2rH-qg-7Zk" secondAttribute="leading" constant="10" id="kl1-Az-wDd"/>
+                                            <constraint firstItem="bGT-ta-0m0" firstAttribute="leading" secondItem="IBm-Ox-TQc" secondAttribute="leading" id="uXM-aZ-Kma"/>
+                                            <constraint firstItem="bGT-ta-0m0" firstAttribute="trailing" secondItem="IBm-Ox-TQc" secondAttribute="trailing" id="vyY-YY-c7t"/>
+                                            <constraint firstAttribute="trailing" secondItem="IBm-Ox-TQc" secondAttribute="trailing" constant="20" id="yLf-wh-Jhu"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="2rH-qg-7Zk" secondAttribute="bottom" id="Ivp-c9-SRZ"/>
+                                    <constraint firstItem="2rH-qg-7Zk" firstAttribute="height" secondItem="UUV-y3-LkF" secondAttribute="height" id="QCs-Y5-Ixz"/>
+                                    <constraint firstItem="2rH-qg-7Zk" firstAttribute="top" secondItem="UUV-y3-LkF" secondAttribute="top" id="WBu-iu-CF7"/>
+                                    <constraint firstItem="2rH-qg-7Zk" firstAttribute="width" secondItem="UUV-y3-LkF" secondAttribute="width" id="al5-WW-3qC"/>
+                                    <constraint firstItem="2rH-qg-7Zk" firstAttribute="leading" secondItem="UUV-y3-LkF" secondAttribute="leading" id="jwI-9m-jHm"/>
+                                    <constraint firstAttribute="trailing" secondItem="2rH-qg-7Zk" secondAttribute="trailing" id="wkt-Bd-dRU"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Zj8-0N-mx7"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="uke-ln-Hra"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="IS7-gh-fs0" firstAttribute="bottom" secondItem="UUV-y3-LkF" secondAttribute="bottom" id="7s9-EI-ZLC"/>
+                            <constraint firstItem="UUV-y3-LkF" firstAttribute="top" secondItem="IS7-gh-fs0" secondAttribute="top" id="LpU-mr-7kw"/>
+                            <constraint firstItem="IS7-gh-fs0" firstAttribute="trailing" secondItem="UUV-y3-LkF" secondAttribute="trailing" id="bhm-oN-rRZ"/>
+                            <constraint firstItem="UUV-y3-LkF" firstAttribute="leading" secondItem="IS7-gh-fs0" secondAttribute="leading" id="sky-uF-L7G"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IS7-gh-fs0"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="g1P-Kl-qWO" id="BFw-gD-Zss"/>
+                        <outlet property="passwordTextField" destination="jVp-KT-yfs" id="19h-el-zdu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yl9-3i-IMQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-104.34782608695653" y="55.580357142857139"/>
+        </scene>
+    </scenes>
+</document>

@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8438A4AD247FD00E00EAAAFB /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438A4AC247FD00E00EAAAFB /* R.generated.swift */; };
+		8438A4AF247FD22600EAAAFB /* PrimaryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438A4AE247FD22600EAAAFB /* PrimaryTextField.swift */; };
+		8438A4B8247FD6E500EAAAFB /* Baloo2-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8438A4B3247FD6E500EAAAFB /* Baloo2-Medium.ttf */; };
+		8438A4B9247FD6E500EAAAFB /* Baloo2-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8438A4B4247FD6E500EAAAFB /* Baloo2-ExtraBold.ttf */; };
+		8438A4BA247FD6E500EAAAFB /* Baloo2-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8438A4B5247FD6E500EAAAFB /* Baloo2-SemiBold.ttf */; };
+		8438A4BB247FD6E500EAAAFB /* Baloo2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8438A4B6247FD6E500EAAAFB /* Baloo2-Regular.ttf */; };
+		8438A4BC247FD6E500EAAAFB /* Baloo2-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8438A4B7247FD6E500EAAAFB /* Baloo2-Bold.ttf */; };
 		844F96F3247B9439008E0BC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F96F2247B9439008E0BC6 /* AppDelegate.swift */; };
-		844F96F5247B9439008E0BC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F96F4247B9439008E0BC6 /* SceneDelegate.swift */; };
 		844F96F7247B9439008E0BC6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F96F6247B9439008E0BC6 /* MainViewController.swift */; };
 		844F96FA247B9439008E0BC6 /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844F96F8247B9439008E0BC6 /* MainViewController.storyboard */; };
 		844F96FC247B943D008E0BC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844F96FB247B943D008E0BC6 /* Assets.xcassets */; };
@@ -22,6 +28,16 @@
 		844F972C247B9A0A008E0BC6 /* MainControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F972B247B9A0A008E0BC6 /* MainControllerViewModel.swift */; };
 		844F972E247B9A2E008E0BC6 /* SplashControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F972D247B9A2E008E0BC6 /* SplashControllerViewModel.swift */; };
 		844F9730247B9BF5008E0BC6 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F972F247B9BF5008E0BC6 /* Common.swift */; };
+		844F9732247BA177008E0BC6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 844F9731247BA177008E0BC6 /* GoogleService-Info.plist */; };
+		844F9735247BC400008E0BC6 /* ErrorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F9734247BC400008E0BC6 /* ErrorTextField.swift */; };
+		844F9737247BC429008E0BC6 /* SettableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F9736247BC429008E0BC6 /* SettableView.swift */; };
+		8470B2942480AF2A003303B3 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470B2932480AF2A003303B3 /* PasswordTextField.swift */; };
+		8470B2962480AF60003303B3 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470B2952480AF60003303B3 /* String+Extensions.swift */; };
+		8470B2982480C700003303B3 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470B2972480C700003303B3 /* GlobalConstants.swift */; };
+		84EEDD492484BBAC0075FAF0 /* RegistrationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84EEDD482484BBAC0075FAF0 /* RegistrationViewController.storyboard */; };
+		84EEDD4B2484BBB70075FAF0 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDD4A2484BBB70075FAF0 /* RegistrationViewController.swift */; };
+		84EEDD4D2484BBC30075FAF0 /* RegistrationControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDD4C2484BBC30075FAF0 /* RegistrationControllerViewModel.swift */; };
+		84EEDD502484C8370075FAF0 /* AbstractViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDD4F2484C8370075FAF0 /* AbstractViewController.swift */; };
 		CCCACB5A3F2A3CDAB14C3ED3 /* Pods_FireNoteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B1F91E44AEC508567D5DF9 /* Pods_FireNoteTests.framework */; };
 		F33DA4A49165E869ED35E8BA /* Pods_FireNote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26555B66BEAC24128FC4E192 /* Pods_FireNote.framework */; };
 /* End PBXBuildFile section */
@@ -40,9 +56,15 @@
 		26555B66BEAC24128FC4E192 /* Pods_FireNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireNote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		407F1EA1C30867388D06C8FF /* Pods-FireNoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireNoteTests.debug.xcconfig"; path = "Target Support Files/Pods-FireNoteTests/Pods-FireNoteTests.debug.xcconfig"; sourceTree = "<group>"; };
 		69B1F91E44AEC508567D5DF9 /* Pods_FireNoteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireNoteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8438A4AC247FD00E00EAAAFB /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		8438A4AE247FD22600EAAAFB /* PrimaryTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTextField.swift; sourceTree = "<group>"; };
+		8438A4B3247FD6E500EAAAFB /* Baloo2-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Medium.ttf"; sourceTree = "<group>"; };
+		8438A4B4247FD6E500EAAAFB /* Baloo2-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-ExtraBold.ttf"; sourceTree = "<group>"; };
+		8438A4B5247FD6E500EAAAFB /* Baloo2-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-SemiBold.ttf"; sourceTree = "<group>"; };
+		8438A4B6247FD6E500EAAAFB /* Baloo2-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Regular.ttf"; sourceTree = "<group>"; };
+		8438A4B7247FD6E500EAAAFB /* Baloo2-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Bold.ttf"; sourceTree = "<group>"; };
 		844F96EF247B9439008E0BC6 /* FireNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		844F96F2247B9439008E0BC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		844F96F4247B9439008E0BC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		844F96F6247B9439008E0BC6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		844F96F9247B9439008E0BC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainViewController.storyboard; sourceTree = "<group>"; };
 		844F96FB247B943D008E0BC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +81,16 @@
 		844F972B247B9A0A008E0BC6 /* MainControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainControllerViewModel.swift; sourceTree = "<group>"; };
 		844F972D247B9A2E008E0BC6 /* SplashControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashControllerViewModel.swift; sourceTree = "<group>"; };
 		844F972F247B9BF5008E0BC6 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		844F9731247BA177008E0BC6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		844F9734247BC400008E0BC6 /* ErrorTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTextField.swift; sourceTree = "<group>"; };
+		844F9736247BC429008E0BC6 /* SettableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettableView.swift; sourceTree = "<group>"; };
+		8470B2932480AF2A003303B3 /* PasswordTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
+		8470B2952480AF60003303B3 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		8470B2972480C700003303B3 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
+		84EEDD482484BBAC0075FAF0 /* RegistrationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegistrationViewController.storyboard; sourceTree = "<group>"; };
+		84EEDD4A2484BBB70075FAF0 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		84EEDD4C2484BBC30075FAF0 /* RegistrationControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationControllerViewModel.swift; sourceTree = "<group>"; };
+		84EEDD4F2484C8370075FAF0 /* AbstractViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractViewController.swift; sourceTree = "<group>"; };
 		BFEFDE683EFB306B8735176C /* Pods-FireNoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireNoteTests.release.xcconfig"; path = "Target Support Files/Pods-FireNoteTests/Pods-FireNoteTests.release.xcconfig"; sourceTree = "<group>"; };
 		CB72BE2B8C5EA4D8C3B79E9C /* Pods-FireNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireNote.debug.xcconfig"; path = "Target Support Files/Pods-FireNote/Pods-FireNote.debug.xcconfig"; sourceTree = "<group>"; };
 		D104B811843826227E5A89FA /* Pods-FireNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireNote.release.xcconfig"; path = "Target Support Files/Pods-FireNote/Pods-FireNote.release.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +125,34 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8438A4B0247FD4EA00EAAAFB /* RSwift */ = {
+			isa = PBXGroup;
+			children = (
+				8438A4AC247FD00E00EAAAFB /* R.generated.swift */,
+			);
+			path = RSwift;
+			sourceTree = "<group>";
+		};
+		8438A4B1247FD5BF00EAAAFB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8438A4B2247FD6D600EAAAFB /* Baloo2 */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		8438A4B2247FD6D600EAAAFB /* Baloo2 */ = {
+			isa = PBXGroup;
+			children = (
+				8438A4B7247FD6E500EAAAFB /* Baloo2-Bold.ttf */,
+				8438A4B4247FD6E500EAAAFB /* Baloo2-ExtraBold.ttf */,
+				8438A4B3247FD6E500EAAAFB /* Baloo2-Medium.ttf */,
+				8438A4B6247FD6E500EAAAFB /* Baloo2-Regular.ttf */,
+				8438A4B5247FD6E500EAAAFB /* Baloo2-SemiBold.ttf */,
+			);
+			path = Baloo2;
+			sourceTree = "<group>";
+		};
 		844F96E6247B9439008E0BC6 = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +176,7 @@
 		844F96F1247B9439008E0BC6 /* FireNote */ = {
 			isa = PBXGroup;
 			children = (
+				8438A4B1247FD5BF00EAAAFB /* Fonts */,
 				844F971C247B97DA008E0BC6 /* UI Components */,
 				844F971B247B97D4008E0BC6 /* Coordinator */,
 				844F971A247B97CF008E0BC6 /* Session */,
@@ -124,10 +185,10 @@
 				844F9717247B97BE008E0BC6 /* Extensions */,
 				844F9716247B97AD008E0BC6 /* Utils */,
 				844F96F2247B9439008E0BC6 /* AppDelegate.swift */,
-				844F96F4247B9439008E0BC6 /* SceneDelegate.swift */,
 				844F96FB247B943D008E0BC6 /* Assets.xcassets */,
 				844F96FD247B943D008E0BC6 /* LaunchScreen.storyboard */,
 				844F9700247B943D008E0BC6 /* Info.plist */,
+				844F9731247BA177008E0BC6 /* GoogleService-Info.plist */,
 			);
 			path = FireNote;
 			sourceTree = "<group>";
@@ -144,7 +205,9 @@
 		844F9716247B97AD008E0BC6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				8438A4B0247FD4EA00EAAAFB /* RSwift */,
 				844F972F247B9BF5008E0BC6 /* Common.swift */,
+				8470B2972480C700003303B3 /* GlobalConstants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -152,6 +215,7 @@
 		844F9717247B97BE008E0BC6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8470B2952480AF60003303B3 /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -159,6 +223,7 @@
 		844F9718247B97C3008E0BC6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				84EEDD4E2484C8290075FAF0 /* Common */,
 				844F9722247B99D1008E0BC6 /* SplashViewController */,
 				844F971F247B98AC008E0BC6 /* Auth */,
 				844F971E247B9828008E0BC6 /* Main */,
@@ -190,6 +255,8 @@
 		844F971C247B97DA008E0BC6 /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
+				844F9736247BC429008E0BC6 /* SettableView.swift */,
+				844F9733247BC3AF008E0BC6 /* TextFields */,
 			);
 			path = "UI Components";
 			sourceTree = "<group>";
@@ -207,9 +274,8 @@
 		844F971F247B98AC008E0BC6 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				844F9720247B99CB008E0BC6 /* LoginViewController.storyboard */,
-				844F9727247B99F1008E0BC6 /* LoginViewController.swift */,
-				844F9729247B99FB008E0BC6 /* LoginControllerViewModel.swift */,
+				84EEDD472484BB9C0075FAF0 /* Registration */,
+				84EEDD462484BB690075FAF0 /* Login */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -222,6 +288,44 @@
 				844F972D247B9A2E008E0BC6 /* SplashControllerViewModel.swift */,
 			);
 			path = SplashViewController;
+			sourceTree = "<group>";
+		};
+		844F9733247BC3AF008E0BC6 /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				844F9734247BC400008E0BC6 /* ErrorTextField.swift */,
+				8438A4AE247FD22600EAAAFB /* PrimaryTextField.swift */,
+				8470B2932480AF2A003303B3 /* PasswordTextField.swift */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
+		84EEDD462484BB690075FAF0 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				844F9720247B99CB008E0BC6 /* LoginViewController.storyboard */,
+				844F9727247B99F1008E0BC6 /* LoginViewController.swift */,
+				844F9729247B99FB008E0BC6 /* LoginControllerViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		84EEDD472484BB9C0075FAF0 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				84EEDD482484BBAC0075FAF0 /* RegistrationViewController.storyboard */,
+				84EEDD4A2484BBB70075FAF0 /* RegistrationViewController.swift */,
+				84EEDD4C2484BBC30075FAF0 /* RegistrationControllerViewModel.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		84EEDD4E2484C8290075FAF0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				84EEDD4F2484C8370075FAF0 /* AbstractViewController.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		EA0AC5C7DCEA1D0DD21CFD49 /* Pods */ = {
@@ -243,12 +347,14 @@
 			buildConfigurationList = 844F970E247B943D008E0BC6 /* Build configuration list for PBXNativeTarget "FireNote" */;
 			buildPhases = (
 				4E3406AC9F9E3B3E417E689C /* [CP] Check Pods Manifest.lock */,
-				844F9714247B96A4008E0BC6 /* Lint */,
+				8438A4AA247FCF3E00EAAAFB /* ShellScript */,
 				844F9715247B96B1008E0BC6 /* Format */,
+				844F9714247B96A4008E0BC6 /* Lint */,
 				844F96EB247B9439008E0BC6 /* Sources */,
 				844F96EC247B9439008E0BC6 /* Frameworks */,
 				844F96ED247B9439008E0BC6 /* Resources */,
 				6976BC3BF68FE046074D202C /* [CP] Embed Pods Frameworks */,
+				98A9B9F28CC229213D5E92CD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -321,11 +427,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8438A4BC247FD6E500EAAAFB /* Baloo2-Bold.ttf in Resources */,
 				844F96FF247B943D008E0BC6 /* LaunchScreen.storyboard in Resources */,
+				84EEDD492484BBAC0075FAF0 /* RegistrationViewController.storyboard in Resources */,
+				8438A4B9247FD6E500EAAAFB /* Baloo2-ExtraBold.ttf in Resources */,
 				844F9721247B99CB008E0BC6 /* LoginViewController.storyboard in Resources */,
+				8438A4B8247FD6E500EAAAFB /* Baloo2-Medium.ttf in Resources */,
 				844F96FC247B943D008E0BC6 /* Assets.xcassets in Resources */,
 				844F96FA247B9439008E0BC6 /* MainViewController.storyboard in Resources */,
 				844F9724247B99DE008E0BC6 /* SplashViewController.storyboard in Resources */,
+				8438A4BA247FD6E500EAAAFB /* Baloo2-SemiBold.ttf in Resources */,
+				8438A4BB247FD6E500EAAAFB /* Baloo2-Regular.ttf in Resources */,
+				844F9732247BA177008E0BC6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +513,25 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FireNote/Pods-FireNote-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8438A4AA247FCF3E00EAAAFB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 		844F9714247B96A4008E0BC6 /* Lint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -437,6 +569,23 @@
 			shellPath = /bin/sh;
 			shellScript = "./scripts/format\n";
 		};
+		98A9B9F28CC229213D5E92CD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FireNote/Pods-FireNote-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FireNote/Pods-FireNote-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FireNote/Pods-FireNote-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -447,12 +596,21 @@
 				844F96F7247B9439008E0BC6 /* MainViewController.swift in Sources */,
 				844F972C247B9A0A008E0BC6 /* MainControllerViewModel.swift in Sources */,
 				844F96F3247B9439008E0BC6 /* AppDelegate.swift in Sources */,
-				844F96F5247B9439008E0BC6 /* SceneDelegate.swift in Sources */,
 				844F9730247B9BF5008E0BC6 /* Common.swift in Sources */,
 				844F9728247B99F1008E0BC6 /* LoginViewController.swift in Sources */,
 				844F972E247B9A2E008E0BC6 /* SplashControllerViewModel.swift in Sources */,
+				8438A4AF247FD22600EAAAFB /* PrimaryTextField.swift in Sources */,
+				8470B2982480C700003303B3 /* GlobalConstants.swift in Sources */,
+				844F9735247BC400008E0BC6 /* ErrorTextField.swift in Sources */,
+				84EEDD4D2484BBC30075FAF0 /* RegistrationControllerViewModel.swift in Sources */,
+				8470B2962480AF60003303B3 /* String+Extensions.swift in Sources */,
+				84EEDD4B2484BBB70075FAF0 /* RegistrationViewController.swift in Sources */,
 				844F972A247B99FB008E0BC6 /* LoginControllerViewModel.swift in Sources */,
+				8470B2942480AF2A003303B3 /* PasswordTextField.swift in Sources */,
 				844F9726247B99E6008E0BC6 /* SplashViewController.swift in Sources */,
+				8438A4AD247FD00E00EAAAFB /* R.generated.swift in Sources */,
+				84EEDD502484C8370075FAF0 /* AbstractViewController.swift in Sources */,
+				844F9737247BC429008E0BC6 /* SettableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

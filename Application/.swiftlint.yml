@@ -1,5 +1,6 @@
 excluded:
   - Pods
+  - R.generated.swift
 
 # rules configuration
 indentation: 4 # 4 spaces
@@ -36,3 +37,5 @@ disabled_rules:
   - force_cast
   - force_try
   - nesting
+  - type_name
+  - identifier_name
