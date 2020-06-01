@@ -8,30 +8,38 @@
 
 import UIKit
 
-/// A field implementation to represent the normal/error state
-class ErrorTextField: SettableView {
+/// A protocol for error validation
+protocol ValidatableTextFieldDelegate: AnyObject {
+    /// Called when the text was changed
+    func validatableTextFieldDidChangeText(_ errorTextField: ErrorTextField)
 
+    /// Called when the text editing was ended
+    func validatableTextFieldDidEndEditing(_ errorTextField: ErrorTextField)
+}
+
+/// A field implementation to represent the normal/error state
+class ErrorTextField: SettableTextField {
     // MARK: - Properties and variables
 
-    var normalBackgroundColor: UIColor = R.color.error_field_background_normal() ?? .white {
+    var normalBackgroundColor: UIColor? = R.color.error_field_background_normal() {
         didSet {
             updateAppearance()
         }
     }
 
-    var errorBackgroundColor: UIColor = R.color.error_field_background_error() ?? .white {
+    var errorBackgroundColor: UIColor? = R.color.error_field_background_error() {
         didSet {
             updateAppearance()
         }
     }
 
-    var normalBorderColor: UIColor = R.color.error_field_border_normal() ?? .white {
+    var normalBorderColor: UIColor? = R.color.error_field_border_normal() {
         didSet {
             updateAppearance()
         }
     }
 
-    var errorBorderColor: UIColor = R.color.error_field_border_error() ?? .white {
+    var errorBorderColor: UIColor? = R.color.error_field_border_error() {
         didSet {
             updateAppearance()
         }
@@ -42,6 +50,8 @@ class ErrorTextField: SettableView {
             updateAppearance()
         }
     }
+
+    var validationDelegate: ValidatableTextFieldDelegate?
 
     // MARK: - UI Lifecycle
 
@@ -55,7 +65,7 @@ class ErrorTextField: SettableView {
     // MARK: - UI Methods
 
     private func updateAppearance() {
-        layer.borderColor = isError ? errorBorderColor.cgColor : normalBorderColor.cgColor
-        layer.backgroundColor = isError ? errorBackgroundColor.cgColor : normalBackgroundColor.cgColor
+        layer.borderColor = isError ? errorBorderColor?.cgColor : normalBorderColor?.cgColor
+        layer.backgroundColor = isError ? errorBackgroundColor?.cgColor : normalBackgroundColor?.cgColor
     }
 }

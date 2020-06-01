@@ -9,10 +9,10 @@
 import UIKit
 
 /// A class, which represents primary text field with rounded corners and edge insets
-class PrimaryTextField: SettableTextField {
+class PrimaryTextField: ErrorTextField {
     // MARK: - Properties and variables
 
-    var contentInset = UIEdgeInsets(top: 5, left: 20, bottom: 5, right: 20)
+    var contentInset = GlobalConstants.textFieldContentInset
 
     // MARK: - UI Lifecycle
 
@@ -25,7 +25,7 @@ class PrimaryTextField: SettableTextField {
 
         borderStyle = .none
 
-        textColor = 
+        textColor = R.color.text_primary()
         font = R.font.baloo2Regular(size: 15.0)
     }
 

@@ -24,7 +24,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g1P-Kl-qWO">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g1P-Kl-qWO" customClass="PrimaryTextField" customModule="FireNote" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="38.5" width="374" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="uiG-8E-gLe"/>
@@ -38,7 +38,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jVp-KT-yfs">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jVp-KT-yfs" customClass="PasswordTextField" customModule="FireNote" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="127" width="374" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="vzW-d3-4l8"/>
@@ -73,7 +73,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Blx-a4-bcD"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="LOGIN"/>
+                                <connections>
+                                    <action selector="loginAction:" destination="7AP-hi-ib8" eventType="touchUpInside" id="Ilt-M5-4Sa"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bd0-jY-azI" userLabel="Register account View">
                                 <rect key="frame" x="56" y="816" width="302" height="46"/>
@@ -87,6 +90,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqx-qp-cUY">
                                         <rect key="frame" x="203" y="8" width="99" height="30"/>
                                         <state key="normal" title="Create it easy!"/>
+                                        <connections>
+                                            <action selector="registerAction:" destination="7AP-hi-ib8" eventType="touchUpInside" id="PbT-Qs-uN5"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -118,6 +124,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IS7-gh-fs0"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="g1P-Kl-qWO" id="BFw-gD-Zss"/>
+                        <outlet property="passwordTextField" destination="jVp-KT-yfs" id="19h-el-zdu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yl9-3i-IMQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

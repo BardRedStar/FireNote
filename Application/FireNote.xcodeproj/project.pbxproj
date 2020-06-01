@@ -31,6 +31,9 @@
 		844F9732247BA177008E0BC6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 844F9731247BA177008E0BC6 /* GoogleService-Info.plist */; };
 		844F9735247BC400008E0BC6 /* ErrorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F9734247BC400008E0BC6 /* ErrorTextField.swift */; };
 		844F9737247BC429008E0BC6 /* SettableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F9736247BC429008E0BC6 /* SettableView.swift */; };
+		8470B2942480AF2A003303B3 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470B2932480AF2A003303B3 /* PasswordTextField.swift */; };
+		8470B2962480AF60003303B3 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470B2952480AF60003303B3 /* String+Extensions.swift */; };
+		8470B2982480C700003303B3 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470B2972480C700003303B3 /* GlobalConstants.swift */; };
 		CCCACB5A3F2A3CDAB14C3ED3 /* Pods_FireNoteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B1F91E44AEC508567D5DF9 /* Pods_FireNoteTests.framework */; };
 		F33DA4A49165E869ED35E8BA /* Pods_FireNote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26555B66BEAC24128FC4E192 /* Pods_FireNote.framework */; };
 /* End PBXBuildFile section */
@@ -77,6 +80,9 @@
 		844F9731247BA177008E0BC6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		844F9734247BC400008E0BC6 /* ErrorTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTextField.swift; sourceTree = "<group>"; };
 		844F9736247BC429008E0BC6 /* SettableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettableView.swift; sourceTree = "<group>"; };
+		8470B2932480AF2A003303B3 /* PasswordTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
+		8470B2952480AF60003303B3 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		8470B2972480C700003303B3 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 		BFEFDE683EFB306B8735176C /* Pods-FireNoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireNoteTests.release.xcconfig"; path = "Target Support Files/Pods-FireNoteTests/Pods-FireNoteTests.release.xcconfig"; sourceTree = "<group>"; };
 		CB72BE2B8C5EA4D8C3B79E9C /* Pods-FireNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireNote.debug.xcconfig"; path = "Target Support Files/Pods-FireNote/Pods-FireNote.debug.xcconfig"; sourceTree = "<group>"; };
 		D104B811843826227E5A89FA /* Pods-FireNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireNote.release.xcconfig"; path = "Target Support Files/Pods-FireNote/Pods-FireNote.release.xcconfig"; sourceTree = "<group>"; };
@@ -193,6 +199,7 @@
 			children = (
 				8438A4B0247FD4EA00EAAAFB /* RSwift */,
 				844F972F247B9BF5008E0BC6 /* Common.swift */,
+				8470B2972480C700003303B3 /* GlobalConstants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -200,6 +207,7 @@
 		844F9717247B97BE008E0BC6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8470B2952480AF60003303B3 /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -279,6 +287,7 @@
 			children = (
 				844F9734247BC400008E0BC6 /* ErrorTextField.swift */,
 				8438A4AE247FD22600EAAAFB /* PrimaryTextField.swift */,
+				8470B2932480AF2A003303B3 /* PasswordTextField.swift */,
 			);
 			path = TextFields;
 			sourceTree = "<group>";
@@ -554,8 +563,11 @@
 				844F9728247B99F1008E0BC6 /* LoginViewController.swift in Sources */,
 				844F972E247B9A2E008E0BC6 /* SplashControllerViewModel.swift in Sources */,
 				8438A4AF247FD22600EAAAFB /* PrimaryTextField.swift in Sources */,
+				8470B2982480C700003303B3 /* GlobalConstants.swift in Sources */,
 				844F9735247BC400008E0BC6 /* ErrorTextField.swift in Sources */,
+				8470B2962480AF60003303B3 /* String+Extensions.swift in Sources */,
 				844F972A247B99FB008E0BC6 /* LoginControllerViewModel.swift in Sources */,
+				8470B2942480AF2A003303B3 /* PasswordTextField.swift in Sources */,
 				844F9726247B99E6008E0BC6 /* SplashViewController.swift in Sources */,
 				8438A4AD247FD00E00EAAAFB /* R.generated.swift in Sources */,
 				844F9737247BC429008E0BC6 /* SettableView.swift in Sources */,
