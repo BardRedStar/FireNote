@@ -12,16 +12,16 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var window: UIWindow?
+    var window: RootWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
         FirebaseApp.configure()
 
-        window = UIWindow()
-        window?.rootViewController = LoginViewController.instantiate(viewModel: LoginControllerViewModel())
+        window = RootWindow()
         window?.makeKeyAndVisible()
+        window?.start(nil)
         return true
     }
 

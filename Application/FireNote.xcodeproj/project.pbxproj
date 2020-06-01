@@ -38,6 +38,12 @@
 		84EEDD4B2484BBB70075FAF0 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDD4A2484BBB70075FAF0 /* RegistrationViewController.swift */; };
 		84EEDD4D2484BBC30075FAF0 /* RegistrationControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDD4C2484BBC30075FAF0 /* RegistrationControllerViewModel.swift */; };
 		84EEDD502484C8370075FAF0 /* AbstractViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDD4F2484C8370075FAF0 /* AbstractViewController.swift */; };
+		84EEDD522484E1070075FAF0 /* RootWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDD512484E1070075FAF0 /* RootWindow.swift */; };
+		84EEDD552484E1470075FAF0 /* DeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDD542484E1470075FAF0 /* DeepLink.swift */; };
+		84EEDD582484F11A0075FAF0 /* AppSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDD572484F11A0075FAF0 /* AppSession.swift */; };
+		84EEDD5A2484F1550075FAF0 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDD592484F1550075FAF0 /* DataManager.swift */; };
+		84EEDD632484F1E00075FAF0 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDD622484F1E00075FAF0 /* Profile.swift */; };
+		84EEDD682484F7860075FAF0 /* AuthNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDD672484F7860075FAF0 /* AuthNavigationController.swift */; };
 		CCCACB5A3F2A3CDAB14C3ED3 /* Pods_FireNoteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B1F91E44AEC508567D5DF9 /* Pods_FireNoteTests.framework */; };
 		F33DA4A49165E869ED35E8BA /* Pods_FireNote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26555B66BEAC24128FC4E192 /* Pods_FireNote.framework */; };
 /* End PBXBuildFile section */
@@ -91,6 +97,12 @@
 		84EEDD4A2484BBB70075FAF0 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		84EEDD4C2484BBC30075FAF0 /* RegistrationControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationControllerViewModel.swift; sourceTree = "<group>"; };
 		84EEDD4F2484C8370075FAF0 /* AbstractViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractViewController.swift; sourceTree = "<group>"; };
+		84EEDD512484E1070075FAF0 /* RootWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootWindow.swift; sourceTree = "<group>"; };
+		84EEDD542484E1470075FAF0 /* DeepLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLink.swift; sourceTree = "<group>"; };
+		84EEDD572484F11A0075FAF0 /* AppSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSession.swift; sourceTree = "<group>"; };
+		84EEDD592484F1550075FAF0 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		84EEDD622484F1E00075FAF0 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		84EEDD672484F7860075FAF0 /* AuthNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavigationController.swift; sourceTree = "<group>"; };
 		BFEFDE683EFB306B8735176C /* Pods-FireNoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireNoteTests.release.xcconfig"; path = "Target Support Files/Pods-FireNoteTests/Pods-FireNoteTests.release.xcconfig"; sourceTree = "<group>"; };
 		CB72BE2B8C5EA4D8C3B79E9C /* Pods-FireNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireNote.debug.xcconfig"; path = "Target Support Files/Pods-FireNote/Pods-FireNote.debug.xcconfig"; sourceTree = "<group>"; };
 		D104B811843826227E5A89FA /* Pods-FireNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireNote.release.xcconfig"; path = "Target Support Files/Pods-FireNote/Pods-FireNote.release.xcconfig"; sourceTree = "<group>"; };
@@ -178,7 +190,7 @@
 			children = (
 				8438A4B1247FD5BF00EAAAFB /* Fonts */,
 				844F971C247B97DA008E0BC6 /* UI Components */,
-				844F971B247B97D4008E0BC6 /* Coordinator */,
+				844F971B247B97D4008E0BC6 /* Coordination */,
 				844F971A247B97CF008E0BC6 /* Session */,
 				844F9719247B97C9008E0BC6 /* Network */,
 				844F9718247B97C3008E0BC6 /* Modules */,
@@ -234,6 +246,9 @@
 		844F9719247B97C9008E0BC6 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				84EEDD5D2484F1990075FAF0 /* Request Keys */,
+				84EEDD5C2484F1940075FAF0 /* Targets */,
+				84EEDD5B2484F18F0075FAF0 /* Models */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -241,15 +256,19 @@
 		844F971A247B97CF008E0BC6 /* Session */ = {
 			isa = PBXGroup;
 			children = (
+				84EEDD572484F11A0075FAF0 /* AppSession.swift */,
+				84EEDD592484F1550075FAF0 /* DataManager.swift */,
 			);
 			path = Session;
 			sourceTree = "<group>";
 		};
-		844F971B247B97D4008E0BC6 /* Coordinator */ = {
+		844F971B247B97D4008E0BC6 /* Coordination */ = {
 			isa = PBXGroup;
 			children = (
+				84EEDD532484E13C0075FAF0 /* DeepLink */,
+				84EEDD512484E1070075FAF0 /* RootWindow.swift */,
 			);
-			path = Coordinator;
+			path = Coordination;
 			sourceTree = "<group>";
 		};
 		844F971C247B97DA008E0BC6 /* UI Components */ = {
@@ -274,6 +293,7 @@
 		844F971F247B98AC008E0BC6 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				84EEDD672484F7860075FAF0 /* AuthNavigationController.swift */,
 				84EEDD472484BB9C0075FAF0 /* Registration */,
 				84EEDD462484BB690075FAF0 /* Login */,
 			);
@@ -326,6 +346,36 @@
 				84EEDD4F2484C8370075FAF0 /* AbstractViewController.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		84EEDD532484E13C0075FAF0 /* DeepLink */ = {
+			isa = PBXGroup;
+			children = (
+				84EEDD542484E1470075FAF0 /* DeepLink.swift */,
+			);
+			path = DeepLink;
+			sourceTree = "<group>";
+		};
+		84EEDD5B2484F18F0075FAF0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84EEDD622484F1E00075FAF0 /* Profile.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		84EEDD5C2484F1940075FAF0 /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
+		84EEDD5D2484F1990075FAF0 /* Request Keys */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Request Keys";
 			sourceTree = "<group>";
 		};
 		EA0AC5C7DCEA1D0DD21CFD49 /* Pods */ = {
@@ -596,19 +646,25 @@
 				844F96F7247B9439008E0BC6 /* MainViewController.swift in Sources */,
 				844F972C247B9A0A008E0BC6 /* MainControllerViewModel.swift in Sources */,
 				844F96F3247B9439008E0BC6 /* AppDelegate.swift in Sources */,
+				84EEDD632484F1E00075FAF0 /* Profile.swift in Sources */,
 				844F9730247B9BF5008E0BC6 /* Common.swift in Sources */,
 				844F9728247B99F1008E0BC6 /* LoginViewController.swift in Sources */,
 				844F972E247B9A2E008E0BC6 /* SplashControllerViewModel.swift in Sources */,
 				8438A4AF247FD22600EAAAFB /* PrimaryTextField.swift in Sources */,
 				8470B2982480C700003303B3 /* GlobalConstants.swift in Sources */,
 				844F9735247BC400008E0BC6 /* ErrorTextField.swift in Sources */,
+				84EEDD582484F11A0075FAF0 /* AppSession.swift in Sources */,
 				84EEDD4D2484BBC30075FAF0 /* RegistrationControllerViewModel.swift in Sources */,
 				8470B2962480AF60003303B3 /* String+Extensions.swift in Sources */,
 				84EEDD4B2484BBB70075FAF0 /* RegistrationViewController.swift in Sources */,
 				844F972A247B99FB008E0BC6 /* LoginControllerViewModel.swift in Sources */,
+				84EEDD682484F7860075FAF0 /* AuthNavigationController.swift in Sources */,
 				8470B2942480AF2A003303B3 /* PasswordTextField.swift in Sources */,
 				844F9726247B99E6008E0BC6 /* SplashViewController.swift in Sources */,
+				84EEDD522484E1070075FAF0 /* RootWindow.swift in Sources */,
 				8438A4AD247FD00E00EAAAFB /* R.generated.swift in Sources */,
+				84EEDD552484E1470075FAF0 /* DeepLink.swift in Sources */,
+				84EEDD5A2484F1550075FAF0 /* DataManager.swift in Sources */,
 				84EEDD502484C8370075FAF0 /* AbstractViewController.swift in Sources */,
 				844F9737247BC429008E0BC6 /* SettableView.swift in Sources */,
 			);
