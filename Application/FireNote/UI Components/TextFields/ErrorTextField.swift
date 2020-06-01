@@ -51,7 +51,7 @@ class ErrorTextField: SettableTextField {
         }
     }
 
-    var validationDelegate: ValidatableTextFieldDelegate?
+    weak var validationDelegate: ValidatableTextFieldDelegate?
 
     // MARK: - UI Lifecycle
 

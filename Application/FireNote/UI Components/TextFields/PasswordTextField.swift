@@ -68,9 +68,6 @@ class PasswordTextField: PrimaryTextField {
         autocorrectionType = .no
 
         configureSubviews()
-
-        delegate = self
-        addTarget(self, action: #selector(textDidChange), for: .editingChanged)
     }
 
     override func layoutSubviews() {
@@ -135,7 +132,7 @@ class PasswordTextField: PrimaryTextField {
         passwordTextFieldDelegate?.passwordTextFieldDidTapRightButton(self)
     }
 
-    @objc private func textDidChange(_ textField: UITextField) {
+    override func textDidChange(_ textField: UITextField) {
         if let range = selectedTextRange, let text = textField.text {
             let selectionStartIndex = offset(from: beginningOfDocument, to: range.start)
             let lengthDifference = abs(text.count - currentText.count)
@@ -153,14 +150,6 @@ class PasswordTextField: PrimaryTextField {
                 currentText.removeSubrange(Range(NSRange(location: selectionStartIndex, length: lengthDifference), in: currentText)!)
             }
         }
-        validationDelegate?.validatableTextFieldDidChangeText(self)
-    }
-}
-
-// MARK: - UITextFieldDelegate
-
-extension PasswordTextField: UITextFieldDelegate {
-    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
-        validationDelegate?.validatableTextFieldDidEndEditing(self)
+        super.textDidChange(textField)
     }
 }
