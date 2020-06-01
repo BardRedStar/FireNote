@@ -34,6 +34,10 @@
 		8470B2942480AF2A003303B3 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470B2932480AF2A003303B3 /* PasswordTextField.swift */; };
 		8470B2962480AF60003303B3 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470B2952480AF60003303B3 /* String+Extensions.swift */; };
 		8470B2982480C700003303B3 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470B2972480C700003303B3 /* GlobalConstants.swift */; };
+		84EEDD492484BBAC0075FAF0 /* RegistrationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84EEDD482484BBAC0075FAF0 /* RegistrationViewController.storyboard */; };
+		84EEDD4B2484BBB70075FAF0 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDD4A2484BBB70075FAF0 /* RegistrationViewController.swift */; };
+		84EEDD4D2484BBC30075FAF0 /* RegistrationControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDD4C2484BBC30075FAF0 /* RegistrationControllerViewModel.swift */; };
+		84EEDD502484C8370075FAF0 /* AbstractViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDD4F2484C8370075FAF0 /* AbstractViewController.swift */; };
 		CCCACB5A3F2A3CDAB14C3ED3 /* Pods_FireNoteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B1F91E44AEC508567D5DF9 /* Pods_FireNoteTests.framework */; };
 		F33DA4A49165E869ED35E8BA /* Pods_FireNote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26555B66BEAC24128FC4E192 /* Pods_FireNote.framework */; };
 /* End PBXBuildFile section */
@@ -83,6 +87,10 @@
 		8470B2932480AF2A003303B3 /* PasswordTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		8470B2952480AF60003303B3 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		8470B2972480C700003303B3 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
+		84EEDD482484BBAC0075FAF0 /* RegistrationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegistrationViewController.storyboard; sourceTree = "<group>"; };
+		84EEDD4A2484BBB70075FAF0 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		84EEDD4C2484BBC30075FAF0 /* RegistrationControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationControllerViewModel.swift; sourceTree = "<group>"; };
+		84EEDD4F2484C8370075FAF0 /* AbstractViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractViewController.swift; sourceTree = "<group>"; };
 		BFEFDE683EFB306B8735176C /* Pods-FireNoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireNoteTests.release.xcconfig"; path = "Target Support Files/Pods-FireNoteTests/Pods-FireNoteTests.release.xcconfig"; sourceTree = "<group>"; };
 		CB72BE2B8C5EA4D8C3B79E9C /* Pods-FireNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireNote.debug.xcconfig"; path = "Target Support Files/Pods-FireNote/Pods-FireNote.debug.xcconfig"; sourceTree = "<group>"; };
 		D104B811843826227E5A89FA /* Pods-FireNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireNote.release.xcconfig"; path = "Target Support Files/Pods-FireNote/Pods-FireNote.release.xcconfig"; sourceTree = "<group>"; };
@@ -215,6 +223,7 @@
 		844F9718247B97C3008E0BC6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				84EEDD4E2484C8290075FAF0 /* Common */,
 				844F9722247B99D1008E0BC6 /* SplashViewController */,
 				844F971F247B98AC008E0BC6 /* Auth */,
 				844F971E247B9828008E0BC6 /* Main */,
@@ -265,10 +274,8 @@
 		844F971F247B98AC008E0BC6 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				84EEDD472484BB9C0075FAF0 /* Registration */,
 				84EEDD462484BB690075FAF0 /* Login */,
-				844F9720247B99CB008E0BC6 /* LoginViewController.storyboard */,
-				844F9727247B99F1008E0BC6 /* LoginViewController.swift */,
-				844F9729247B99FB008E0BC6 /* LoginControllerViewModel.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -296,8 +303,29 @@
 		84EEDD462484BB690075FAF0 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				844F9720247B99CB008E0BC6 /* LoginViewController.storyboard */,
+				844F9727247B99F1008E0BC6 /* LoginViewController.swift */,
+				844F9729247B99FB008E0BC6 /* LoginControllerViewModel.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		84EEDD472484BB9C0075FAF0 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				84EEDD482484BBAC0075FAF0 /* RegistrationViewController.storyboard */,
+				84EEDD4A2484BBB70075FAF0 /* RegistrationViewController.swift */,
+				84EEDD4C2484BBC30075FAF0 /* RegistrationControllerViewModel.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		84EEDD4E2484C8290075FAF0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				84EEDD4F2484C8370075FAF0 /* AbstractViewController.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		EA0AC5C7DCEA1D0DD21CFD49 /* Pods */ = {
@@ -401,6 +429,7 @@
 			files = (
 				8438A4BC247FD6E500EAAAFB /* Baloo2-Bold.ttf in Resources */,
 				844F96FF247B943D008E0BC6 /* LaunchScreen.storyboard in Resources */,
+				84EEDD492484BBAC0075FAF0 /* RegistrationViewController.storyboard in Resources */,
 				8438A4B9247FD6E500EAAAFB /* Baloo2-ExtraBold.ttf in Resources */,
 				844F9721247B99CB008E0BC6 /* LoginViewController.storyboard in Resources */,
 				8438A4B8247FD6E500EAAAFB /* Baloo2-Medium.ttf in Resources */,
@@ -573,11 +602,14 @@
 				8438A4AF247FD22600EAAAFB /* PrimaryTextField.swift in Sources */,
 				8470B2982480C700003303B3 /* GlobalConstants.swift in Sources */,
 				844F9735247BC400008E0BC6 /* ErrorTextField.swift in Sources */,
+				84EEDD4D2484BBC30075FAF0 /* RegistrationControllerViewModel.swift in Sources */,
 				8470B2962480AF60003303B3 /* String+Extensions.swift in Sources */,
+				84EEDD4B2484BBB70075FAF0 /* RegistrationViewController.swift in Sources */,
 				844F972A247B99FB008E0BC6 /* LoginControllerViewModel.swift in Sources */,
 				8470B2942480AF2A003303B3 /* PasswordTextField.swift in Sources */,
 				844F9726247B99E6008E0BC6 /* SplashViewController.swift in Sources */,
 				8438A4AD247FD00E00EAAAFB /* R.generated.swift in Sources */,
+				84EEDD502484C8370075FAF0 /* AbstractViewController.swift in Sources */,
 				844F9737247BC429008E0BC6 /* SettableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

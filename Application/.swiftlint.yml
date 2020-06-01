@@ -1,5 +1,6 @@
 excluded:
   - Pods
+  - R.generated.swift
 
 # rules configuration
 indentation: 4 # 4 spaces
@@ -7,7 +8,7 @@ line_length:
   warning:
     140
   error:
-    300
+    200
   ignores_urls:
     true
 file_length:

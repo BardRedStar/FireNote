@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e32-Rp-rsG">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Baloo2-Medium.ttf">
+            <string>Baloo2-Medium</string>
+        </array>
+        <array key="Baloo2-Regular.ttf">
+            <string>Baloo2-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Registration View Controller-->
+        <scene sceneID="KFy-18-RYZ">
+            <objects>
+                <viewController storyboardIdentifier="RegistrationViewController" id="e32-Rp-rsG" customClass="RegistrationViewController" customModule="FireNote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JaS-Az-wrs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eAp-tx-ZGY" customClass="TPKeyboardAvoidingScrollView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ySo-cl-gUv" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registration" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fza-56-NRs">
+                                                <rect key="frame" x="20" y="180" width="374" height="55.5"/>
+                                                <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="35"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2nt-t4-AmP" userLabel="Fields View">
+                                                <rect key="frame" x="20" y="260.5" width="374" height="292"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lW2-Fa-8UH">
+                                                        <rect key="frame" x="0.0" y="115" width="42" height="28.5"/>
+                                                        <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BEv-Zg-Iu6" customClass="PrimaryTextField" customModule="FireNote" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="148.5" width="374" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="EDx-FO-i8I"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="16"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71f-oU-mF3">
+                                                        <rect key="frame" x="0.0" y="8" width="82" height="29"/>
+                                                        <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qa1-ki-Y1G" customClass="PrimaryTextField" customModule="FireNote" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="42" width="168.5" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="4SS-b0-kL9"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="16"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adA-0d-UWp">
+                                                        <rect key="frame" x="195.5" y="8" width="79.5" height="29"/>
+                                                        <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmB-xn-7ku">
+                                                        <rect key="frame" x="0.0" y="208.5" width="74.5" height="28.5"/>
+                                                        <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l1u-dP-nzE" customClass="PasswordTextField" customModule="FireNote" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="242" width="374" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="V9Q-Pl-M6D"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="16"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Orz-8C-urO" customClass="PrimaryTextField" customModule="FireNote" customModuleProvider="target">
+                                                        <rect key="frame" x="195.5" y="42" width="168.5" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="9x8-dl-UhE"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="16"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="l1u-dP-nzE" secondAttribute="bottom" constant="10" id="0zr-tW-t7Z"/>
+                                                    <constraint firstItem="BEv-Zg-Iu6" firstAttribute="leading" secondItem="2nt-t4-AmP" secondAttribute="leading" id="16C-UZ-pNK"/>
+                                                    <constraint firstItem="BEv-Zg-Iu6" firstAttribute="top" secondItem="lW2-Fa-8UH" secondAttribute="bottom" constant="5" id="5gm-30-P7C"/>
+                                                    <constraint firstItem="qa1-ki-Y1G" firstAttribute="width" secondItem="2nt-t4-AmP" secondAttribute="width" multiplier="0.45" id="7lw-sv-pYu"/>
+                                                    <constraint firstItem="l1u-dP-nzE" firstAttribute="leading" secondItem="2nt-t4-AmP" secondAttribute="leading" id="8jg-Eo-ezJ"/>
+                                                    <constraint firstItem="WmB-xn-7ku" firstAttribute="leading" secondItem="2nt-t4-AmP" secondAttribute="leading" id="DLz-Jm-ZcJ"/>
+                                                    <constraint firstItem="adA-0d-UWp" firstAttribute="top" secondItem="2nt-t4-AmP" secondAttribute="top" constant="8" id="IBR-9a-ejc"/>
+                                                    <constraint firstItem="lW2-Fa-8UH" firstAttribute="leading" secondItem="2nt-t4-AmP" secondAttribute="leading" id="Mei-Xe-IaB"/>
+                                                    <constraint firstItem="WmB-xn-7ku" firstAttribute="top" secondItem="BEv-Zg-Iu6" secondAttribute="bottom" constant="20" id="Pr6-CK-zZV"/>
+                                                    <constraint firstItem="71f-oU-mF3" firstAttribute="top" secondItem="2nt-t4-AmP" secondAttribute="top" constant="8" id="aHX-bG-00I"/>
+                                                    <constraint firstItem="lW2-Fa-8UH" firstAttribute="top" secondItem="qa1-ki-Y1G" secondAttribute="bottom" constant="33" id="ffW-xA-lPh"/>
+                                                    <constraint firstItem="Orz-8C-urO" firstAttribute="top" secondItem="adA-0d-UWp" secondAttribute="bottom" constant="5" id="g1e-Rp-qkW"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Orz-8C-urO" secondAttribute="trailing" constant="10" id="iOd-b4-cbK"/>
+                                                    <constraint firstItem="71f-oU-mF3" firstAttribute="leading" secondItem="2nt-t4-AmP" secondAttribute="leading" id="ifm-lg-w1h"/>
+                                                    <constraint firstAttribute="trailing" secondItem="l1u-dP-nzE" secondAttribute="trailing" id="jau-PW-8MY"/>
+                                                    <constraint firstItem="Orz-8C-urO" firstAttribute="width" secondItem="qa1-ki-Y1G" secondAttribute="width" id="m9b-BD-wrR"/>
+                                                    <constraint firstItem="Orz-8C-urO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qa1-ki-Y1G" secondAttribute="trailing" constant="10" id="pRE-TT-pW6"/>
+                                                    <constraint firstItem="l1u-dP-nzE" firstAttribute="top" secondItem="WmB-xn-7ku" secondAttribute="bottom" constant="5" id="qTl-xh-BQq"/>
+                                                    <constraint firstItem="qa1-ki-Y1G" firstAttribute="top" secondItem="71f-oU-mF3" secondAttribute="bottom" constant="5" id="t71-mU-XeO"/>
+                                                    <constraint firstAttribute="trailing" secondItem="BEv-Zg-Iu6" secondAttribute="trailing" id="xsj-Ce-4Jc"/>
+                                                    <constraint firstItem="qa1-ki-Y1G" firstAttribute="leading" secondItem="2nt-t4-AmP" secondAttribute="leading" id="zni-24-UzC"/>
+                                                    <constraint firstItem="adA-0d-UWp" firstAttribute="leading" secondItem="Orz-8C-urO" secondAttribute="leading" id="ztA-Q3-fIp"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qeq-G1-Ax2">
+                                                <rect key="frame" x="20" y="562.5" width="374" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="SdM-qd-toD"/>
+                                                </constraints>
+                                                <state key="normal" title="CREATE ACCOUNT"/>
+                                                <connections>
+                                                    <action selector="logInAction:" destination="e32-Rp-rsG" eventType="touchUpInside" id="lYP-Ja-SAz"/>
+                                                    <action selector="loginAction:" destination="e32-Rp-rsG" eventType="touchUpInside" id="sh2-kj-KDJ"/>
+                                                    <action selector="registerAction:" destination="e32-Rp-rsG" eventType="touchUpInside" id="N1X-Bv-kWA"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dO8-rJ-E3a" userLabel="Register account View">
+                                                <rect key="frame" x="86" y="743" width="242" height="55"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44w-kG-wUP">
+                                                        <rect key="frame" x="0.0" y="14" width="185" height="27"/>
+                                                        <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQR-gg-Lle">
+                                                        <rect key="frame" x="195" y="8" width="47" height="39"/>
+                                                        <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="17"/>
+                                                        <state key="normal" title="Log In."/>
+                                                        <connections>
+                                                            <action selector="registerAction:" destination="e32-Rp-rsG" eventType="touchUpInside" id="dFN-3g-8WV"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="xQR-gg-Lle" firstAttribute="leading" secondItem="44w-kG-wUP" secondAttribute="trailing" constant="10" id="Z4r-Lw-CxD"/>
+                                                    <constraint firstItem="44w-kG-wUP" firstAttribute="leading" secondItem="dO8-rJ-E3a" secondAttribute="leading" id="mGo-Qt-nCZ"/>
+                                                    <constraint firstItem="xQR-gg-Lle" firstAttribute="top" secondItem="dO8-rJ-E3a" secondAttribute="top" constant="8" id="nHC-JV-lGW"/>
+                                                    <constraint firstAttribute="bottom" secondItem="xQR-gg-Lle" secondAttribute="bottom" constant="8" id="nzb-UM-H2t"/>
+                                                    <constraint firstAttribute="trailing" secondItem="xQR-gg-Lle" secondAttribute="trailing" id="xc0-XI-OQJ"/>
+                                                    <constraint firstItem="44w-kG-wUP" firstAttribute="centerY" secondItem="xQR-gg-Lle" secondAttribute="centerY" id="ymD-Ph-QsE"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Fza-56-NRs" secondAttribute="trailing" constant="20" id="539-XH-Bfm"/>
+                                            <constraint firstItem="2nt-t4-AmP" firstAttribute="top" secondItem="Fza-56-NRs" secondAttribute="bottom" constant="25" id="B9r-vb-tl2"/>
+                                            <constraint firstItem="qeq-G1-Ax2" firstAttribute="trailing" secondItem="2nt-t4-AmP" secondAttribute="trailing" id="BYt-xR-0JU"/>
+                                            <constraint firstItem="qeq-G1-Ax2" firstAttribute="top" secondItem="2nt-t4-AmP" secondAttribute="bottom" constant="10" id="BjZ-Iy-anv"/>
+                                            <constraint firstAttribute="trailing" secondItem="2nt-t4-AmP" secondAttribute="trailing" constant="20" id="ELF-8n-7Y6"/>
+                                            <constraint firstItem="Fza-56-NRs" firstAttribute="leading" secondItem="ySo-cl-gUv" secondAttribute="leading" constant="20" id="Fmr-te-squ"/>
+                                            <constraint firstAttribute="bottom" secondItem="dO8-rJ-E3a" secondAttribute="bottom" constant="20" id="GvZ-wu-kAj"/>
+                                            <constraint firstItem="2nt-t4-AmP" firstAttribute="leading" secondItem="ySo-cl-gUv" secondAttribute="leading" constant="20" id="Ntu-ys-F59"/>
+                                            <constraint firstItem="dO8-rJ-E3a" firstAttribute="centerX" secondItem="ySo-cl-gUv" secondAttribute="centerX" id="Q7r-gs-fVa"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dO8-rJ-E3a" secondAttribute="trailing" constant="10" id="Xym-6f-lCO"/>
+                                            <constraint firstItem="qeq-G1-Ax2" firstAttribute="leading" secondItem="2nt-t4-AmP" secondAttribute="leading" id="c6U-m9-uGl"/>
+                                            <constraint firstItem="dO8-rJ-E3a" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ySo-cl-gUv" secondAttribute="leading" constant="10" id="jAA-Dd-h9n"/>
+                                            <constraint firstItem="Fza-56-NRs" firstAttribute="top" secondItem="ySo-cl-gUv" secondAttribute="top" constant="180" id="jJq-n2-weN"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ySo-cl-gUv" secondAttribute="bottom" id="04T-ZP-x5f"/>
+                                    <constraint firstAttribute="trailing" secondItem="ySo-cl-gUv" secondAttribute="trailing" id="YKf-yd-6ib"/>
+                                    <constraint firstItem="ySo-cl-gUv" firstAttribute="leading" secondItem="eAp-tx-ZGY" secondAttribute="leading" id="iPZ-Uu-d1e"/>
+                                    <constraint firstItem="ySo-cl-gUv" firstAttribute="height" secondItem="eAp-tx-ZGY" secondAttribute="height" id="uIo-yF-5kn"/>
+                                    <constraint firstItem="ySo-cl-gUv" firstAttribute="width" secondItem="eAp-tx-ZGY" secondAttribute="width" id="vPn-aq-cUg"/>
+                                    <constraint firstItem="ySo-cl-gUv" firstAttribute="top" secondItem="eAp-tx-ZGY" secondAttribute="top" id="z3M-X7-z5Z"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="vB2-MA-KtX"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="5Kk-4f-0Qq"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="o1Z-5O-y3c" firstAttribute="bottom" secondItem="eAp-tx-ZGY" secondAttribute="bottom" id="Pjb-SO-dtB"/>
+                            <constraint firstItem="eAp-tx-ZGY" firstAttribute="top" secondItem="o1Z-5O-y3c" secondAttribute="top" id="SUw-N4-KA7"/>
+                            <constraint firstItem="eAp-tx-ZGY" firstAttribute="leading" secondItem="o1Z-5O-y3c" secondAttribute="leading" id="UFS-dB-ZDm"/>
+                            <constraint firstItem="o1Z-5O-y3c" firstAttribute="trailing" secondItem="eAp-tx-ZGY" secondAttribute="trailing" id="yPl-ac-4wR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="o1Z-5O-y3c"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="BEv-Zg-Iu6" id="7Ia-13-Enq"/>
+                        <outlet property="firstNameTextField" destination="qa1-ki-Y1G" id="a3t-Qs-ddu"/>
+                        <outlet property="lastNameTextField" destination="Orz-8C-urO" id="m2Z-sh-LFa"/>
+                        <outlet property="passwordTextField" destination="l1u-dP-nzE" id="X2u-zg-7bF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="737-C6-cfR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-104.34782608695653" y="55.580357142857139"/>
+        </scene>
+    </scenes>
+</document>

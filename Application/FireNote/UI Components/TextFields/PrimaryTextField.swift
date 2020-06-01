@@ -8,11 +8,19 @@
 
 import UIKit
 
+/// A delegate protocol for PrimaryTextField
+protocol PrimaryTextFieldDelegate: AnyObject {
+    /// Called when the return button was tapped
+    func primaryTextFieldDidTapReturn(_ textField: PrimaryTextField)
+}
+
 /// A class, which represents primary text field with rounded corners and edge insets
 class PrimaryTextField: ErrorTextField {
     // MARK: - Properties and variables
 
     var contentInset = GlobalConstants.textFieldContentInset
+
+    weak var primaryDelegate: PrimaryTextFieldDelegate?
 
     // MARK: - UI Lifecycle
 
@@ -68,5 +76,10 @@ class PrimaryTextField: ErrorTextField {
 extension PrimaryTextField: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
         validationDelegate?.validatableTextFieldDidEndEditing(self)
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        primaryDelegate?.primaryTextFieldDidTapReturn(self)
+        return true
     }
 }
