@@ -9,7 +9,7 @@
 import UIKit
 
 /// A class to coordinate the auth flow navigation
-class AuthNavigationController: UINavigationController {
+class AuthNavigationController: AbstractNavigationController {
     // MARK: - Output
 
     var onLogin: (() -> Void)?
@@ -19,6 +19,8 @@ class AuthNavigationController: UINavigationController {
     init() {
         let controller = LoginViewController.instantiate(viewModel: LoginControllerViewModel())
 
+        super.init(rootViewController: controller)
+
         controller.onLogin = { [weak self] in
             self?.onLogin?()
         }
@@ -26,12 +28,14 @@ class AuthNavigationController: UINavigationController {
         controller.onRegister = { [weak self] in
             self?.pushRegistration()
         }
-
-        super.init(rootViewController: controller)
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+
+    override func setupNavigationBarAppearance() {
+        makeNavigationBarTransparent()
     }
 
     // MARK: - Routing
@@ -43,7 +47,10 @@ class AuthNavigationController: UINavigationController {
             self?.onLogin?()
         }
 
+        controller.onBack = { [weak self] in
+            self?.popViewController(animated: true)
+        }
+
         pushViewController(controller, animated: true)
     }
-
 }

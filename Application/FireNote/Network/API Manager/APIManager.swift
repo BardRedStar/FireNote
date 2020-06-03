@@ -1,5 +1,5 @@
 //
-//  DataManager.swift
+//  APIManager.swift
 //  FireNote
 //
 //  Created by Denis Kovalev on 01.06.2020.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-class DataManager {
-    var profile: Profile?
+class APIManager {
+    init() {}
 }
