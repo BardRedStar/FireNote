@@ -35,6 +35,9 @@
 		8470B2962480AF60003303B3 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470B2952480AF60003303B3 /* String+Extensions.swift */; };
 		8470B2982480C700003303B3 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470B2972480C700003303B3 /* GlobalConstants.swift */; };
 		847B24D224874D980016B8FD /* AbstractNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B24D124874D980016B8FD /* AbstractNavigationController.swift */; };
+		847B24D524875CD80016B8FD /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B24D424875CD80016B8FD /* PrimaryButton.swift */; };
+		847B24D7248766150016B8FD /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B24D6248766150016B8FD /* SecondaryButton.swift */; };
+		847B24D924876EE80016B8FD /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B24D824876EE80016B8FD /* TextButton.swift */; };
 		84EEDD492484BBAC0075FAF0 /* RegistrationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84EEDD482484BBAC0075FAF0 /* RegistrationViewController.storyboard */; };
 		84EEDD4B2484BBB70075FAF0 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDD4A2484BBB70075FAF0 /* RegistrationViewController.swift */; };
 		84EEDD4D2484BBC30075FAF0 /* RegistrationControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDD4C2484BBC30075FAF0 /* RegistrationControllerViewModel.swift */; };
@@ -97,6 +100,9 @@
 		8470B2952480AF60003303B3 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		8470B2972480C700003303B3 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 		847B24D124874D980016B8FD /* AbstractNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractNavigationController.swift; sourceTree = "<group>"; };
+		847B24D424875CD80016B8FD /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		847B24D6248766150016B8FD /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
+		847B24D824876EE80016B8FD /* TextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
 		84EEDD482484BBAC0075FAF0 /* RegistrationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegistrationViewController.storyboard; sourceTree = "<group>"; };
 		84EEDD4A2484BBB70075FAF0 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		84EEDD4C2484BBC30075FAF0 /* RegistrationControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationControllerViewModel.swift; sourceTree = "<group>"; };
@@ -281,8 +287,8 @@
 		844F971C247B97DA008E0BC6 /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
-				847B24D324875C730016B8FD /* Buttons */,
 				844F9736247BC429008E0BC6 /* SettableView.swift */,
+				847B24D324875C730016B8FD /* Buttons */,
 				844F9733247BC3AF008E0BC6 /* TextFields */,
 			);
 			path = "UI Components";
@@ -331,6 +337,9 @@
 		847B24D324875C730016B8FD /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				847B24D424875CD80016B8FD /* PrimaryButton.swift */,
+				847B24D6248766150016B8FD /* SecondaryButton.swift */,
+				847B24D824876EE80016B8FD /* TextButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -674,6 +683,7 @@
 				84EEDD632484F1E00075FAF0 /* Profile.swift in Sources */,
 				844F9730247B9BF5008E0BC6 /* Common.swift in Sources */,
 				844F9728247B99F1008E0BC6 /* LoginViewController.swift in Sources */,
+				847B24D924876EE80016B8FD /* TextButton.swift in Sources */,
 				844F972E247B9A2E008E0BC6 /* SplashControllerViewModel.swift in Sources */,
 				8438A4AF247FD22600EAAAFB /* PrimaryTextField.swift in Sources */,
 				8470B2982480C700003303B3 /* GlobalConstants.swift in Sources */,
@@ -686,6 +696,8 @@
 				84EEDD682484F7860075FAF0 /* AuthNavigationController.swift in Sources */,
 				8470B2942480AF2A003303B3 /* PasswordTextField.swift in Sources */,
 				844F9726247B99E6008E0BC6 /* SplashViewController.swift in Sources */,
+				847B24D7248766150016B8FD /* SecondaryButton.swift in Sources */,
+				847B24D524875CD80016B8FD /* PrimaryButton.swift in Sources */,
 				84EEDD522484E1070075FAF0 /* RootWindow.swift in Sources */,
 				84EEDD6D248507400075FAF0 /* APIManager.swift in Sources */,
 				847B24D224874D980016B8FD /* AbstractNavigationController.swift in Sources */,

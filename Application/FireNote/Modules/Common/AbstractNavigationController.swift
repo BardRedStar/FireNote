@@ -43,6 +43,6 @@ class AbstractNavigationController: UINavigationController {
     ///
     /// Note: Override this method to set up navbar for your navigation flow.
     func setupNavigationBarAppearance() {
-        showNavigationBar()
+        UINavigationBar.appearance().tintColor = R.color.main_normal()
     }
 }

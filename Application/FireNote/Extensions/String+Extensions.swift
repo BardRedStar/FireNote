@@ -30,8 +30,20 @@ extension String {
     /// Checks whether the password valid or not.
     /// Valid password contains at least 1 uppercase letter, 1 lowercase letter, 1 digit, and at least 8 letters at all.
     func isValidPassword() -> Bool {
-        let expression = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$"
-        let predicate = NSPredicate(format: "SELF MATCHES %@", expression)
-        return predicate.evaluate(with: self)
+        if count < 8 { return false }
+
+        // Count digits, lowercase and uppercase letters
+        var lowercaseCount = 0
+        var uppercaseCount = 0
+        var digitsCount = 0
+        forEach { character in
+            if character.isNumber { digitsCount += 1 }
+            if character.isUppercase { uppercaseCount += 1 }
+            if character.isLowercase { lowercaseCount += 1 }
+        }
+
+        guard lowercaseCount == 0 || uppercaseCount == 0 || digitsCount == 0 else { return false }
+
+        return true
     }
 }
