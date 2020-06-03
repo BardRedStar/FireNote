@@ -8,9 +8,28 @@
 
 /// A class for holidng the registration screen data operations
 class RegistrationControllerViewModel {
+    // MARK: - Properties and variables
 
-    func registerWith(firstName: String, lastName: String, email: String, password: String, completion: @escaping () -> Void) {
-        delay(1.0, completion: completion)
+    let session: Session
+
+    // MARK: - Initialization
+
+    init(session: Session) {
+        self.session = session
     }
 
+    // MARK: - API Calls
+
+    func registerWith(firstName: String, lastName: String, email: String, password: String,
+                      completion: @escaping (Result<Void, APIError>) -> Void) {
+        session.apiManager.registerUserWith(email: email, password: password) { [weak self] result in
+            switch result {
+            case .success:
+                self?.session.defaultStorage.userCredentials = UserCredentials(email: email, password: password)
+                completion(.success(()))
+            case let .failure(error):
+                completion(.failure(error))
+            }
+        }
+    }
 }

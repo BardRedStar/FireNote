@@ -16,10 +16,8 @@ class AuthNavigationController: AbstractNavigationController {
 
     // MARK: - Initialization
 
-    init() {
-        let controller = LoginViewController.instantiate(viewModel: LoginControllerViewModel())
-
-        super.init(rootViewController: controller)
+    override func setupRootViewController() -> UIViewController {
+        let controller = LoginViewController.instantiate(viewModel: LoginControllerViewModel(session: session))
 
         controller.onLogin = { [weak self] in
             self?.onLogin?()
@@ -28,10 +26,8 @@ class AuthNavigationController: AbstractNavigationController {
         controller.onRegister = { [weak self] in
             self?.pushRegistration()
         }
-    }
 
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+        return controller
     }
 
     override func setupNavigationBarAppearance() {
@@ -42,7 +38,7 @@ class AuthNavigationController: AbstractNavigationController {
     // MARK: - Routing
 
     private func pushRegistration() {
-        let controller = RegistrationViewController.instantiate(viewModel: RegistrationControllerViewModel())
+        let controller = RegistrationViewController.instantiate(viewModel: RegistrationControllerViewModel(session: session))
 
         controller.onRegister = { [weak self] in
             self?.onLogin?()

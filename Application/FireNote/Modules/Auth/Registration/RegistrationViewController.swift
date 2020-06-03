@@ -60,8 +60,14 @@ class RegistrationViewController: AbstractViewController, StoryboardBased {
     // MARK: - API methods
 
     func register(firstName: String, lastName: String, email: String, password: String) {
-        viewModel.registerWith(firstName: firstName, lastName: lastName, email: email, password: password) { [weak self] in
-            self?.onRegister?()
+        viewModel.registerWith(firstName: firstName, lastName: lastName, email: email, password: password) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success:
+                self.onRegister?()
+            case let .failure(error):
+                AlertPresenter.presentErrorAlert(message: error.localizedDescription, target: self, buttonAction: nil)
+            }
         }
     }
 
@@ -86,6 +92,7 @@ class RegistrationViewController: AbstractViewController, StoryboardBased {
             """ : ""
 
         guard validationErrorMessage.isEmpty else {
+            AlertPresenter.presentErrorAlert(message: validationErrorMessage, target: self)
             return
         }
 

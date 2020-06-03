@@ -8,8 +8,23 @@
 
 import Foundation
 
+/// Application session class
 class Session {
+    // MARK: - Properties and variables
 
-    init() {
+    let apiManager: APIManager
+    let dataManager: DataManager
+    let defaultStorage: DefaultStorage
+
+    var isAuthorized: Bool {
+        return dataManager.user != nil
+    }
+
+    // MARK: - Initialization
+
+    init(apiManager: APIManager, dataManager: DataManager, defaultStorage: DefaultStorage) {
+        self.apiManager = apiManager
+        self.dataManager = dataManager
+        self.defaultStorage = defaultStorage
     }
 }

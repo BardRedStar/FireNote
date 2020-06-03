@@ -8,9 +8,27 @@
 
 /// A class for holding the login screen data operations
 class LoginControllerViewModel {
+    // MARK: - Properties and variables
+
+    let session: Session
+
+    // MARK: - Initialization
+
+    init(session: Session) {
+        self.session = session
+    }
 
     // MARK: - API Calls
-    func loginWith(email: String, password: String, completion: @escaping () -> Void) {
-        delay(1.0, completion: completion)
+
+    func loginWith(email: String, password: String, completion: @escaping (Result<Void, APIError>) -> Void) {
+        session.apiManager.loginWith(email: email, password: password) { [weak self] result in
+            switch result {
+            case .success:
+                self?.session.defaultStorage.userCredentials = UserCredentials(email: email, password: password)
+                completion(.success(()))
+            case let .failure(error):
+                completion(.failure(error))
+            }
+        }
     }
 }

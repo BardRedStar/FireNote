@@ -6,8 +6,5 @@
 //  Copyright © 2020 Denis Kovalev. All rights reserved.
 //
 
-import Foundation
-
-class APIManager {
-    init() {}
-}
+/// A class for providing the requests to network services
+class APIManager {}

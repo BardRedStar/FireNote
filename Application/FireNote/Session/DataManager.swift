@@ -6,8 +6,10 @@
 //  Copyright © 2020 Denis Kovalev. All rights reserved.
 //
 
-import Foundation
+import FirebaseAuth
 
 class DataManager {
-    var profile: Profile?
+    var user: User? {
+        return Auth.auth().currentUser
+    }
 }

@@ -8,4 +8,12 @@
 
 import Foundation
 
-class APIError {}
+enum APIError: Error {
+    case firebaseError(Error)
+
+    var localizedDescription: String {
+        switch self {
+        case let .firebaseError(error): return error.localizedDescription
+        }
+    }
+}
