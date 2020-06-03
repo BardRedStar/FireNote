@@ -35,6 +35,7 @@ class AuthNavigationController: AbstractNavigationController {
     }
 
     override func setupNavigationBarAppearance() {
+        super.setupNavigationBarAppearance()
         makeNavigationBarTransparent()
     }
 

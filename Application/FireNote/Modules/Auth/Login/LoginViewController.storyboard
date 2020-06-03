@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -85,7 +86,7 @@
                                                     <constraint firstItem="XsN-em-hDI" firstAttribute="top" secondItem="IBm-Ox-TQc" secondAttribute="top" constant="10" id="zpf-8K-Poo"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGT-ta-0m0">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGT-ta-0m0" customClass="PrimaryButton" customModule="FireNote" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="512.5" width="374" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Blx-a4-bcD"/>
@@ -104,7 +105,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqx-qp-cUY">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqx-qp-cUY" customClass="TextButton" customModule="FireNote" customModuleProvider="target">
                                                         <rect key="frame" x="204.5" y="8" width="103" height="39"/>
                                                         <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="17"/>
                                                         <state key="normal" title="Create it easy!"/>
@@ -113,7 +114,7 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="nzv-5e-dRN" firstAttribute="centerY" secondItem="cqx-qp-cUY" secondAttribute="centerY" id="5my-5Y-Gcj"/>
                                                     <constraint firstItem="cqx-qp-cUY" firstAttribute="top" secondItem="bd0-jY-azI" secondAttribute="top" constant="8" id="6fm-f5-myI"/>
@@ -124,7 +125,7 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bd0-jY-azI" secondAttribute="trailing" constant="10" id="Bmj-WC-fHS"/>
                                             <constraint firstItem="pfI-cS-kYH" firstAttribute="leading" secondItem="2rH-qg-7Zk" secondAttribute="leading" constant="20" id="Gcg-3s-be0"/>
@@ -144,6 +145,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="2rH-qg-7Zk" secondAttribute="bottom" id="Ivp-c9-SRZ"/>
                                     <constraint firstItem="2rH-qg-7Zk" firstAttribute="height" secondItem="UUV-y3-LkF" secondAttribute="height" id="QCs-Y5-Ixz"/>
@@ -156,7 +158,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="uke-ln-Hra"/>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="background_main"/>
                         <constraints>
                             <constraint firstItem="IS7-gh-fs0" firstAttribute="bottom" secondItem="UUV-y3-LkF" secondAttribute="bottom" id="7s9-EI-ZLC"/>
                             <constraint firstItem="UUV-y3-LkF" firstAttribute="top" secondItem="IS7-gh-fs0" secondAttribute="top" id="LpU-mr-7kw"/>
@@ -175,4 +177,9 @@
             <point key="canvasLocation" x="-104.34782608695653" y="55.580357142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="background_main">
+            <color red="0.99278582334931287" green="0.94720426659672052" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
