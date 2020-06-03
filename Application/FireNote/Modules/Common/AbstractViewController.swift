@@ -19,13 +19,6 @@ class AbstractViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let backButton = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_back"), style: .plain, target: self, action: #selector(backAction))
-        navigationItem.backBarButtonItem = backButton
-    }
-
-    // MARK: - UI Callbacks
-
-    @objc private func backAction(_ sender: UIBarButtonItem) {
-        onBack?()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
     }
 }

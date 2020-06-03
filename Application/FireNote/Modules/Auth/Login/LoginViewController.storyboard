@@ -30,13 +30,16 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfI-cS-kYH">
-                                                <rect key="frame" x="20" y="180" width="374" height="55.5"/>
+                                                <rect key="frame" x="20" y="50" width="374" height="56"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="34d-4t-WYR"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="35"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IBm-Ox-TQc" userLabel="Fields View">
-                                                <rect key="frame" x="20" y="260.5" width="374" height="187"/>
+                                                <rect key="frame" x="20" y="315.5" width="374" height="187"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XsN-em-hDI">
                                                         <rect key="frame" x="0.0" y="10" width="42" height="28.5"/>
@@ -83,7 +86,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGT-ta-0m0">
-                                                <rect key="frame" x="20" y="457.5" width="374" height="40"/>
+                                                <rect key="frame" x="20" y="512.5" width="374" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Blx-a4-bcD"/>
                                                 </constraints>
@@ -127,12 +130,14 @@
                                             <constraint firstItem="pfI-cS-kYH" firstAttribute="leading" secondItem="2rH-qg-7Zk" secondAttribute="leading" constant="20" id="Gcg-3s-be0"/>
                                             <constraint firstAttribute="bottom" secondItem="bd0-jY-azI" secondAttribute="bottom" constant="20" id="MK7-rV-xX8"/>
                                             <constraint firstItem="IBm-Ox-TQc" firstAttribute="leading" secondItem="2rH-qg-7Zk" secondAttribute="leading" constant="20" id="MtT-GX-8nY"/>
-                                            <constraint firstItem="IBm-Ox-TQc" firstAttribute="top" secondItem="pfI-cS-kYH" secondAttribute="bottom" constant="25" id="OfW-j1-gV3"/>
+                                            <constraint firstItem="IBm-Ox-TQc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="pfI-cS-kYH" secondAttribute="bottom" constant="25" id="OfW-j1-gV3"/>
                                             <constraint firstItem="bd0-jY-azI" firstAttribute="centerX" secondItem="2rH-qg-7Zk" secondAttribute="centerX" id="RiT-0l-MDe"/>
+                                            <constraint firstItem="IBm-Ox-TQc" firstAttribute="centerY" secondItem="2rH-qg-7Zk" secondAttribute="centerY" id="Tfa-ET-xdn"/>
                                             <constraint firstAttribute="trailing" secondItem="pfI-cS-kYH" secondAttribute="trailing" constant="20" id="UQN-wr-oop"/>
                                             <constraint firstItem="bGT-ta-0m0" firstAttribute="top" secondItem="IBm-Ox-TQc" secondAttribute="bottom" constant="10" id="XxE-aP-ZfN"/>
-                                            <constraint firstItem="pfI-cS-kYH" firstAttribute="top" secondItem="2rH-qg-7Zk" secondAttribute="top" constant="180" id="hlw-ky-UDq"/>
+                                            <constraint firstItem="pfI-cS-kYH" firstAttribute="top" secondItem="2rH-qg-7Zk" secondAttribute="top" constant="50" id="hlw-ky-UDq"/>
                                             <constraint firstItem="bd0-jY-azI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2rH-qg-7Zk" secondAttribute="leading" constant="10" id="kl1-Az-wDd"/>
+                                            <constraint firstItem="bd0-jY-azI" firstAttribute="top" relation="greaterThanOrEqual" secondItem="bGT-ta-0m0" secondAttribute="bottom" constant="20" id="m4n-Cv-A1d"/>
                                             <constraint firstItem="bGT-ta-0m0" firstAttribute="leading" secondItem="IBm-Ox-TQc" secondAttribute="leading" id="uXM-aZ-Kma"/>
                                             <constraint firstItem="bGT-ta-0m0" firstAttribute="trailing" secondItem="IBm-Ox-TQc" secondAttribute="trailing" id="vyY-YY-c7t"/>
                                             <constraint firstAttribute="trailing" secondItem="IBm-Ox-TQc" secondAttribute="trailing" constant="20" id="yLf-wh-Jhu"/>
