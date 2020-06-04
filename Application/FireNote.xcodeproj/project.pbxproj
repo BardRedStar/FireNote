@@ -239,11 +239,11 @@
 		844F9716247B97AD008E0BC6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				8438A4B0247FD4EA00EAAAFB /* RSwift */,
 				844F972F247B9BF5008E0BC6 /* Common.swift */,
 				8470B2972480C700003303B3 /* GlobalConstants.swift */,
-				847B24DE24879E290016B8FD /* KeychainManager.swift */,
-				847B24E02487A0170016B8FD /* AlertPresenter.swift */,
+				849907B5248893E5003FF06F /* Managers */,
+				849907B4248893DB003FF06F /* Presenters */,
+				8438A4B0247FD4EA00EAAAFB /* RSwift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -356,6 +356,22 @@
 				847B24D824876EE80016B8FD /* TextButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		849907B4248893DB003FF06F /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				847B24E02487A0170016B8FD /* AlertPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		849907B5248893E5003FF06F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				847B24DE24879E290016B8FD /* KeychainManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		84EEDD462484BB690075FAF0 /* Login */ = {
