@@ -43,6 +43,8 @@
 		847B24DF24879E290016B8FD /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B24DE24879E290016B8FD /* KeychainManager.swift */; };
 		847B24E12487A0170016B8FD /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B24E02487A0170016B8FD /* AlertPresenter.swift */; };
 		847B24E32487A9070016B8FD /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B24E22487A9070016B8FD /* MainNavigationController.swift */; };
+		849907BB2488A04C003FF06F /* HUDLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849907BA2488A04C003FF06F /* HUDLoaderView.swift */; };
+		849907BD2488AC3C003FF06F /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849907BC2488AC3C003FF06F /* UIColor+Extensions.swift */; };
 		84EEDD492484BBAC0075FAF0 /* RegistrationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84EEDD482484BBAC0075FAF0 /* RegistrationViewController.storyboard */; };
 		84EEDD4B2484BBB70075FAF0 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDD4A2484BBB70075FAF0 /* RegistrationViewController.swift */; };
 		84EEDD4D2484BBC30075FAF0 /* RegistrationControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDD4C2484BBC30075FAF0 /* RegistrationControllerViewModel.swift */; };
@@ -113,6 +115,8 @@
 		847B24DE24879E290016B8FD /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		847B24E02487A0170016B8FD /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
 		847B24E22487A9070016B8FD /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		849907BA2488A04C003FF06F /* HUDLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDLoaderView.swift; sourceTree = "<group>"; };
+		849907BC2488AC3C003FF06F /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		84EEDD482484BBAC0075FAF0 /* RegistrationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegistrationViewController.storyboard; sourceTree = "<group>"; };
 		84EEDD4A2484BBB70075FAF0 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		84EEDD4C2484BBC30075FAF0 /* RegistrationControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationControllerViewModel.swift; sourceTree = "<group>"; };
@@ -252,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				8470B2952480AF60003303B3 /* String+Extensions.swift */,
+				849907BC2488AC3C003FF06F /* UIColor+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -301,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				844F9736247BC429008E0BC6 /* SettableView.swift */,
+				849907B92488A02F003FF06F /* Views */,
 				847B24D324875C730016B8FD /* Buttons */,
 				844F9733247BC3AF008E0BC6 /* TextFields */,
 			);
@@ -372,6 +378,14 @@
 				847B24DE24879E290016B8FD /* KeychainManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		849907B92488A02F003FF06F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				849907BA2488A04C003FF06F /* HUDLoaderView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		84EEDD462484BB690075FAF0 /* Login */ = {
@@ -709,6 +723,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				844F96F7247B9439008E0BC6 /* MainViewController.swift in Sources */,
+				849907BD2488AC3C003FF06F /* UIColor+Extensions.swift in Sources */,
 				844F972C247B9A0A008E0BC6 /* MainControllerViewModel.swift in Sources */,
 				844F96F3247B9439008E0BC6 /* AppDelegate.swift in Sources */,
 				84EEDD632484F1E00075FAF0 /* Profile.swift in Sources */,
@@ -737,6 +752,7 @@
 				84EEDD6D248507400075FAF0 /* APIManager.swift in Sources */,
 				847B24D224874D980016B8FD /* AbstractNavigationController.swift in Sources */,
 				8438A4AD247FD00E00EAAAFB /* R.generated.swift in Sources */,
+				849907BB2488A04C003FF06F /* HUDLoaderView.swift in Sources */,
 				84EEDD552484E1470075FAF0 /* DeepLink.swift in Sources */,
 				847B24DF24879E290016B8FD /* KeychainManager.swift in Sources */,
 				84EEDD5A2484F1550075FAF0 /* DataManager.swift in Sources */,

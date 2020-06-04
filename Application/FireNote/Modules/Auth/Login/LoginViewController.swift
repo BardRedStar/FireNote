@@ -7,6 +7,7 @@
 //
 
 import FirebaseUI
+import PKHUD
 import Reusable
 import UIKit
 
@@ -54,8 +55,10 @@ class LoginViewController: AbstractViewController, StoryboardBased {
     // MARK: - API methods
 
     private func login(email: String, password: String) {
+        HUD.show(.customView(view: HUDLoaderView.shared))
         viewModel.loginWith(email: email, password: password) { [weak self] result in
             guard let self = self else { return }
+            HUD.hide()
             switch result {
             case .success:
                 self.onLogin?()
