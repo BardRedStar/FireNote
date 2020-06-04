@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+class MainControllerViewModel {
+    // MARK: - Properties and variables
+
+    let session: Session
+
+    // MARK: - Initialization
+
+    init(session: Session) {
+        self.session = session
+    }
+}

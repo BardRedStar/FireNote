@@ -38,6 +38,11 @@
 		847B24D524875CD80016B8FD /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B24D424875CD80016B8FD /* PrimaryButton.swift */; };
 		847B24D7248766150016B8FD /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B24D6248766150016B8FD /* SecondaryButton.swift */; };
 		847B24D924876EE80016B8FD /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B24D824876EE80016B8FD /* TextButton.swift */; };
+		847B24DB248793020016B8FD /* APIManager+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B24DA248793020016B8FD /* APIManager+Firebase.swift */; };
+		847B24DD24879D570016B8FD /* DefaultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B24DC24879D570016B8FD /* DefaultStorage.swift */; };
+		847B24DF24879E290016B8FD /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B24DE24879E290016B8FD /* KeychainManager.swift */; };
+		847B24E12487A0170016B8FD /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B24E02487A0170016B8FD /* AlertPresenter.swift */; };
+		847B24E32487A9070016B8FD /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B24E22487A9070016B8FD /* MainNavigationController.swift */; };
 		84EEDD492484BBAC0075FAF0 /* RegistrationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84EEDD482484BBAC0075FAF0 /* RegistrationViewController.storyboard */; };
 		84EEDD4B2484BBB70075FAF0 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDD4A2484BBB70075FAF0 /* RegistrationViewController.swift */; };
 		84EEDD4D2484BBC30075FAF0 /* RegistrationControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDD4C2484BBC30075FAF0 /* RegistrationControllerViewModel.swift */; };
@@ -103,6 +108,11 @@
 		847B24D424875CD80016B8FD /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		847B24D6248766150016B8FD /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 		847B24D824876EE80016B8FD /* TextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
+		847B24DA248793020016B8FD /* APIManager+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIManager+Firebase.swift"; sourceTree = "<group>"; };
+		847B24DC24879D570016B8FD /* DefaultStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStorage.swift; sourceTree = "<group>"; };
+		847B24DE24879E290016B8FD /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		847B24E02487A0170016B8FD /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
+		847B24E22487A9070016B8FD /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		84EEDD482484BBAC0075FAF0 /* RegistrationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegistrationViewController.storyboard; sourceTree = "<group>"; };
 		84EEDD4A2484BBB70075FAF0 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		84EEDD4C2484BBC30075FAF0 /* RegistrationControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationControllerViewModel.swift; sourceTree = "<group>"; };
@@ -229,9 +239,11 @@
 		844F9716247B97AD008E0BC6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				8438A4B0247FD4EA00EAAAFB /* RSwift */,
 				844F972F247B9BF5008E0BC6 /* Common.swift */,
 				8470B2972480C700003303B3 /* GlobalConstants.swift */,
+				849907B5248893E5003FF06F /* Managers */,
+				849907B4248893DB003FF06F /* Presenters */,
+				8438A4B0247FD4EA00EAAAFB /* RSwift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -271,6 +283,7 @@
 			children = (
 				84EEDD572484F11A0075FAF0 /* AppSession.swift */,
 				84EEDD592484F1550075FAF0 /* DataManager.swift */,
+				847B24DC24879D570016B8FD /* DefaultStorage.swift */,
 			);
 			path = Session;
 			sourceTree = "<group>";
@@ -297,8 +310,9 @@
 		844F971E247B9828008E0BC6 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				844F96F6247B9439008E0BC6 /* MainViewController.swift */,
+				847B24E22487A9070016B8FD /* MainNavigationController.swift */,
 				844F96F8247B9439008E0BC6 /* MainViewController.storyboard */,
+				844F96F6247B9439008E0BC6 /* MainViewController.swift */,
 				844F972B247B9A0A008E0BC6 /* MainControllerViewModel.swift */,
 			);
 			path = Main;
@@ -342,6 +356,22 @@
 				847B24D824876EE80016B8FD /* TextButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		849907B4248893DB003FF06F /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				847B24E02487A0170016B8FD /* AlertPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		849907B5248893E5003FF06F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				847B24DE24879E290016B8FD /* KeychainManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		84EEDD462484BB690075FAF0 /* Login */ = {
@@ -408,6 +438,7 @@
 			children = (
 				84EEDD6C248507400075FAF0 /* APIManager.swift */,
 				84EEDD6E248508BD0075FAF0 /* APIError.swift */,
+				847B24DA248793020016B8FD /* APIManager+Firebase.swift */,
 			);
 			path = "API Manager";
 			sourceTree = "<group>";
@@ -686,7 +717,9 @@
 				847B24D924876EE80016B8FD /* TextButton.swift in Sources */,
 				844F972E247B9A2E008E0BC6 /* SplashControllerViewModel.swift in Sources */,
 				8438A4AF247FD22600EAAAFB /* PrimaryTextField.swift in Sources */,
+				847B24DD24879D570016B8FD /* DefaultStorage.swift in Sources */,
 				8470B2982480C700003303B3 /* GlobalConstants.swift in Sources */,
+				847B24E12487A0170016B8FD /* AlertPresenter.swift in Sources */,
 				844F9735247BC400008E0BC6 /* ErrorTextField.swift in Sources */,
 				84EEDD582484F11A0075FAF0 /* AppSession.swift in Sources */,
 				84EEDD4D2484BBC30075FAF0 /* RegistrationControllerViewModel.swift in Sources */,
@@ -698,11 +731,14 @@
 				844F9726247B99E6008E0BC6 /* SplashViewController.swift in Sources */,
 				847B24D7248766150016B8FD /* SecondaryButton.swift in Sources */,
 				847B24D524875CD80016B8FD /* PrimaryButton.swift in Sources */,
+				847B24DB248793020016B8FD /* APIManager+Firebase.swift in Sources */,
 				84EEDD522484E1070075FAF0 /* RootWindow.swift in Sources */,
+				847B24E32487A9070016B8FD /* MainNavigationController.swift in Sources */,
 				84EEDD6D248507400075FAF0 /* APIManager.swift in Sources */,
 				847B24D224874D980016B8FD /* AbstractNavigationController.swift in Sources */,
 				8438A4AD247FD00E00EAAAFB /* R.generated.swift in Sources */,
 				84EEDD552484E1470075FAF0 /* DeepLink.swift in Sources */,
+				847B24DF24879E290016B8FD /* KeychainManager.swift in Sources */,
 				84EEDD5A2484F1550075FAF0 /* DataManager.swift in Sources */,
 				84EEDD502484C8370075FAF0 /* AbstractViewController.swift in Sources */,
 				844F9737247BC429008E0BC6 /* SettableView.swift in Sources */,

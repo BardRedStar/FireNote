@@ -42,7 +42,7 @@ extension String {
             if character.isLowercase { lowercaseCount += 1 }
         }
 
-        guard lowercaseCount == 0 || uppercaseCount == 0 || digitsCount == 0 else { return false }
+        guard lowercaseCount > 0 || uppercaseCount > 0 || digitsCount > 0 else { return false }
 
         return true
     }

@@ -52,11 +52,16 @@ class LoginViewController: AbstractViewController, StoryboardBased {
     }
 
     // MARK: - API methods
-    
-    private func login(email: String, password: String) {
 
-        viewModel.loginWith(email: email, password: password) { [weak self] in
-            self?.onLogin?()
+    private func login(email: String, password: String) {
+        viewModel.loginWith(email: email, password: password) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success:
+                self.onLogin?()
+            case let .failure(error):
+                AlertPresenter.presentErrorAlert(message: error.localizedDescription, target: self, buttonAction: nil)
+            }
         }
     }
 
@@ -77,6 +82,7 @@ class LoginViewController: AbstractViewController, StoryboardBased {
             """ : ""
 
         guard validationErrorMessage.isEmpty else {
+            AlertPresenter.presentErrorAlert(message: validationErrorMessage, target: self)
             return
         }
 
