@@ -34,6 +34,7 @@
 		8470B2942480AF2A003303B3 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470B2932480AF2A003303B3 /* PasswordTextField.swift */; };
 		8470B2962480AF60003303B3 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470B2952480AF60003303B3 /* String+Extensions.swift */; };
 		8470B2982480C700003303B3 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470B2972480C700003303B3 /* GlobalConstants.swift */; };
+		8474AB6F2498831700520D5C /* HUDPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474AB6E2498831700520D5C /* HUDPresenter.swift */; };
 		847B24D224874D980016B8FD /* AbstractNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B24D124874D980016B8FD /* AbstractNavigationController.swift */; };
 		847B24D524875CD80016B8FD /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B24D424875CD80016B8FD /* PrimaryButton.swift */; };
 		847B24D7248766150016B8FD /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B24D6248766150016B8FD /* SecondaryButton.swift */; };
@@ -106,6 +107,7 @@
 		8470B2932480AF2A003303B3 /* PasswordTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		8470B2952480AF60003303B3 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		8470B2972480C700003303B3 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
+		8474AB6E2498831700520D5C /* HUDPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDPresenter.swift; sourceTree = "<group>"; };
 		847B24D124874D980016B8FD /* AbstractNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractNavigationController.swift; sourceTree = "<group>"; };
 		847B24D424875CD80016B8FD /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		847B24D6248766150016B8FD /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 		844F9718247B97C3008E0BC6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				8474AB70249898EA00520D5C /* Sidebar */,
 				84EEDD4E2484C8290075FAF0 /* Common */,
 				844F9722247B99D1008E0BC6 /* SplashViewController */,
 				844F971F247B98AC008E0BC6 /* Auth */,
@@ -354,6 +357,13 @@
 			path = TextFields;
 			sourceTree = "<group>";
 		};
+		8474AB70249898EA00520D5C /* Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sidebar;
+			sourceTree = "<group>";
+		};
 		847B24D324875C730016B8FD /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
@@ -368,6 +378,7 @@
 			isa = PBXGroup;
 			children = (
 				847B24E02487A0170016B8FD /* AlertPresenter.swift */,
+				8474AB6E2498831700520D5C /* HUDPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -732,6 +743,7 @@
 				847B24D924876EE80016B8FD /* TextButton.swift in Sources */,
 				844F972E247B9A2E008E0BC6 /* SplashControllerViewModel.swift in Sources */,
 				8438A4AF247FD22600EAAAFB /* PrimaryTextField.swift in Sources */,
+				8474AB6F2498831700520D5C /* HUDPresenter.swift in Sources */,
 				847B24DD24879D570016B8FD /* DefaultStorage.swift in Sources */,
 				8470B2982480C700003303B3 /* GlobalConstants.swift in Sources */,
 				847B24E12487A0170016B8FD /* AlertPresenter.swift in Sources */,

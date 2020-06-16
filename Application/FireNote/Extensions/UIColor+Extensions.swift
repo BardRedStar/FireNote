@@ -21,7 +21,7 @@ extension UIColor {
     func mergeWith(_ color: UIColor) -> UIColor {
         var red1: CGFloat = 0.0, green1: CGFloat = 0.0, blue1: CGFloat = 0.0, alpha1: CGFloat = 0.0
         var red2: CGFloat = 0.0, green2: CGFloat = 0.0, blue2: CGFloat = 0.0, alpha2: CGFloat = 0.0
-        color.getRed(&red1, green: &green1, blue: &blue1, alpha: &alpha1)
+        getRed(&red1, green: &green1, blue: &blue1, alpha: &alpha1)
         color.getRed(&red2, green: &green2, blue: &blue2, alpha: &alpha2)
         return UIColor(red: (red1 + red2) / 2, green: (green1 + green2) / 2, blue: (blue1 + blue2) / 2, alpha: 1.0)
     }
