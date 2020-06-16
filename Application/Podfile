@@ -18,6 +18,7 @@ target 'FireNote' do
   pod 'TPKeyboardAvoiding'
   pod 'SwiftKeychainWrapper'
   pod 'R.swift'
+  pod 'PKHUD'
 
   # Firebase authentication
   pod 'FirebaseUI/Auth'

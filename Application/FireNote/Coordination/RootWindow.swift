@@ -17,7 +17,7 @@ class RootWindow: UIWindow {
     }
 
     private func runSplash() {
-        let controller = SplashViewController.instantiate(viewModel: SplashControllerViewModel())
+        let controller = SplashViewController.instantiate(viewModel: SplashControllerViewModel(session: session))
 
         controller.onFinish = { [weak self] in
             if self?.session.isAuthorized == true {
