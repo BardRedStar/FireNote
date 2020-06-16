@@ -7,17 +7,7 @@
 //
 
 /// A class to operate with data for splash screen
-class SplashControllerViewModel {
-
-    // MARK: - Properties and variables
-
-    let session: Session
-
-    // MARK: - Initialization
-
-    init(session: Session) {
-        self.session = session
-    }
+class SplashControllerViewModel: AbstractControllerViewModel {
 
     // MARK: - API Calls
 

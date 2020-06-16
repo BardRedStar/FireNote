@@ -35,6 +35,13 @@
 		8470B2962480AF60003303B3 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470B2952480AF60003303B3 /* String+Extensions.swift */; };
 		8470B2982480C700003303B3 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470B2972480C700003303B3 /* GlobalConstants.swift */; };
 		8474AB6F2498831700520D5C /* HUDPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474AB6E2498831700520D5C /* HUDPresenter.swift */; };
+		8474AB7224989B2000520D5C /* SidebarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474AB7124989B2000520D5C /* SidebarPresenter.swift */; };
+		8474AB7424989B4500520D5C /* SidebarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474AB7324989B4500520D5C /* SidebarCoordinator.swift */; };
+		8474AB762498C34600520D5C /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474AB752498C34600520D5C /* SidebarViewController.swift */; };
+		8474AB782498C6EF00520D5C /* SidebarControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474AB772498C6EF00520D5C /* SidebarControllerViewModel.swift */; };
+		8474AB7A2498C72C00520D5C /* AbstractControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474AB792498C72C00520D5C /* AbstractControllerViewModel.swift */; };
+		8474AB7C2498CA1300520D5C /* SidebarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8474AB7B2498CA1300520D5C /* SidebarViewController.storyboard */; };
+		8474AB7E2498D03300520D5C /* SidebarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474AB7D2498D03300520D5C /* SidebarTableViewCell.swift */; };
 		847B24D224874D980016B8FD /* AbstractNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B24D124874D980016B8FD /* AbstractNavigationController.swift */; };
 		847B24D524875CD80016B8FD /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B24D424875CD80016B8FD /* PrimaryButton.swift */; };
 		847B24D7248766150016B8FD /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B24D6248766150016B8FD /* SecondaryButton.swift */; };
@@ -108,6 +115,13 @@
 		8470B2952480AF60003303B3 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		8470B2972480C700003303B3 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 		8474AB6E2498831700520D5C /* HUDPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDPresenter.swift; sourceTree = "<group>"; };
+		8474AB7124989B2000520D5C /* SidebarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarPresenter.swift; sourceTree = "<group>"; };
+		8474AB7324989B4500520D5C /* SidebarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarCoordinator.swift; sourceTree = "<group>"; };
+		8474AB752498C34600520D5C /* SidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
+		8474AB772498C6EF00520D5C /* SidebarControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarControllerViewModel.swift; sourceTree = "<group>"; };
+		8474AB792498C72C00520D5C /* AbstractControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractControllerViewModel.swift; sourceTree = "<group>"; };
+		8474AB7B2498CA1300520D5C /* SidebarViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SidebarViewController.storyboard; sourceTree = "<group>"; };
+		8474AB7D2498D03300520D5C /* SidebarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarTableViewCell.swift; sourceTree = "<group>"; };
 		847B24D124874D980016B8FD /* AbstractNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractNavigationController.swift; sourceTree = "<group>"; };
 		847B24D424875CD80016B8FD /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		847B24D6248766150016B8FD /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
@@ -266,8 +280,8 @@
 		844F9718247B97C3008E0BC6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				8474AB70249898EA00520D5C /* Sidebar */,
 				84EEDD4E2484C8290075FAF0 /* Common */,
+				8474AB70249898EA00520D5C /* Sidebar */,
 				844F9722247B99D1008E0BC6 /* SplashViewController */,
 				844F971F247B98AC008E0BC6 /* Auth */,
 				844F971E247B9828008E0BC6 /* Main */,
@@ -360,6 +374,12 @@
 		8474AB70249898EA00520D5C /* Sidebar */ = {
 			isa = PBXGroup;
 			children = (
+				8474AB7124989B2000520D5C /* SidebarPresenter.swift */,
+				8474AB7324989B4500520D5C /* SidebarCoordinator.swift */,
+				8474AB752498C34600520D5C /* SidebarViewController.swift */,
+				8474AB772498C6EF00520D5C /* SidebarControllerViewModel.swift */,
+				8474AB7B2498CA1300520D5C /* SidebarViewController.storyboard */,
+				8474AB7D2498D03300520D5C /* SidebarTableViewCell.swift */,
 			);
 			path = Sidebar;
 			sourceTree = "<group>";
@@ -424,6 +444,7 @@
 			children = (
 				84EEDD4F2484C8370075FAF0 /* AbstractViewController.swift */,
 				847B24D124874D980016B8FD /* AbstractNavigationController.swift */,
+				8474AB792498C72C00520D5C /* AbstractControllerViewModel.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -571,6 +592,7 @@
 				844F96FF247B943D008E0BC6 /* LaunchScreen.storyboard in Resources */,
 				84EEDD492484BBAC0075FAF0 /* RegistrationViewController.storyboard in Resources */,
 				8438A4B9247FD6E500EAAAFB /* Baloo2-ExtraBold.ttf in Resources */,
+				8474AB7C2498CA1300520D5C /* SidebarViewController.storyboard in Resources */,
 				844F9721247B99CB008E0BC6 /* LoginViewController.storyboard in Resources */,
 				8438A4B8247FD6E500EAAAFB /* Baloo2-Medium.ttf in Resources */,
 				844F96FC247B943D008E0BC6 /* Assets.xcassets in Resources */,
@@ -743,6 +765,7 @@
 				847B24D924876EE80016B8FD /* TextButton.swift in Sources */,
 				844F972E247B9A2E008E0BC6 /* SplashControllerViewModel.swift in Sources */,
 				8438A4AF247FD22600EAAAFB /* PrimaryTextField.swift in Sources */,
+				8474AB7A2498C72C00520D5C /* AbstractControllerViewModel.swift in Sources */,
 				8474AB6F2498831700520D5C /* HUDPresenter.swift in Sources */,
 				847B24DD24879D570016B8FD /* DefaultStorage.swift in Sources */,
 				8470B2982480C700003303B3 /* GlobalConstants.swift in Sources */,
@@ -750,6 +773,8 @@
 				844F9735247BC400008E0BC6 /* ErrorTextField.swift in Sources */,
 				84EEDD582484F11A0075FAF0 /* AppSession.swift in Sources */,
 				84EEDD4D2484BBC30075FAF0 /* RegistrationControllerViewModel.swift in Sources */,
+				8474AB7E2498D03300520D5C /* SidebarTableViewCell.swift in Sources */,
+				8474AB7424989B4500520D5C /* SidebarCoordinator.swift in Sources */,
 				8470B2962480AF60003303B3 /* String+Extensions.swift in Sources */,
 				84EEDD4B2484BBB70075FAF0 /* RegistrationViewController.swift in Sources */,
 				844F972A247B99FB008E0BC6 /* LoginControllerViewModel.swift in Sources */,
@@ -763,13 +788,16 @@
 				847B24E32487A9070016B8FD /* MainNavigationController.swift in Sources */,
 				84EEDD6D248507400075FAF0 /* APIManager.swift in Sources */,
 				847B24D224874D980016B8FD /* AbstractNavigationController.swift in Sources */,
+				8474AB7224989B2000520D5C /* SidebarPresenter.swift in Sources */,
 				8438A4AD247FD00E00EAAAFB /* R.generated.swift in Sources */,
+				8474AB762498C34600520D5C /* SidebarViewController.swift in Sources */,
 				849907BB2488A04C003FF06F /* HUDLoaderView.swift in Sources */,
 				84EEDD552484E1470075FAF0 /* DeepLink.swift in Sources */,
 				847B24DF24879E290016B8FD /* KeychainManager.swift in Sources */,
 				84EEDD5A2484F1550075FAF0 /* DataManager.swift in Sources */,
 				84EEDD502484C8370075FAF0 /* AbstractViewController.swift in Sources */,
 				844F9737247BC429008E0BC6 /* SettableView.swift in Sources */,
+				8474AB782498C6EF00520D5C /* SidebarControllerViewModel.swift in Sources */,
 				84EEDD6F248508BD0075FAF0 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

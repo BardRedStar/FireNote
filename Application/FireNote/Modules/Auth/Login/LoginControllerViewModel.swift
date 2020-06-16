@@ -7,16 +7,7 @@
 //
 
 /// A class for holding the login screen data operations
-class LoginControllerViewModel {
-    // MARK: - Properties and variables
-
-    let session: Session
-
-    // MARK: - Initialization
-
-    init(session: Session) {
-        self.session = session
-    }
+class LoginControllerViewModel: AbstractControllerViewModel {
 
     // MARK: - API Calls
 
