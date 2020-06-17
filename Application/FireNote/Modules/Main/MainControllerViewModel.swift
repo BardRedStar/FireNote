@@ -8,6 +8,4 @@
 
 import Foundation
 
-class MainControllerViewModel: AbstractControllerViewModel {
-    
-}
+class MainControllerViewModel: AbstractControllerViewModel {}

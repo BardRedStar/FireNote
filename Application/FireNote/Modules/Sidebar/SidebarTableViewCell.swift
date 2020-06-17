@@ -7,20 +7,25 @@
 //
 
 import Reusable
+import UIKit
 
 /// A class, which represents the sidebar item view
 class SidebarTableViewCell: SettableTableViewCell, Reusable {
-
     // MARK: - Outlets
 
-    @IBOutlet weak var iconImageView: UIImageView!
-    
+    @IBOutlet private var iconImageView: UIImageView!
+    @IBOutlet private var titleLabel: UILabel!
 
     // MARK: - UI Lifecycle
 
     override func setup() {
         super.setup()
+    }
 
+    // MARK: - UI Methods
 
+    func configureWith(model: SidebarControllerViewModel.Item) {
+        iconImageView.image = model.icon
+        titleLabel.text = model.title
     }
 }

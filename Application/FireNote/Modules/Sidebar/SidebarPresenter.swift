@@ -6,10 +6,7 @@
 //  Copyright © 2020 Denis Kovalev. All rights reserved.
 //
 
-import Foundation
-
 import Cartography
-import Foundation
 import UIKit
 
 /// A class to present sidebar on controllers
@@ -17,7 +14,7 @@ class SidebarPresenter {
     // MARK: - Definitions
 
     enum Constants {
-        static let sidebarLeftInset: CGFloat = 85.0
+        static let sidebarMaxWidth: CGFloat = 300.0
         static let minVelocityToOpenSidebar: CGFloat = 1200.0
     }
 
@@ -38,12 +35,12 @@ class SidebarPresenter {
     private var sidebarContainerView = UIView()
 
     var sidebarController: SidebarViewController?
-    private(set) weak var rootViewController: UIViewController!
 
+    private(set) weak var rootViewController: UIViewController!
 
     // MARK: - Output
 
-    var onDidSelectItem: ((SidebarControllerViewModel.ItemType) -> Void)?
+    var onDidSelectItem: ((SidebarControllerViewModel.Item) -> Void)?
     var onDidLogout: (() -> Void)?
 
     // MARK: - Properties and variables
@@ -51,7 +48,8 @@ class SidebarPresenter {
     private var sidebarXConstraint: NSLayoutConstraint?
 
     private var sidebarState: SidebarState = .closed
-    var isSidebarEnabled: Bool = false
+
+    var isSidebarEnabled: Bool = true
 
     // MARK: - Initialization
 
@@ -83,7 +81,7 @@ class SidebarPresenter {
             containerView.top == view.top
             containerView.bottom == view.bottom
             sidebarXConstraint = containerView.left == view.right
-            containerView.width == view.width - Constants.sidebarLeftInset
+            containerView.width == Constants.sidebarMaxWidth
 
             fadeView.edges == view.edges
         }
@@ -124,10 +122,14 @@ class SidebarPresenter {
             updateSidebarData()
         }
 
-        UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseOut, animations: { [weak self] in
+        let sidebarPosition = abs(sidebarXConstraint?.constant ?? 0.0)
+        let allPathLength = Constants.sidebarMaxWidth
+        let animationTime: TimeInterval = 0.3 * Double((shouldExpand ? allPathLength - sidebarPosition : sidebarPosition) / allPathLength)
+        UIView.animate(withDuration: animationTime, delay: 0.0, options: .curveEaseOut, animations: { [weak self] in
             guard let self = self else { return }
 
-            self.sidebarXConstraint?.constant = shouldExpand ? -(self.rootViewController.view.frame.width - Constants.sidebarLeftInset) : 0.0
+            self.sidebarXConstraint?.constant =
+                shouldExpand ? -Constants.sidebarMaxWidth : 0.0
             self.sidebarFadeView.alpha = shouldExpand ? 1.0 : 0.0
             self.rootViewController.view.layoutIfNeeded()
         }, completion: { [weak self] finished in
@@ -139,8 +141,6 @@ class SidebarPresenter {
     }
 
     // MARK: - Sidebar Logic methods
-
-
 
     private func updateSidebarData() {
         sidebarController?.updateData()
@@ -191,11 +191,11 @@ class SidebarPresenter {
 // MARK: - SidebarViewControllerDelegate
 
 extension SidebarPresenter: SidebarViewControllerDelegate {
-    func sidebarDidClose(_ controller: SidebarViewController) {
+    func sidebarViewControllerDidClose(_ controller: SidebarViewController) {
         toggleSidebar(shouldExpand: false)
     }
 
-    func sidebarDidSelectItem(_ controller: SidebarViewController, type: SidebarControllerViewModel.ItemType) {
-        onDidSelectItem?(type)
+    func sidebarViewController(_ controller: SidebarViewController, didSelectItem item: SidebarControllerViewModel.Item) {
+        onDidSelectItem?(item)
     }
 }

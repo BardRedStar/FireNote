@@ -36,7 +36,6 @@
 		8470B2982480C700003303B3 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470B2972480C700003303B3 /* GlobalConstants.swift */; };
 		8474AB6F2498831700520D5C /* HUDPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474AB6E2498831700520D5C /* HUDPresenter.swift */; };
 		8474AB7224989B2000520D5C /* SidebarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474AB7124989B2000520D5C /* SidebarPresenter.swift */; };
-		8474AB7424989B4500520D5C /* SidebarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474AB7324989B4500520D5C /* SidebarCoordinator.swift */; };
 		8474AB762498C34600520D5C /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474AB752498C34600520D5C /* SidebarViewController.swift */; };
 		8474AB782498C6EF00520D5C /* SidebarControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474AB772498C6EF00520D5C /* SidebarControllerViewModel.swift */; };
 		8474AB7A2498C72C00520D5C /* AbstractControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474AB792498C72C00520D5C /* AbstractControllerViewModel.swift */; };
@@ -116,7 +115,6 @@
 		8470B2972480C700003303B3 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 		8474AB6E2498831700520D5C /* HUDPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDPresenter.swift; sourceTree = "<group>"; };
 		8474AB7124989B2000520D5C /* SidebarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarPresenter.swift; sourceTree = "<group>"; };
-		8474AB7324989B4500520D5C /* SidebarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarCoordinator.swift; sourceTree = "<group>"; };
 		8474AB752498C34600520D5C /* SidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
 		8474AB772498C6EF00520D5C /* SidebarControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarControllerViewModel.swift; sourceTree = "<group>"; };
 		8474AB792498C72C00520D5C /* AbstractControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractControllerViewModel.swift; sourceTree = "<group>"; };
@@ -375,7 +373,6 @@
 			isa = PBXGroup;
 			children = (
 				8474AB7124989B2000520D5C /* SidebarPresenter.swift */,
-				8474AB7324989B4500520D5C /* SidebarCoordinator.swift */,
 				8474AB752498C34600520D5C /* SidebarViewController.swift */,
 				8474AB772498C6EF00520D5C /* SidebarControllerViewModel.swift */,
 				8474AB7B2498CA1300520D5C /* SidebarViewController.storyboard */,
@@ -774,7 +771,6 @@
 				84EEDD582484F11A0075FAF0 /* AppSession.swift in Sources */,
 				84EEDD4D2484BBC30075FAF0 /* RegistrationControllerViewModel.swift in Sources */,
 				8474AB7E2498D03300520D5C /* SidebarTableViewCell.swift in Sources */,
-				8474AB7424989B4500520D5C /* SidebarCoordinator.swift in Sources */,
 				8470B2962480AF60003303B3 /* String+Extensions.swift in Sources */,
 				84EEDD4B2484BBB70075FAF0 /* RegistrationViewController.swift in Sources */,
 				844F972A247B99FB008E0BC6 /* LoginControllerViewModel.swift in Sources */,
