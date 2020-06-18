@@ -30,8 +30,23 @@ class SplashViewController: UIViewController, StoryboardBased {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        delay(2.0, completion: { [weak self] in
-            self?.onFinish?()
+        delay(1.0, completion: { [weak self] in
+            if self?.viewModel.session.isAuthorized == true {
+                self?.onFinish?()
+                return
+            }
+
+            self?.viewModel.login { [weak self] result in
+                guard let self = self else { return }
+                switch result {
+                case .success:
+                    self.onFinish?()
+                case let .failure(error):
+                    AlertPresenter.presentErrorAlert(message: error.localizedDescription, target: self) { [weak self] in
+                        self?.onFinish?()
+                    }
+                }
+            }
         })
     }
 

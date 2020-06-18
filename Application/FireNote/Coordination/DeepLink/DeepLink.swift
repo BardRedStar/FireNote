@@ -13,8 +13,7 @@ struct DeepLink: Equatable {
     // MARK: - Enumerators
 
     /// Represents the deep link targets
-    enum Target: Equatable {
-    }
+    enum Target: Equatable {}
 
     // MARK: - Properties and variables
 
@@ -51,4 +50,3 @@ struct DeepLink: Equatable {
         }
     }
 }
-

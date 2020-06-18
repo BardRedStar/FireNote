@@ -10,19 +10,34 @@ import UIKit
 
 /// A superclass for abstract navigation controller, which provides the base functionality of navcontroller
 class AbstractNavigationController: UINavigationController {
+    // MARK: - Properties and variables
+
+    let session: Session!
+
     // MARK: - Initialization
 
-    override init(rootViewController: UIViewController) {
-        super.init(rootViewController: rootViewController)
+    init(session: Session) {
+        self.session = session
+        super.init(nibName: nil, bundle: nil)
+
+        let controller = setupRootViewController()
+        viewControllers = [controller]
+
         setupNavigationBarAppearance()
     }
 
     required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setupNavigationBarAppearance()
+        fatalError("No coder initialization for AbstractNavigationController")
     }
 
     // MARK: - UI Methods
+
+    /// Sets up the root controller and applies it as root to this navigation controller
+    ///
+    /// Note: This method must be overriden in any subclass!
+    func setupRootViewController() -> UIViewController {
+        return UIViewController()
+    }
 
     func hideNavigationBar() {
         navigationBar.isHidden = true

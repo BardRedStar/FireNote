@@ -10,22 +10,27 @@ import Foundation
 import UIKit
 
 class RootWindow: UIWindow {
+    var session: Session!
 
     func start(_ deeplink: DeepLink?) {
         runSplash()
     }
 
     private func runSplash() {
-        let controller = SplashViewController.instantiate(viewModel: SplashControllerViewModel())
+        let controller = SplashViewController.instantiate(viewModel: SplashControllerViewModel(session: session))
 
         controller.onFinish = { [weak self] in
-            self?.runAuth()
+            if self?.session.isAuthorized == true {
+                self?.runMain()
+            } else {
+                self?.runAuth()
+            }
         }
         rootViewController = controller
     }
 
     private func runAuth() {
-        let controller = AuthNavigationController()
+        let controller = AuthNavigationController(session: session)
 
         controller.onLogin = { [weak self] in
             self?.runMain()
@@ -34,6 +39,12 @@ class RootWindow: UIWindow {
     }
 
     private func runMain() {
+        let controller = MainNavigationController(session: session)
 
+        controller.onLogout = { [weak self] in
+            self?.runAuth()
+        }
+
+        rootViewController = controller
     }
 }

@@ -7,6 +7,7 @@
 //
 
 import FirebaseUI
+import PKHUD
 import Reusable
 import UIKit
 
@@ -52,11 +53,18 @@ class LoginViewController: AbstractViewController, StoryboardBased {
     }
 
     // MARK: - API methods
-    
-    private func login(email: String, password: String) {
 
-        viewModel.loginWith(email: email, password: password) { [weak self] in
-            self?.onLogin?()
+    private func login(email: String, password: String) {
+        HUD.show(.customView(view: HUDLoaderView.shared))
+        viewModel.loginWith(email: email, password: password) { [weak self] result in
+            guard let self = self else { return }
+            HUD.hide()
+            switch result {
+            case .success:
+                self.onLogin?()
+            case let .failure(error):
+                AlertPresenter.presentErrorAlert(message: error.localizedDescription, target: self, buttonAction: nil)
+            }
         }
     }
 
@@ -77,6 +85,7 @@ class LoginViewController: AbstractViewController, StoryboardBased {
             """ : ""
 
         guard validationErrorMessage.isEmpty else {
+            AlertPresenter.presentErrorAlert(message: validationErrorMessage, target: self)
             return
         }
 

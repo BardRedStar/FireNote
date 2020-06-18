@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7AP-hi-ib8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7AP-hi-ib8">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,14 +23,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Yma-TR-BFL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UUV-y3-LkF" customClass="TPKeyboardAvoidingScrollView">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2rH-qg-7Zk" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfI-cS-kYH">
-                                                <rect key="frame" x="20" y="50" width="374" height="56"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfI-cS-kYH">
+                                                <rect key="frame" x="20" y="234.5" width="374" height="56"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="34d-4t-WYR"/>
                                                 </constraints>
@@ -124,19 +126,28 @@
                                                     <constraint firstAttribute="bottom" secondItem="cqx-qp-cUY" secondAttribute="bottom" constant="8" id="yxV-Dq-wzg"/>
                                                 </constraints>
                                             </view>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Ywd-Wb-It7">
+                                                <rect key="frame" x="142" y="20" width="130" height="130"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="130" id="kdC-SO-SZ4"/>
+                                                    <constraint firstAttribute="width" constant="130" id="z3x-m5-cR8"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bd0-jY-azI" secondAttribute="trailing" constant="10" id="Bmj-WC-fHS"/>
+                                            <constraint firstItem="Ywd-Wb-It7" firstAttribute="top" secondItem="2rH-qg-7Zk" secondAttribute="top" constant="20" id="Csw-oA-wHW"/>
                                             <constraint firstItem="pfI-cS-kYH" firstAttribute="leading" secondItem="2rH-qg-7Zk" secondAttribute="leading" constant="20" id="Gcg-3s-be0"/>
                                             <constraint firstAttribute="bottom" secondItem="bd0-jY-azI" secondAttribute="bottom" constant="20" id="MK7-rV-xX8"/>
                                             <constraint firstItem="IBm-Ox-TQc" firstAttribute="leading" secondItem="2rH-qg-7Zk" secondAttribute="leading" constant="20" id="MtT-GX-8nY"/>
-                                            <constraint firstItem="IBm-Ox-TQc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="pfI-cS-kYH" secondAttribute="bottom" constant="25" id="OfW-j1-gV3"/>
+                                            <constraint firstItem="IBm-Ox-TQc" firstAttribute="top" secondItem="pfI-cS-kYH" secondAttribute="bottom" constant="25" id="OfW-j1-gV3"/>
                                             <constraint firstItem="bd0-jY-azI" firstAttribute="centerX" secondItem="2rH-qg-7Zk" secondAttribute="centerX" id="RiT-0l-MDe"/>
                                             <constraint firstItem="IBm-Ox-TQc" firstAttribute="centerY" secondItem="2rH-qg-7Zk" secondAttribute="centerY" id="Tfa-ET-xdn"/>
                                             <constraint firstAttribute="trailing" secondItem="pfI-cS-kYH" secondAttribute="trailing" constant="20" id="UQN-wr-oop"/>
                                             <constraint firstItem="bGT-ta-0m0" firstAttribute="top" secondItem="IBm-Ox-TQc" secondAttribute="bottom" constant="10" id="XxE-aP-ZfN"/>
-                                            <constraint firstItem="pfI-cS-kYH" firstAttribute="top" secondItem="2rH-qg-7Zk" secondAttribute="top" constant="50" id="hlw-ky-UDq"/>
+                                            <constraint firstItem="Ywd-Wb-It7" firstAttribute="centerX" secondItem="2rH-qg-7Zk" secondAttribute="centerX" id="a8X-fJ-IYz"/>
+                                            <constraint firstItem="pfI-cS-kYH" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ywd-Wb-It7" secondAttribute="bottom" constant="30" id="dLW-TS-18D"/>
                                             <constraint firstItem="bd0-jY-azI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2rH-qg-7Zk" secondAttribute="leading" constant="10" id="kl1-Az-wDd"/>
                                             <constraint firstItem="bd0-jY-azI" firstAttribute="top" relation="greaterThanOrEqual" secondItem="bGT-ta-0m0" secondAttribute="bottom" constant="20" id="m4n-Cv-A1d"/>
                                             <constraint firstItem="bGT-ta-0m0" firstAttribute="leading" secondItem="IBm-Ox-TQc" secondAttribute="leading" id="uXM-aZ-Kma"/>
@@ -158,11 +169,15 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="uke-ln-Hra"/>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" name="background_main"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="IS7-gh-fs0" firstAttribute="bottom" secondItem="UUV-y3-LkF" secondAttribute="bottom" id="7s9-EI-ZLC"/>
                             <constraint firstItem="UUV-y3-LkF" firstAttribute="top" secondItem="IS7-gh-fs0" secondAttribute="top" id="LpU-mr-7kw"/>
+                            <constraint firstItem="Yma-TR-BFL" firstAttribute="height" secondItem="5qE-ge-Ipt" secondAttribute="height" id="Ts6-Dw-43Z"/>
+                            <constraint firstItem="Yma-TR-BFL" firstAttribute="width" secondItem="5qE-ge-Ipt" secondAttribute="width" id="WVy-In-p8a"/>
+                            <constraint firstItem="Yma-TR-BFL" firstAttribute="top" secondItem="5qE-ge-Ipt" secondAttribute="top" id="XlD-mN-PHk"/>
                             <constraint firstItem="IS7-gh-fs0" firstAttribute="trailing" secondItem="UUV-y3-LkF" secondAttribute="trailing" id="bhm-oN-rRZ"/>
+                            <constraint firstItem="Yma-TR-BFL" firstAttribute="leading" secondItem="IS7-gh-fs0" secondAttribute="leading" id="sJ2-VD-gxF"/>
                             <constraint firstItem="UUV-y3-LkF" firstAttribute="leading" secondItem="IS7-gh-fs0" secondAttribute="leading" id="sky-uF-L7G"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IS7-gh-fs0"/>
@@ -178,8 +193,7 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="background_main">
-            <color red="0.99278582334931287" green="0.94720426659672052" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <image name="background" width="794" height="1123"/>
+        <image name="logo" width="346" height="346"/>
     </resources>
 </document>
