@@ -39,7 +39,7 @@ class RootWindow: UIWindow {
     }
 
     private func runMain() {
-        let controller = MainNavigationController(session: session)
+        let controller = NotesNavigationController(session: session)
 
         controller.onLogout = { [weak self] in
             self?.runAuth()
