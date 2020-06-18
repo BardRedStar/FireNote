@@ -7,16 +7,7 @@
 //
 
 /// A class for holidng the registration screen data operations
-class RegistrationControllerViewModel {
-    // MARK: - Properties and variables
-
-    let session: Session
-
-    // MARK: - Initialization
-
-    init(session: Session) {
-        self.session = session
-    }
+class RegistrationControllerViewModel: AbstractControllerViewModel {
 
     // MARK: - API Calls
 

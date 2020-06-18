@@ -92,3 +92,20 @@ class SettableLabel: UIView {
     /// Needs to be overriden
     func setup() {}
 }
+
+class SettableTableViewCell: UITableViewCell {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+
+        setup()
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+
+        setup()
+    }
+
+    /// Needs to be overriden
+    func setup() {}
+}
