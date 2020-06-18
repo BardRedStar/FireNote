@@ -32,7 +32,7 @@ class AuthNavigationController: AbstractNavigationController {
 
     override func setupNavigationBarAppearance() {
         super.setupNavigationBarAppearance()
-        makeNavigationBarTransparent()
+        hideNavigationBar()
     }
 
     // MARK: - Routing
