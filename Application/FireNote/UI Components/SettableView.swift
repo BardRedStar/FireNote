@@ -109,3 +109,20 @@ class SettableTableViewCell: UITableViewCell {
     /// Needs to be overriden
     func setup() {}
 }
+
+class SettableCollectionViewCell: UICollectionViewCell {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+
+        setup()
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+
+        setup()
+    }
+
+    /// Needs to be overriden
+    func setup() {}
+}
