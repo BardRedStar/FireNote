@@ -58,7 +58,8 @@ class NotesViewController: AbstractViewController, StoryboardBased {
         super.viewDidLayoutSubviews()
 
         if isFirstLayout {
-            itemWidth = (view.frame.width - collectionView.contentInset.left - collectionView.contentInset.right) / 3
+            itemWidth = ((view.frame.width - collectionView.contentInset.left - collectionView.contentInset.right) /
+                CGFloat(Constants.numberOfColumns)) - Constants.notePadding * 2
             isFirstLayout = false
         }
     }
@@ -67,6 +68,7 @@ class NotesViewController: AbstractViewController, StoryboardBased {
 
     private func configureCollectionView() {
         collectionView.refreshControl = refreshControl
+        collectionView.addSubview(refreshControl)
         collectionView.register(cellType: NoteCollectionViewCell.self)
 
         if let layout = collectionView.collectionViewLayout as? TileCollectionViewLayout {
@@ -79,8 +81,6 @@ class NotesViewController: AbstractViewController, StoryboardBased {
     // MARK: - UI Callbacks
 
     @objc private func refreshAction(_ sender: UIRefreshControl) {
-        sender.beginRefreshing()
-
         viewModel.loadTestData()
 
         collectionView.reloadData()
@@ -100,6 +100,10 @@ extension NotesViewController: UICollectionViewDelegate, UICollectionViewDataSou
         let cell: NoteCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
         cell.configureWith(viewModel.items[indexPath.row])
         return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
     }
 }
 

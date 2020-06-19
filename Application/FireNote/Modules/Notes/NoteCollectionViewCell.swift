@@ -57,6 +57,10 @@ class NoteCollectionViewCell: SettableCollectionViewCell, Reusable {
     /// Label, which is needed to define the cell bounds
     private static let label = UILabel()
 
+    // MARK: - Properties and variables
+
+    var model: NoteViewModel?
+
     // MARK: - UI Lifecycle
 
     override func setup() {
@@ -94,22 +98,23 @@ class NoteCollectionViewCell: SettableCollectionViewCell, Reusable {
         let insetHeight = Constants.contentInset.top + Constants.padding * 2 + Constants.contentInset.bottom + 1 // Add the separator height
         let labelWidth = width - Constants.contentInset.left - Constants.contentInset.right
 
-        // Title height
-        label.numberOfLines = 1
-        label.font = Constants.titleFont
-        label.text = model.title
-        let titleHeight = label.sizeThatFits(CGSize(width: labelWidth, height: CGFloat.greatestFiniteMagnitude)).height
-
         // Body height
         label.numberOfLines = 0
         label.font = Constants.bodyFont
         label.text = model.body
         let bodyHeight = label.sizeThatFits(CGSize(width: labelWidth, height: CGFloat.greatestFiniteMagnitude)).height
 
+        // Title height
+        label.numberOfLines = 1
+        label.font = Constants.titleFont
+        label.text = model.title
+        let titleHeight = label.sizeThatFits(CGSize(width: labelWidth, height: CGFloat.greatestFiniteMagnitude)).height
+
         return max(min(insetHeight + titleHeight + bodyHeight, Constants.cellMaxHeight), Constants.cellMinHeight)
     }
 
     func configureWith(_ model: NoteViewModel) {
+        self.model = model
         titleLabel.text = model.title
         bodyLabel.text = model.body
     }
