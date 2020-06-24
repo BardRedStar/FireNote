@@ -102,9 +102,7 @@ extension NotesViewController: UICollectionViewDelegate, UICollectionViewDataSou
         return cell
     }
 
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {}
 }
 
 // MARK: - TileCollectionViewLayoutDelegate

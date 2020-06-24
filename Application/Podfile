@@ -18,7 +18,7 @@ target 'FireNote' do
   pod 'TPKeyboardAvoiding'
   pod 'SwiftKeychainWrapper'
   pod 'R.swift'
-  pod 'PKHUD'
+  pod 'WordPress-Aztec-iOS'
 
   # Firebase authentication
   pod 'FirebaseUI/Auth'

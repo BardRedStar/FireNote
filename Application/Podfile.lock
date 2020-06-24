@@ -101,7 +101,6 @@ PODS:
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
-  - PKHUD (5.3.0)
   - PromisesObjC (1.2.8)
   - R.swift (5.2.2):
     - R.swift.Library (~> 5.2.0)
@@ -115,6 +114,7 @@ PODS:
   - SwiftKeychainWrapper (3.4.0)
   - SwiftLint (0.39.1)
   - TPKeyboardAvoiding (1.3.3)
+  - WordPress-Aztec-iOS (1.19.2)
 
 DEPENDENCIES:
   - Cartography
@@ -122,13 +122,13 @@ DEPENDENCIES:
   - FirebaseUI/Auth
   - FirebaseUI/Google
   - Kingfisher
-  - PKHUD
   - R.swift
   - Reusable
   - SwiftFormat/CLI (~> 0.43)
   - SwiftKeychainWrapper
   - SwiftLint (~> 0.38)
   - TPKeyboardAvoiding
+  - WordPress-Aztec-iOS
 
 SPEC REPOS:
   trunk:
@@ -152,7 +152,6 @@ SPEC REPOS:
     - GTMSessionFetcher
     - Kingfisher
     - nanopb
-    - PKHUD
     - PromisesObjC
     - R.swift
     - R.swift.Library
@@ -161,6 +160,7 @@ SPEC REPOS:
     - SwiftKeychainWrapper
     - SwiftLint
     - TPKeyboardAvoiding
+    - WordPress-Aztec-iOS
 
 SPEC CHECKSUMS:
   AppAuth: 73574f3013a1e65b9601a3ddc8b3158cce68c09d
@@ -183,7 +183,6 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
   Kingfisher: d342c8354c10c3d85a27d6d4c42c41285924b898
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
-  PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
   R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
@@ -192,7 +191,8 @@ SPEC CHECKSUMS:
   SwiftKeychainWrapper: 6fc49fbf7d4a6b0772917acb0e53a1639f6078d6
   SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
   TPKeyboardAvoiding: 6dd3fe3268b8f2627beb7ff3d82a3cacbdf66a36
+  WordPress-Aztec-iOS: d01bf0c5e150ae6a046f06ba63b7cc2762061c0b
 
-PODFILE CHECKSUM: c0b174dac1b116ac62f6eebae886b02a980d00c0
+PODFILE CHECKSUM: 6f9ceae30aa20244c2f69b4139fccbe7c2b4dcb1
 
 COCOAPODS: 1.9.2

@@ -6,4 +6,5 @@
 //  Copyright © 2020 Denis Kovalev. All rights reserved.
 //
 
-import Foundation
+/// A class to process data operations for editor controller
+class EditorControllerViewModel: AbstractControllerViewModel {}

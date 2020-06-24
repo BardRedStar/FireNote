@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		843639F724A34C5A001F7757 /* EditorNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843639F624A34C5A001F7757 /* EditorNoteView.swift */; };
+		843639F924A353E9001F7757 /* Aztec+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843639F824A353E9001F7757 /* Aztec+Extensions.swift */; };
 		8438A4AD247FD00E00EAAAFB /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438A4AC247FD00E00EAAAFB /* R.generated.swift */; };
 		8438A4AF247FD22600EAAAFB /* PrimaryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438A4AE247FD22600EAAAFB /* PrimaryTextField.swift */; };
 		8438A4B8247FD6E500EAAAFB /* Baloo2-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8438A4B3247FD6E500EAAAFB /* Baloo2-Medium.ttf */; };
@@ -50,6 +52,9 @@
 		847B24DF24879E290016B8FD /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B24DE24879E290016B8FD /* KeychainManager.swift */; };
 		847B24E12487A0170016B8FD /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B24E02487A0170016B8FD /* AlertPresenter.swift */; };
 		847B24E32487A9070016B8FD /* NotesNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B24E22487A9070016B8FD /* NotesNavigationController.swift */; };
+		847E633B249C773700ED1EE5 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E633A249C773700ED1EE5 /* EditorViewController.swift */; };
+		847E633D249C774200ED1EE5 /* EditorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847E633C249C774200ED1EE5 /* EditorViewController.storyboard */; };
+		847E633F249C774D00ED1EE5 /* EditorControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E633E249C774D00ED1EE5 /* EditorControllerViewModel.swift */; };
 		849907BB2488A04C003FF06F /* HUDLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849907BA2488A04C003FF06F /* HUDLoaderView.swift */; };
 		849907BD2488AC3C003FF06F /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849907BC2488AC3C003FF06F /* UIColor+Extensions.swift */; };
 		849A406A249B1C4C00018B06 /* TileCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A4069249B1C4C00018B06 /* TileCollectionViewLayout.swift */; };
@@ -85,6 +90,8 @@
 		26555B66BEAC24128FC4E192 /* Pods_FireNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireNote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		407F1EA1C30867388D06C8FF /* Pods-FireNoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireNoteTests.debug.xcconfig"; path = "Target Support Files/Pods-FireNoteTests/Pods-FireNoteTests.debug.xcconfig"; sourceTree = "<group>"; };
 		69B1F91E44AEC508567D5DF9 /* Pods_FireNoteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireNoteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		843639F624A34C5A001F7757 /* EditorNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorNoteView.swift; sourceTree = "<group>"; };
+		843639F824A353E9001F7757 /* Aztec+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Aztec+Extensions.swift"; sourceTree = "<group>"; };
 		8438A4AC247FD00E00EAAAFB /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		8438A4AE247FD22600EAAAFB /* PrimaryTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTextField.swift; sourceTree = "<group>"; };
 		8438A4B3247FD6E500EAAAFB /* Baloo2-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Medium.ttf"; sourceTree = "<group>"; };
@@ -132,6 +139,9 @@
 		847B24DE24879E290016B8FD /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		847B24E02487A0170016B8FD /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
 		847B24E22487A9070016B8FD /* NotesNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesNavigationController.swift; sourceTree = "<group>"; };
+		847E633A249C773700ED1EE5 /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
+		847E633C249C774200ED1EE5 /* EditorViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditorViewController.storyboard; sourceTree = "<group>"; };
+		847E633E249C774D00ED1EE5 /* EditorControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorControllerViewModel.swift; sourceTree = "<group>"; };
 		849907BA2488A04C003FF06F /* HUDLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDLoaderView.swift; sourceTree = "<group>"; };
 		849907BC2488AC3C003FF06F /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		849A4069249B1C4C00018B06 /* TileCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileCollectionViewLayout.swift; sourceTree = "<group>"; };
@@ -181,6 +191,13 @@
 				69B1F91E44AEC508567D5DF9 /* Pods_FireNoteTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		843639DB24A3017B001F7757 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CollectionViewCells;
 			sourceTree = "<group>";
 		};
 		8438A4B0247FD4EA00EAAAFB /* RSwift */ = {
@@ -277,6 +294,7 @@
 			children = (
 				8470B2952480AF60003303B3 /* String+Extensions.swift */,
 				849907BC2488AC3C003FF06F /* UIColor+Extensions.swift */,
+				843639F824A353E9001F7757 /* Aztec+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -289,6 +307,7 @@
 				844F9722247B99D1008E0BC6 /* SplashViewController */,
 				844F971F247B98AC008E0BC6 /* Auth */,
 				844F971E247B9828008E0BC6 /* Notes */,
+				847E6339249C762600ED1EE5 /* Editor */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -330,6 +349,7 @@
 				849907B92488A02F003FF06F /* Views */,
 				847B24D324875C730016B8FD /* Buttons */,
 				844F9733247BC3AF008E0BC6 /* TextFields */,
+				843639DB24A3017B001F7757 /* CollectionViewCells */,
 				849A4068249B1BEC00018B06 /* CollectionViewLayouts */,
 			);
 			path = "UI Components";
@@ -398,6 +418,17 @@
 				847B24D824876EE80016B8FD /* TextButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		847E6339249C762600ED1EE5 /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				847E633A249C773700ED1EE5 /* EditorViewController.swift */,
+				847E633C249C774200ED1EE5 /* EditorViewController.storyboard */,
+				847E633E249C774D00ED1EE5 /* EditorControllerViewModel.swift */,
+				843639F624A34C5A001F7757 /* EditorNoteView.swift */,
+			);
+			path = Editor;
 			sourceTree = "<group>";
 		};
 		849907B4248893DB003FF06F /* Presenters */ = {
@@ -606,6 +637,7 @@
 				844F96FF247B943D008E0BC6 /* LaunchScreen.storyboard in Resources */,
 				84EEDD492484BBAC0075FAF0 /* RegistrationViewController.storyboard in Resources */,
 				8438A4B9247FD6E500EAAAFB /* Baloo2-ExtraBold.ttf in Resources */,
+				847E633D249C774200ED1EE5 /* EditorViewController.storyboard in Resources */,
 				8474AB7C2498CA1300520D5C /* SidebarViewController.storyboard in Resources */,
 				844F9721247B99CB008E0BC6 /* LoginViewController.storyboard in Resources */,
 				8438A4B8247FD6E500EAAAFB /* Baloo2-Medium.ttf in Resources */,
@@ -773,9 +805,11 @@
 				849907BD2488AC3C003FF06F /* UIColor+Extensions.swift in Sources */,
 				844F972C247B9A0A008E0BC6 /* NotesControllerViewModel.swift in Sources */,
 				844F96F3247B9439008E0BC6 /* AppDelegate.swift in Sources */,
+				847E633B249C773700ED1EE5 /* EditorViewController.swift in Sources */,
 				84EEDD632484F1E00075FAF0 /* Profile.swift in Sources */,
 				844F9730247B9BF5008E0BC6 /* Common.swift in Sources */,
 				844F9728247B99F1008E0BC6 /* LoginViewController.swift in Sources */,
+				843639F724A34C5A001F7757 /* EditorNoteView.swift in Sources */,
 				847B24D924876EE80016B8FD /* TextButton.swift in Sources */,
 				844F972E247B9A2E008E0BC6 /* SplashControllerViewModel.swift in Sources */,
 				8438A4AF247FD22600EAAAFB /* PrimaryTextField.swift in Sources */,
@@ -801,8 +835,10 @@
 				847B24DB248793020016B8FD /* APIManager+Firebase.swift in Sources */,
 				849A406A249B1C4C00018B06 /* TileCollectionViewLayout.swift in Sources */,
 				84EEDD522484E1070075FAF0 /* RootWindow.swift in Sources */,
+				847E633F249C774D00ED1EE5 /* EditorControllerViewModel.swift in Sources */,
 				847B24E32487A9070016B8FD /* NotesNavigationController.swift in Sources */,
 				84EEDD6D248507400075FAF0 /* APIManager.swift in Sources */,
+				843639F924A353E9001F7757 /* Aztec+Extensions.swift in Sources */,
 				847B24D224874D980016B8FD /* AbstractNavigationController.swift in Sources */,
 				8474AB7224989B2000520D5C /* SidebarPresenter.swift in Sources */,
 				8438A4AD247FD00E00EAAAFB /* R.generated.swift in Sources */,
