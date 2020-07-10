@@ -32,6 +32,34 @@ extension FormattingIdentifier {
         default: return #imageLiteral(resourceName: "help-outline")
         }
     }
+
+    var headerFromIdentifier: Header.HeaderType? {
+        switch self {
+        case .header1: return .h1
+        case .header2: return .h2
+        case .header3: return .h3
+        case .header4: return .h4
+        case .header5: return .h5
+        case .header6: return .h6
+        case .p: return Header.HeaderType.none
+        default: return nil
+        }
+    }
+
+    var listTypeFromIdentifier: TextList.Style? {
+        switch self {
+        case .unorderedlist: return .unordered
+        case .orderedlist: return .ordered
+        default: return nil
+        }
+    }
+
+    var hasOptions: Bool {
+        switch self {
+        case .unorderedlist, .orderedlist, .p: return true
+        default: return false
+        }
+    }
 }
 
 /// An extension for Header class from the Aztec library

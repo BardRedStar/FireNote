@@ -33,6 +33,10 @@ class NotesViewController: AbstractViewController, StoryboardBased {
         return refreshControl
     }()
 
+    // MARK: - Output
+
+    var onSelectNote: (() -> Void)?
+
     // MARK: - Properties and variables
 
     var itemWidth: CGFloat = 0.0
@@ -102,7 +106,9 @@ extension NotesViewController: UICollectionViewDelegate, UICollectionViewDataSou
         return cell
     }
 
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {}
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        onSelectNote?()
+    }
 }
 
 // MARK: - TileCollectionViewLayoutDelegate

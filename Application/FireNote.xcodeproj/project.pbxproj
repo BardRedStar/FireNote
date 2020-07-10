@@ -33,6 +33,9 @@
 		844F9732247BA177008E0BC6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 844F9731247BA177008E0BC6 /* GoogleService-Info.plist */; };
 		844F9735247BC400008E0BC6 /* ErrorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F9734247BC400008E0BC6 /* ErrorTextField.swift */; };
 		844F9737247BC429008E0BC6 /* SettableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F9736247BC429008E0BC6 /* SettableView.swift */; };
+		8454685B24A611FC00B98E9A /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454685A24A611FC00B98E9A /* CGPoint+Extensions.swift */; };
+		846A9DD124A456D800A5B0AD /* EditorToolbarOptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A9DD024A456D800A5B0AD /* EditorToolbarOptionTableViewCell.swift */; };
+		846A9DD324A46A3D00A5B0AD /* EditorToolbarOptionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A9DD224A46A3D00A5B0AD /* EditorToolbarOptionsPresenter.swift */; };
 		8470B2942480AF2A003303B3 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470B2932480AF2A003303B3 /* PasswordTextField.swift */; };
 		8470B2962480AF60003303B3 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470B2952480AF60003303B3 /* String+Extensions.swift */; };
 		8470B2982480C700003303B3 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470B2972480C700003303B3 /* GlobalConstants.swift */; };
@@ -120,6 +123,9 @@
 		844F9731247BA177008E0BC6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		844F9734247BC400008E0BC6 /* ErrorTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTextField.swift; sourceTree = "<group>"; };
 		844F9736247BC429008E0BC6 /* SettableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettableView.swift; sourceTree = "<group>"; };
+		8454685A24A611FC00B98E9A /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
+		846A9DD024A456D800A5B0AD /* EditorToolbarOptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorToolbarOptionTableViewCell.swift; sourceTree = "<group>"; };
+		846A9DD224A46A3D00A5B0AD /* EditorToolbarOptionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorToolbarOptionsPresenter.swift; sourceTree = "<group>"; };
 		8470B2932480AF2A003303B3 /* PasswordTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		8470B2952480AF60003303B3 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		8470B2972480C700003303B3 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
@@ -295,6 +301,7 @@
 				8470B2952480AF60003303B3 /* String+Extensions.swift */,
 				849907BC2488AC3C003FF06F /* UIColor+Extensions.swift */,
 				843639F824A353E9001F7757 /* Aztec+Extensions.swift */,
+				8454685A24A611FC00B98E9A /* CGPoint+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -427,6 +434,8 @@
 				847E633C249C774200ED1EE5 /* EditorViewController.storyboard */,
 				847E633E249C774D00ED1EE5 /* EditorControllerViewModel.swift */,
 				843639F624A34C5A001F7757 /* EditorNoteView.swift */,
+				846A9DD024A456D800A5B0AD /* EditorToolbarOptionTableViewCell.swift */,
+				846A9DD224A46A3D00A5B0AD /* EditorToolbarOptionsPresenter.swift */,
 			);
 			path = Editor;
 			sourceTree = "<group>";
@@ -801,6 +810,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				846A9DD124A456D800A5B0AD /* EditorToolbarOptionTableViewCell.swift in Sources */,
 				844F96F7247B9439008E0BC6 /* NotesViewController.swift in Sources */,
 				849907BD2488AC3C003FF06F /* UIColor+Extensions.swift in Sources */,
 				844F972C247B9A0A008E0BC6 /* NotesControllerViewModel.swift in Sources */,
@@ -808,6 +818,7 @@
 				847E633B249C773700ED1EE5 /* EditorViewController.swift in Sources */,
 				84EEDD632484F1E00075FAF0 /* Profile.swift in Sources */,
 				844F9730247B9BF5008E0BC6 /* Common.swift in Sources */,
+				846A9DD324A46A3D00A5B0AD /* EditorToolbarOptionsPresenter.swift in Sources */,
 				844F9728247B99F1008E0BC6 /* LoginViewController.swift in Sources */,
 				843639F724A34C5A001F7757 /* EditorNoteView.swift in Sources */,
 				847B24D924876EE80016B8FD /* TextButton.swift in Sources */,
@@ -833,6 +844,7 @@
 				847B24D524875CD80016B8FD /* PrimaryButton.swift in Sources */,
 				849A406C249B3F1100018B06 /* NoteCollectionViewCell.swift in Sources */,
 				847B24DB248793020016B8FD /* APIManager+Firebase.swift in Sources */,
+				8454685B24A611FC00B98E9A /* CGPoint+Extensions.swift in Sources */,
 				849A406A249B1C4C00018B06 /* TileCollectionViewLayout.swift in Sources */,
 				84EEDD522484E1070075FAF0 /* RootWindow.swift in Sources */,
 				847E633F249C774D00ED1EE5 /* EditorControllerViewModel.swift in Sources */,

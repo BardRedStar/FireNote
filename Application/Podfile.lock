@@ -93,6 +93,7 @@ PODS:
   - GTMSessionFetcher/Core (1.4.0)
   - GTMSessionFetcher/Full (1.4.0):
     - GTMSessionFetcher/Core (= 1.4.0)
+  - KeyboardNotificationsObserver (0.2.0)
   - Kingfisher (5.13.2):
     - Kingfisher/Core (= 5.13.2)
   - Kingfisher/Core (5.13.2)
@@ -121,6 +122,7 @@ DEPENDENCIES:
   - Firebase/Analytics
   - FirebaseUI/Auth
   - FirebaseUI/Google
+  - KeyboardNotificationsObserver
   - Kingfisher
   - R.swift
   - Reusable
@@ -150,6 +152,7 @@ SPEC REPOS:
     - GoogleUtilities
     - GTMAppAuth
     - GTMSessionFetcher
+    - KeyboardNotificationsObserver
     - Kingfisher
     - nanopb
     - PromisesObjC
@@ -181,6 +184,7 @@ SPEC CHECKSUMS:
   GoogleUtilities: ad0f3b691c67909d03a3327cc205222ab8f42e0e
   GTMAppAuth: 4deac854479704f348309e7b66189e604cf5e01e
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
+  KeyboardNotificationsObserver: 551a9a508057697dfc3de39f1ec3e55b9c71eff9
   Kingfisher: d342c8354c10c3d85a27d6d4c42c41285924b898
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
@@ -193,6 +197,6 @@ SPEC CHECKSUMS:
   TPKeyboardAvoiding: 6dd3fe3268b8f2627beb7ff3d82a3cacbdf66a36
   WordPress-Aztec-iOS: d01bf0c5e150ae6a046f06ba63b7cc2762061c0b
 
-PODFILE CHECKSUM: 6f9ceae30aa20244c2f69b4139fccbe7c2b4dcb1
+PODFILE CHECKSUM: 54f812cd6a115154391be3942b1e3bf55551885c
 
 COCOAPODS: 1.9.2
