@@ -64,6 +64,7 @@
 		849A406C249B3F1100018B06 /* NoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A406B249B3F1100018B06 /* NoteCollectionViewCell.swift */; };
 		849A406F249B53BE00018B06 /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A406E249B53BE00018B06 /* NoteViewModel.swift */; };
 		84EEAE8424B84191006E75A6 /* AMKeyboardFrameTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEAE8324B84191006E75A6 /* AMKeyboardFrameTrackerView.swift */; };
+		84EEAE8624B86ECB006E75A6 /* EditorToolsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEAE8524B86ECB006E75A6 /* EditorToolsPresenter.swift */; };
 		84EEDD492484BBAC0075FAF0 /* RegistrationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84EEDD482484BBAC0075FAF0 /* RegistrationViewController.storyboard */; };
 		84EEDD4B2484BBB70075FAF0 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDD4A2484BBB70075FAF0 /* RegistrationViewController.swift */; };
 		84EEDD4D2484BBC30075FAF0 /* RegistrationControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDD4C2484BBC30075FAF0 /* RegistrationControllerViewModel.swift */; };
@@ -155,6 +156,7 @@
 		849A406B249B3F1100018B06 /* NoteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCollectionViewCell.swift; sourceTree = "<group>"; };
 		849A406E249B53BE00018B06 /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
 		84EEAE8324B84191006E75A6 /* AMKeyboardFrameTrackerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMKeyboardFrameTrackerView.swift; sourceTree = "<group>"; };
+		84EEAE8524B86ECB006E75A6 /* EditorToolsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorToolsPresenter.swift; sourceTree = "<group>"; };
 		84EEDD482484BBAC0075FAF0 /* RegistrationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegistrationViewController.storyboard; sourceTree = "<group>"; };
 		84EEDD4A2484BBB70075FAF0 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		84EEDD4C2484BBC30075FAF0 /* RegistrationControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationControllerViewModel.swift; sourceTree = "<group>"; };
@@ -438,6 +440,7 @@
 				843639F624A34C5A001F7757 /* EditorNoteView.swift */,
 				846A9DD024A456D800A5B0AD /* EditorToolbarOptionTableViewCell.swift */,
 				846A9DD224A46A3D00A5B0AD /* EditorToolbarOptionsPresenter.swift */,
+				84EEAE8524B86ECB006E75A6 /* EditorToolsPresenter.swift */,
 			);
 			path = Editor;
 			sourceTree = "<group>";
@@ -831,6 +834,7 @@
 				8474AB6F2498831700520D5C /* HUDPresenter.swift in Sources */,
 				847B24DD24879D570016B8FD /* DefaultStorage.swift in Sources */,
 				8470B2982480C700003303B3 /* GlobalConstants.swift in Sources */,
+				84EEAE8624B86ECB006E75A6 /* EditorToolsPresenter.swift in Sources */,
 				847B24E12487A0170016B8FD /* AlertPresenter.swift in Sources */,
 				844F9735247BC400008E0BC6 /* ErrorTextField.swift in Sources */,
 				84EEDD582484F11A0075FAF0 /* AppSession.swift in Sources */,

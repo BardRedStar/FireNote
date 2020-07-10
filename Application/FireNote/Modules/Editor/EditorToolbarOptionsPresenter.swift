@@ -66,7 +66,7 @@ class EditorToolbarOptionsPresenter: NSObject {
 
     private func changeState(shouldOpen: Bool, completion: (() -> Void)? = nil) {
         isOpened = shouldOpen
-        UIView.animate(withDuration: 0.1, delay: 0.0, options: .curveEaseOut, animations: { [weak self] in
+        UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseOut, animations: { [weak self] in
             self?.tableView.frame.size.height = shouldOpen ? self?.contentHeight() ?? 0.0 : 0.0
         }, completion: { [weak self] finished in
             if finished, !shouldOpen {
