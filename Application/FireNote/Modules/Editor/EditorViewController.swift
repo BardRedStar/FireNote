@@ -32,6 +32,7 @@ class EditorViewController: AbstractViewController, StoryboardBased {
     @IBOutlet private var attachmentBar: UIView!
     @IBOutlet private var noteAttachmentsView: UIView!
 
+    @IBOutlet private var formatBarTopConstraint: NSLayoutConstraint!
     @IBOutlet private var bodyTextViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet private var attachmentBarBottomConstraint: NSLayoutConstraint!
     @IBOutlet private var attachmentsViewHeightConstraint: NSLayoutConstraint!
@@ -76,6 +77,8 @@ class EditorViewController: AbstractViewController, StoryboardBased {
         return formatBar
     }()
 
+    private let keyboardFrameTrackerView = AMKeyboardFrameTrackerView(height: 0)
+
     // MARK: - Output
 
     // MARK: - Properties and variables
@@ -112,8 +115,6 @@ class EditorViewController: AbstractViewController, StoryboardBased {
             initialTextViewHeight = textViewHeight
             bodyTextViewHeightConstraint?.constant = textViewHeight
 
-            scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: attachmentBar.frame.height, right: 0)
-
             isFirstLayout = false
         }
     }
@@ -129,23 +130,27 @@ class EditorViewController: AbstractViewController, StoryboardBased {
             text.edges == textContainer.edges
         }
 
-        keyboardObserver.onWillShow = { [weak self] info in
-            guard let self = self else { return }
-
-            UIView.animate(withDuration: info.animationDuration, delay: 0.0, options: info.animationOptions, animations: { [weak self] in
-                self?.attachmentBarBottomConstraint.constant = info.endFrame.height
-                self?.view.layoutIfNeeded()
-            })
+        keyboardObserver.onWillHide = { [weak self] _ in
+            self?.moveFormatBarWith(offset: -(self?.formatBarContainerView.frame.height ?? 0))
         }
 
-        keyboardObserver.onWillHide = { [weak self] info in
-            guard let self = self else { return }
+        keyboardFrameTrackerView.delegate = self
+        bodyTextView.inputAccessoryView = keyboardFrameTrackerView
+        titleTextField.inputAccessoryView = keyboardFrameTrackerView
+    }
 
-            UIView.animate(withDuration: info.animationDuration, delay: 0.0, options: info.animationOptions, animations: { [weak self] in
-                self?.attachmentBarBottomConstraint.constant = info.endFrame.height
-                self?.view.layoutIfNeeded()
-            })
-        }
+    private func moveAttachmentsBarWith(offset: CGFloat, duration: TimeInterval, options: UIView.AnimationOptions) {
+        UIView.animate(withDuration: duration, delay: 0.0, options: options, animations: { [weak self] in
+            self?.attachmentBarBottomConstraint.constant = offset
+            self?.view.layoutIfNeeded()
+        })
+    }
+
+    private func moveFormatBarWith(offset: CGFloat) {
+        UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseOut, animations: { [weak self] in
+            self?.formatBarTopConstraint.constant = offset
+            self?.view.layoutIfNeeded()
+        })
     }
 
     private func makeToolbarButton(identifier: FormattingIdentifier) -> FormatBarItem {
@@ -352,17 +357,29 @@ extension EditorViewController: UITextViewDelegate {
         updateFormatBar()
     }
 
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        if text == "\n" {
-            textView.resignFirstResponder()
-            return false
-        }
-        return true
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        moveFormatBarWith(offset: 0)
+    }
+
+    func textViewDidEndEditing(_ textView: UITextView) {
+        moveFormatBarWith(offset: -formatBarContainerView.frame.height)
     }
 }
 
 extension EditorViewController: Aztec.TextViewFormattingDelegate {
     func textViewCommandToggledAStyle() {
         updateFormatBar()
+    }
+}
+
+// MARK: - AMKeyboardFrameTrackerDelegate
+
+extension EditorViewController: AMKeyboardFrameTrackerDelegate {
+    func keyboardFrameDidChange(with frame: CGRect) {
+        let bottomSpacing = UIScreen.main.bounds.height - frame.origin.y
+
+        print("Y: \(frame.origin.y), Height: \(frame.height), Spacing: \(bottomSpacing)")
+        attachmentBarBottomConstraint.constant = max(bottomSpacing, 0)
+        view.layoutIfNeeded()
     }
 }

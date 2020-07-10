@@ -21,8 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="4MI-cM-lKx" customClass="TPKeyboardAvoidingScrollView">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="4MI-cM-lKx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iqB-jc-7Ql" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="275"/>
@@ -106,10 +106,10 @@
                             <constraint firstItem="2qq-GK-RVu" firstAttribute="bottom" secondItem="kgk-KV-vh1" secondAttribute="bottom" id="GCP-Vf-dfk"/>
                             <constraint firstItem="zrL-l6-Buq" firstAttribute="top" secondItem="2qq-GK-RVu" secondAttribute="top" constant="-44" id="KmU-0v-KPW"/>
                             <constraint firstItem="kgk-KV-vh1" firstAttribute="leading" secondItem="2qq-GK-RVu" secondAttribute="leading" id="O1d-dF-QWv"/>
-                            <constraint firstItem="2qq-GK-RVu" firstAttribute="bottom" secondItem="4MI-cM-lKx" secondAttribute="bottom" id="QrP-56-bhy"/>
+                            <constraint firstItem="4MI-cM-lKx" firstAttribute="top" secondItem="zrL-l6-Buq" secondAttribute="bottom" id="OKr-ts-oVU"/>
                             <constraint firstItem="zrL-l6-Buq" firstAttribute="leading" secondItem="2qq-GK-RVu" secondAttribute="leading" id="UIp-gf-GtA"/>
-                            <constraint firstItem="4MI-cM-lKx" firstAttribute="top" secondItem="2qq-GK-RVu" secondAttribute="top" id="djI-lH-FOF"/>
                             <constraint firstItem="2qq-GK-RVu" firstAttribute="trailing" secondItem="zrL-l6-Buq" secondAttribute="trailing" id="eeX-sI-u5j"/>
+                            <constraint firstItem="kgk-KV-vh1" firstAttribute="top" secondItem="4MI-cM-lKx" secondAttribute="bottom" id="u9t-UN-nwp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2qq-GK-RVu"/>
                     </view>
@@ -120,6 +120,7 @@
                         <outlet property="bodyTextViewContainerView" destination="9Gz-Ox-wY2" id="YhN-Iz-cco"/>
                         <outlet property="bodyTextViewHeightConstraint" destination="hyY-5f-LAa" id="8bK-fG-yxd"/>
                         <outlet property="formatBarContainerView" destination="zrL-l6-Buq" id="Zqn-y8-hjM"/>
+                        <outlet property="formatBarTopConstraint" destination="KmU-0v-KPW" id="mHT-gu-X2a"/>
                         <outlet property="noteAttachmentsView" destination="6ks-Yy-1dK" id="yFl-up-3ad"/>
                         <outlet property="scrollView" destination="4MI-cM-lKx" id="nKB-tc-swW"/>
                         <outlet property="titleTextField" destination="eI5-bS-aYY" id="gC7-6N-SBw"/>
