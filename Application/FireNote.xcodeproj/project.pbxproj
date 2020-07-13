@@ -76,6 +76,8 @@
 		84EEDD682484F7860075FAF0 /* AuthNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDD672484F7860075FAF0 /* AuthNavigationController.swift */; };
 		84EEDD6D248507400075FAF0 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDD6C248507400075FAF0 /* APIManager.swift */; };
 		84EEDD6F248508BD0075FAF0 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDD6E248508BD0075FAF0 /* APIError.swift */; };
+		84F49F0424BC47E8002E7300 /* EditorAttachmentsBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F49F0324BC47E8002E7300 /* EditorAttachmentsBarView.swift */; };
+		84F49F0724BC5D30002E7300 /* OrderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F49F0624BC5D30002E7300 /* OrderedButton.swift */; };
 		CCCACB5A3F2A3CDAB14C3ED3 /* Pods_FireNoteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B1F91E44AEC508567D5DF9 /* Pods_FireNoteTests.framework */; };
 		F33DA4A49165E869ED35E8BA /* Pods_FireNote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26555B66BEAC24128FC4E192 /* Pods_FireNote.framework */; };
 /* End PBXBuildFile section */
@@ -167,6 +169,8 @@
 		84EEDD672484F7860075FAF0 /* AuthNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavigationController.swift; sourceTree = "<group>"; };
 		84EEDD6C248507400075FAF0 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		84EEDD6E248508BD0075FAF0 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		84F49F0324BC47E8002E7300 /* EditorAttachmentsBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorAttachmentsBarView.swift; sourceTree = "<group>"; };
+		84F49F0624BC5D30002E7300 /* OrderedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedButton.swift; sourceTree = "<group>"; };
 		BFEFDE683EFB306B8735176C /* Pods-FireNoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireNoteTests.release.xcconfig"; path = "Target Support Files/Pods-FireNoteTests/Pods-FireNoteTests.release.xcconfig"; sourceTree = "<group>"; };
 		CB72BE2B8C5EA4D8C3B79E9C /* Pods-FireNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireNote.debug.xcconfig"; path = "Target Support Files/Pods-FireNote/Pods-FireNote.debug.xcconfig"; sourceTree = "<group>"; };
 		D104B811843826227E5A89FA /* Pods-FireNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireNote.release.xcconfig"; path = "Target Support Files/Pods-FireNote/Pods-FireNote.release.xcconfig"; sourceTree = "<group>"; };
@@ -425,6 +429,7 @@
 				847B24D424875CD80016B8FD /* PrimaryButton.swift */,
 				847B24D6248766150016B8FD /* SecondaryButton.swift */,
 				847B24D824876EE80016B8FD /* TextButton.swift */,
+				84F49F0624BC5D30002E7300 /* OrderedButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -432,12 +437,11 @@
 		847E6339249C762600ED1EE5 /* Editor */ = {
 			isa = PBXGroup;
 			children = (
+				84F49F0524BC4F25002E7300 /* EditorToolbar */,
 				847E633A249C773700ED1EE5 /* EditorViewController.swift */,
 				847E633C249C774200ED1EE5 /* EditorViewController.storyboard */,
 				847E633E249C774D00ED1EE5 /* EditorControllerViewModel.swift */,
-				846A9DD024A456D800A5B0AD /* EditorToolbarOptionTableViewCell.swift */,
-				846A9DD224A46A3D00A5B0AD /* EditorToolbarOptionsPresenter.swift */,
-				84EEAE8524B86ECB006E75A6 /* EditorToolsPresenter.swift */,
+				84F49F0324BC47E8002E7300 /* EditorAttachmentsBarView.swift */,
 			);
 			path = Editor;
 			sourceTree = "<group>";
@@ -544,6 +548,16 @@
 				847B24DA248793020016B8FD /* APIManager+Firebase.swift */,
 			);
 			path = "API Manager";
+			sourceTree = "<group>";
+		};
+		84F49F0524BC4F25002E7300 /* EditorToolbar */ = {
+			isa = PBXGroup;
+			children = (
+				846A9DD024A456D800A5B0AD /* EditorToolbarOptionTableViewCell.swift */,
+				846A9DD224A46A3D00A5B0AD /* EditorToolbarOptionsPresenter.swift */,
+				84EEAE8524B86ECB006E75A6 /* EditorToolsPresenter.swift */,
+			);
+			path = EditorToolbar;
 			sourceTree = "<group>";
 		};
 		EA0AC5C7DCEA1D0DD21CFD49 /* Pods */ = {
@@ -820,7 +834,9 @@
 				844F96F3247B9439008E0BC6 /* AppDelegate.swift in Sources */,
 				847E633B249C773700ED1EE5 /* EditorViewController.swift in Sources */,
 				84EEDD632484F1E00075FAF0 /* Profile.swift in Sources */,
+				84F49F0724BC5D30002E7300 /* OrderedButton.swift in Sources */,
 				844F9730247B9BF5008E0BC6 /* Common.swift in Sources */,
+				84F49F0424BC47E8002E7300 /* EditorAttachmentsBarView.swift in Sources */,
 				846A9DD324A46A3D00A5B0AD /* EditorToolbarOptionsPresenter.swift in Sources */,
 				844F9728247B99F1008E0BC6 /* LoginViewController.swift in Sources */,
 				847B24D924876EE80016B8FD /* TextButton.swift in Sources */,

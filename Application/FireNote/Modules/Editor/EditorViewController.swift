@@ -26,7 +26,7 @@ class EditorViewController: AbstractViewController, StoryboardBased {
     @IBOutlet private var titleTextField: UITextField!
     @IBOutlet private var formatBarContainerView: UIView!
     @IBOutlet private var bodyTextViewContainerView: UIView!
-    @IBOutlet private var attachmentBar: UIView!
+    @IBOutlet private var attachmentBar: EditorAttachmentsBarView!
     @IBOutlet private var noteAttachmentsView: UIView!
 
     @IBOutlet private var formatBarTopConstraint: NSLayoutConstraint!
@@ -69,6 +69,8 @@ class EditorViewController: AbstractViewController, StoryboardBased {
         super.viewDidLoad()
         setupUI()
         setupKeyboardTracking()
+
+        attachmentBar.delegate = self
     }
 
     override func viewDidLayoutSubviews() {
@@ -79,6 +81,8 @@ class EditorViewController: AbstractViewController, StoryboardBased {
                 - noteAttachmentsView.frame.height - 31.0
             initialTextViewHeight = textViewHeight
             bodyTextViewHeightConstraint?.constant = textViewHeight
+
+            configureAttachmentsBar()
 
             isFirstLayout = false
         }
@@ -95,6 +99,10 @@ class EditorViewController: AbstractViewController, StoryboardBased {
             bar.edges == barContainer.edges
             text.edges == textContainer.edges
         }
+    }
+
+    private func configureAttachmentsBar() {
+        attachmentBar.configureWith(models: viewModel.attachmentButtons)
     }
 
     private func setupKeyboardTracking() {
@@ -148,5 +156,11 @@ extension EditorViewController: AMKeyboardFrameTrackerDelegate {
 
         attachmentBarBottomConstraint.constant = max(bottomSpacing, 0)
         view.layoutIfNeeded()
+    }
+}
+
+extension EditorViewController: EditorAttachmentsBarViewDelegate {
+    func attachmentsBarView(_ attachmentsBarView: EditorAttachmentsBarView, didSelectAttachmentAtIndex index: Int) {
+        print(index)
     }
 }

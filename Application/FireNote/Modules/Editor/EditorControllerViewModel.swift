@@ -6,5 +6,25 @@
 //  Copyright © 2020 Denis Kovalev. All rights reserved.
 //
 
+import UIKit
+
 /// A class to process data operations for editor controller
-class EditorControllerViewModel: AbstractControllerViewModel {}
+class EditorControllerViewModel: AbstractControllerViewModel {
+    enum AttachmentBarButton: CaseIterable {
+        case camera, media, file, geo, graffiti
+
+        var icon: UIImage {
+            switch self {
+            case .camera: return #imageLiteral(resourceName: "ic_camera")
+            case .media: return #imageLiteral(resourceName: "ic_media")
+            case .file: return #imageLiteral(resourceName: "ic_file")
+            case .geo: return #imageLiteral(resourceName: "ic_geotag")
+            case .graffiti: return #imageLiteral(resourceName: "ic_paint")
+            }
+        }
+    }
+
+    var attachmentButtons: [AttachmentBarButton] {
+        return AttachmentBarButton.allCases.reversed()
+    }
+}
