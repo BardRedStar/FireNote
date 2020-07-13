@@ -76,18 +76,6 @@ extension Header.HeaderType {
         }
     }
 
-    var description: String {
-        switch self {
-        case .none: return "Default"
-        case .h1: return "Heading 1"
-        case .h2: return "Heading 2"
-        case .h3: return "Heading 3"
-        case .h4: return "Heading 4"
-        case .h5: return "Heading 5"
-        case .h6: return "Heading 6"
-        }
-    }
-
     var iconImage: UIImage? {
         return formattingIdentifier.iconImage
     }
@@ -99,13 +87,6 @@ extension TextList.Style {
         switch self {
         case .ordered: return .orderedlist
         case .unordered: return .unorderedlist
-        }
-    }
-
-    var description: String {
-        switch self {
-        case .ordered: return "Ordered List"
-        case .unordered: return "Unordered List"
         }
     }
 

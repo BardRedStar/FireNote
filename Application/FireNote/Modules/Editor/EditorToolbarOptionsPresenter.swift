@@ -55,7 +55,6 @@ class EditorToolbarOptionsPresenter: NSObject {
         tableView.reloadData()
         view.addSubview(tableView)
         tableView.frame = frame
-        tableView.frame.size.height = contentHeight()
 
         changeState(shouldOpen: true)
     }

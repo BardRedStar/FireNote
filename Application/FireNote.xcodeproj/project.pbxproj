@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		843639F724A34C5A001F7757 /* EditorNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843639F624A34C5A001F7757 /* EditorNoteView.swift */; };
 		843639F924A353E9001F7757 /* Aztec+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843639F824A353E9001F7757 /* Aztec+Extensions.swift */; };
 		8438A4AD247FD00E00EAAAFB /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438A4AC247FD00E00EAAAFB /* R.generated.swift */; };
 		8438A4AF247FD22600EAAAFB /* PrimaryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438A4AE247FD22600EAAAFB /* PrimaryTextField.swift */; };
@@ -95,7 +94,6 @@
 		26555B66BEAC24128FC4E192 /* Pods_FireNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireNote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		407F1EA1C30867388D06C8FF /* Pods-FireNoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireNoteTests.debug.xcconfig"; path = "Target Support Files/Pods-FireNoteTests/Pods-FireNoteTests.debug.xcconfig"; sourceTree = "<group>"; };
 		69B1F91E44AEC508567D5DF9 /* Pods_FireNoteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireNoteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		843639F624A34C5A001F7757 /* EditorNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorNoteView.swift; sourceTree = "<group>"; };
 		843639F824A353E9001F7757 /* Aztec+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Aztec+Extensions.swift"; sourceTree = "<group>"; };
 		8438A4AC247FD00E00EAAAFB /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		8438A4AE247FD22600EAAAFB /* PrimaryTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTextField.swift; sourceTree = "<group>"; };
@@ -437,7 +435,6 @@
 				847E633A249C773700ED1EE5 /* EditorViewController.swift */,
 				847E633C249C774200ED1EE5 /* EditorViewController.storyboard */,
 				847E633E249C774D00ED1EE5 /* EditorControllerViewModel.swift */,
-				843639F624A34C5A001F7757 /* EditorNoteView.swift */,
 				846A9DD024A456D800A5B0AD /* EditorToolbarOptionTableViewCell.swift */,
 				846A9DD224A46A3D00A5B0AD /* EditorToolbarOptionsPresenter.swift */,
 				84EEAE8524B86ECB006E75A6 /* EditorToolsPresenter.swift */,
@@ -826,7 +823,6 @@
 				844F9730247B9BF5008E0BC6 /* Common.swift in Sources */,
 				846A9DD324A46A3D00A5B0AD /* EditorToolbarOptionsPresenter.swift in Sources */,
 				844F9728247B99F1008E0BC6 /* LoginViewController.swift in Sources */,
-				843639F724A34C5A001F7757 /* EditorNoteView.swift in Sources */,
 				847B24D924876EE80016B8FD /* TextButton.swift in Sources */,
 				844F972E247B9A2E008E0BC6 /* SplashControllerViewModel.swift in Sources */,
 				8438A4AF247FD22600EAAAFB /* PrimaryTextField.swift in Sources */,

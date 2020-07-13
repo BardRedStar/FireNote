@@ -38,8 +38,8 @@ class EditorViewController: AbstractViewController, StoryboardBased {
 
     private let keyboardFrameTrackerView = AMKeyboardFrameTrackerView(height: 0)
 
-    private lazy var formatBarPresenter: EditorFormatBarPresenter = {
-        let presenter = EditorFormatBarPresenter(parentViewController: self)
+    private lazy var toolsPresenter: EditorToolsPresenter = {
+        let presenter = EditorToolsPresenter(parentViewController: self)
         presenter.formatBarDelegate = self
         presenter.textViewDelegate = self
         return presenter
@@ -68,6 +68,7 @@ class EditorViewController: AbstractViewController, StoryboardBased {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupKeyboardTracking()
     }
 
     override func viewDidLayoutSubviews() {
@@ -86,29 +87,24 @@ class EditorViewController: AbstractViewController, StoryboardBased {
     // MARK: - UI Methods
 
     private func setupUI() {
-        formatBarContainerView.addSubview(formatBarPresenter.formatBar)
-        bodyTextViewContainerView.addSubview(formatBarPresenter.textView)
+        formatBarContainerView.addSubview(toolsPresenter.formatBar)
+        bodyTextViewContainerView.addSubview(toolsPresenter.textView)
 
-        constrain(formatBarContainerView, formatBarPresenter.formatBar, bodyTextViewContainerView,
-                  formatBarPresenter.textView) { barContainer, bar, textContainer, text in
+        constrain(formatBarContainerView, toolsPresenter.formatBar, bodyTextViewContainerView,
+                  toolsPresenter.textView) { barContainer, bar, textContainer, text in
             bar.edges == barContainer.edges
             text.edges == textContainer.edges
         }
+    }
 
+    private func setupKeyboardTracking() {
         keyboardObserver.onWillHide = { [weak self] _ in
             self?.moveFormatBarWith(offset: -(self?.formatBarContainerView.frame.height ?? 0))
         }
 
         keyboardFrameTrackerView.delegate = self
-        formatBarPresenter.textView.inputAccessoryView = keyboardFrameTrackerView
+        toolsPresenter.textView.inputAccessoryView = keyboardFrameTrackerView
         titleTextField.inputAccessoryView = keyboardFrameTrackerView
-    }
-
-    private func moveAttachmentsBarWith(offset: CGFloat, duration: TimeInterval, options: UIView.AnimationOptions) {
-        UIView.animate(withDuration: duration, delay: 0.0, options: options, animations: { [weak self] in
-            self?.attachmentBarBottomConstraint.constant = offset
-            self?.view.layoutIfNeeded()
-        })
     }
 
     private func moveFormatBarWith(offset: CGFloat) {
