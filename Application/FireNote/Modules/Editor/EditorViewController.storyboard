@@ -22,33 +22,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="4MI-cM-lKx">
-                                <rect key="frame" x="0.0" y="44" width="414" height="778"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="776"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iqB-jc-7Ql" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="282.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="275"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Note title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eI5-bS-aYY">
-                                                <rect key="frame" x="15" y="10" width="384" height="31.5"/>
+                                                <rect key="frame" x="15" y="10" width="384" height="24"/>
                                                 <color key="textColor" name="text_primary"/>
                                                 <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="19"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="caD-C4-uky" userLabel="Separator View">
-                                                <rect key="frame" x="0.0" y="51.5" width="414" height="1"/>
+                                                <rect key="frame" x="0.0" y="44" width="414" height="1"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="zky-Kg-86I"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ks-Yy-1dK" userLabel="Attachments View">
-                                                <rect key="frame" x="0.0" y="182.5" width="414" height="100"/>
+                                                <rect key="frame" x="0.0" y="175" width="414" height="100"/>
                                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="eyN-WO-t3e"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Gz-Ox-wY2" userLabel="TextViewContainer">
-                                                <rect key="frame" x="0.0" y="62.5" width="414" height="120"/>
+                                                <rect key="frame" x="0.0" y="55" width="414" height="120"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="120" id="hyY-5f-LAa"/>
@@ -91,10 +91,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kgk-KV-vh1" userLabel="Attachment Bar" customClass="EditorAttachmentsBarView" customModule="FireNote" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="822" width="414" height="40"/>
+                                <rect key="frame" x="0.0" y="820" width="414" height="42"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Ont-er-aqH"/>
+                                    <constraint firstAttribute="height" constant="42" id="Ont-er-aqH"/>
                                 </constraints>
                             </view>
                         </subviews>

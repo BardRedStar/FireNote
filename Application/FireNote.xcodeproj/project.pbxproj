@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84251A9524BD65E40039953F /* MediaPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84251A9424BD65E40039953F /* MediaPicker.swift */; };
+		84251A9924BD78310039953F /* EditorAttachmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84251A9824BD78310039953F /* EditorAttachmentsView.swift */; };
+		84251A9B24BD7A1F0039953F /* EditorAttachmentsGeotagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84251A9A24BD7A1F0039953F /* EditorAttachmentsGeotagView.swift */; };
+		84251A9D24BD9E3E0039953F /* EditorAttachmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84251A9C24BD9E3E0039953F /* EditorAttachmentViewModel.swift */; };
 		843639F924A353E9001F7757 /* Aztec+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843639F824A353E9001F7757 /* Aztec+Extensions.swift */; };
 		8438A4AD247FD00E00EAAAFB /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438A4AC247FD00E00EAAAFB /* R.generated.swift */; };
 		8438A4AF247FD22600EAAAFB /* PrimaryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438A4AE247FD22600EAAAFB /* PrimaryTextField.swift */; };
@@ -96,6 +100,10 @@
 		26555B66BEAC24128FC4E192 /* Pods_FireNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireNote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		407F1EA1C30867388D06C8FF /* Pods-FireNoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireNoteTests.debug.xcconfig"; path = "Target Support Files/Pods-FireNoteTests/Pods-FireNoteTests.debug.xcconfig"; sourceTree = "<group>"; };
 		69B1F91E44AEC508567D5DF9 /* Pods_FireNoteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireNoteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84251A9424BD65E40039953F /* MediaPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPicker.swift; sourceTree = "<group>"; };
+		84251A9824BD78310039953F /* EditorAttachmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorAttachmentsView.swift; sourceTree = "<group>"; };
+		84251A9A24BD7A1F0039953F /* EditorAttachmentsGeotagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorAttachmentsGeotagView.swift; sourceTree = "<group>"; };
+		84251A9C24BD9E3E0039953F /* EditorAttachmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorAttachmentViewModel.swift; sourceTree = "<group>"; };
 		843639F824A353E9001F7757 /* Aztec+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Aztec+Extensions.swift"; sourceTree = "<group>"; };
 		8438A4AC247FD00E00EAAAFB /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		8438A4AE247FD22600EAAAFB /* PrimaryTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTextField.swift; sourceTree = "<group>"; };
@@ -203,6 +211,24 @@
 				69B1F91E44AEC508567D5DF9 /* Pods_FireNoteTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84251A9624BD66C10039953F /* Pickers */ = {
+			isa = PBXGroup;
+			children = (
+				84251A9424BD65E40039953F /* MediaPicker.swift */,
+			);
+			path = Pickers;
+			sourceTree = "<group>";
+		};
+		84251A9724BD781B0039953F /* EditorAttachments */ = {
+			isa = PBXGroup;
+			children = (
+				84251A9824BD78310039953F /* EditorAttachmentsView.swift */,
+				84251A9A24BD7A1F0039953F /* EditorAttachmentsGeotagView.swift */,
+				84251A9C24BD9E3E0039953F /* EditorAttachmentViewModel.swift */,
+			);
+			path = EditorAttachments;
 			sourceTree = "<group>";
 		};
 		843639DB24A3017B001F7757 /* CollectionViewCells */ = {
@@ -364,6 +390,7 @@
 				844F9733247BC3AF008E0BC6 /* TextFields */,
 				843639DB24A3017B001F7757 /* CollectionViewCells */,
 				849A4068249B1BEC00018B06 /* CollectionViewLayouts */,
+				84251A9624BD66C10039953F /* Pickers */,
 			);
 			path = "UI Components";
 			sourceTree = "<group>";
@@ -437,11 +464,12 @@
 		847E6339249C762600ED1EE5 /* Editor */ = {
 			isa = PBXGroup;
 			children = (
+				84251A9724BD781B0039953F /* EditorAttachments */,
 				84F49F0524BC4F25002E7300 /* EditorToolbar */,
+				84F49F0324BC47E8002E7300 /* EditorAttachmentsBarView.swift */,
 				847E633A249C773700ED1EE5 /* EditorViewController.swift */,
 				847E633C249C774200ED1EE5 /* EditorViewController.storyboard */,
 				847E633E249C774D00ED1EE5 /* EditorControllerViewModel.swift */,
-				84F49F0324BC47E8002E7300 /* EditorAttachmentsBarView.swift */,
 			);
 			path = Editor;
 			sourceTree = "<group>";
@@ -836,6 +864,8 @@
 				84EEDD632484F1E00075FAF0 /* Profile.swift in Sources */,
 				84F49F0724BC5D30002E7300 /* OrderedButton.swift in Sources */,
 				844F9730247B9BF5008E0BC6 /* Common.swift in Sources */,
+				84251A9B24BD7A1F0039953F /* EditorAttachmentsGeotagView.swift in Sources */,
+				84251A9D24BD9E3E0039953F /* EditorAttachmentViewModel.swift in Sources */,
 				84F49F0424BC47E8002E7300 /* EditorAttachmentsBarView.swift in Sources */,
 				846A9DD324A46A3D00A5B0AD /* EditorToolbarOptionsPresenter.swift in Sources */,
 				844F9728247B99F1008E0BC6 /* LoginViewController.swift in Sources */,
@@ -849,6 +879,7 @@
 				84EEAE8624B86ECB006E75A6 /* EditorToolsPresenter.swift in Sources */,
 				847B24E12487A0170016B8FD /* AlertPresenter.swift in Sources */,
 				844F9735247BC400008E0BC6 /* ErrorTextField.swift in Sources */,
+				84251A9524BD65E40039953F /* MediaPicker.swift in Sources */,
 				84EEDD582484F11A0075FAF0 /* AppSession.swift in Sources */,
 				84EEDD4D2484BBC30075FAF0 /* RegistrationControllerViewModel.swift in Sources */,
 				849A406F249B53BE00018B06 /* NoteViewModel.swift in Sources */,
@@ -872,6 +903,7 @@
 				843639F924A353E9001F7757 /* Aztec+Extensions.swift in Sources */,
 				847B24D224874D980016B8FD /* AbstractNavigationController.swift in Sources */,
 				8474AB7224989B2000520D5C /* SidebarPresenter.swift in Sources */,
+				84251A9924BD78310039953F /* EditorAttachmentsView.swift in Sources */,
 				8438A4AD247FD00E00EAAAFB /* R.generated.swift in Sources */,
 				8474AB762498C34600520D5C /* SidebarViewController.swift in Sources */,
 				849907BB2488A04C003FF06F /* HUDLoaderView.swift in Sources */,

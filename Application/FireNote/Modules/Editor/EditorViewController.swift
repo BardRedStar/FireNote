@@ -45,6 +45,11 @@ class EditorViewController: AbstractViewController, StoryboardBased {
         return presenter
     }()
 
+    private lazy var mediaPicker: MediaPicker = {
+        let mediaPicker = MediaPicker(presentationController: self, delegate: self)
+        return mediaPicker
+    }()
+
     // MARK: - Output
 
     // MARK: - Properties and variables
@@ -52,7 +57,6 @@ class EditorViewController: AbstractViewController, StoryboardBased {
     private let keyboardObserver = KeyboardNotificationsObserver()
 
     private var initialTextViewHeight: CGFloat = 0.0
-
     private var isFirstLayout = true
 
     private var viewModel: EditorControllerViewModel!
@@ -121,6 +125,25 @@ class EditorViewController: AbstractViewController, StoryboardBased {
             self?.view.layoutIfNeeded()
         })
     }
+
+    // MARK: - Attachment Bar Actions
+
+    private func handleAttachmentAction(for attachment: EditorControllerViewModel.AttachmentBarButton) {
+        switch attachment {
+        case .media:
+            handleMediaAttachment()
+        case .file:
+            break
+        case .geo:
+            break
+        case .graffiti:
+            break
+        }
+    }
+
+    private func handleMediaAttachment() {
+        mediaPicker.present()
+    }
 }
 
 // MARK: - EditorToolsPresenterTextViewDelegate
@@ -159,8 +182,20 @@ extension EditorViewController: AMKeyboardFrameTrackerDelegate {
     }
 }
 
+// MARK: - EditorAttachmentsBarViewDelegate
+
 extension EditorViewController: EditorAttachmentsBarViewDelegate {
     func attachmentsBarView(_ attachmentsBarView: EditorAttachmentsBarView, didSelectAttachmentAtIndex index: Int) {
-        print(index)
+        handleAttachmentAction(for: viewModel.attachmentButtons[index])
     }
+}
+
+// MARK: - MediaPickerDelegate
+
+extension EditorViewController: MediaPickerDelegate {
+    func mediaPicker(_ picker: MediaPicker, didSelectMedia item: MediaItem) {
+
+    }
+
+    func mediaPickerDidCancel(_ picker: MediaPicker) {}
 }

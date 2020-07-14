@@ -11,11 +11,10 @@ import UIKit
 /// A class to process data operations for editor controller
 class EditorControllerViewModel: AbstractControllerViewModel {
     enum AttachmentBarButton: CaseIterable {
-        case camera, media, file, geo, graffiti
+        case media, file, geo, graffiti
 
         var icon: UIImage {
             switch self {
-            case .camera: return #imageLiteral(resourceName: "ic_camera")
             case .media: return #imageLiteral(resourceName: "ic_media")
             case .file: return #imageLiteral(resourceName: "ic_file")
             case .geo: return #imageLiteral(resourceName: "ic_geotag")
