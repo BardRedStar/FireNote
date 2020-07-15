@@ -39,6 +39,7 @@
 		8454685B24A611FC00B98E9A /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454685A24A611FC00B98E9A /* CGPoint+Extensions.swift */; };
 		846A9DD124A456D800A5B0AD /* EditorToolbarOptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A9DD024A456D800A5B0AD /* EditorToolbarOptionTableViewCell.swift */; };
 		846A9DD324A46A3D00A5B0AD /* EditorToolbarOptionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A9DD224A46A3D00A5B0AD /* EditorToolbarOptionsPresenter.swift */; };
+		846EC9EC24BEB2D900B7394F /* EditorAttachmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EC9EB24BEB2D900B7394F /* EditorAttachmentCollectionViewCell.swift */; };
 		8470B2942480AF2A003303B3 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470B2932480AF2A003303B3 /* PasswordTextField.swift */; };
 		8470B2962480AF60003303B3 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470B2952480AF60003303B3 /* String+Extensions.swift */; };
 		8470B2982480C700003303B3 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470B2972480C700003303B3 /* GlobalConstants.swift */; };
@@ -136,6 +137,7 @@
 		8454685A24A611FC00B98E9A /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
 		846A9DD024A456D800A5B0AD /* EditorToolbarOptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorToolbarOptionTableViewCell.swift; sourceTree = "<group>"; };
 		846A9DD224A46A3D00A5B0AD /* EditorToolbarOptionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorToolbarOptionsPresenter.swift; sourceTree = "<group>"; };
+		846EC9EB24BEB2D900B7394F /* EditorAttachmentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorAttachmentCollectionViewCell.swift; sourceTree = "<group>"; };
 		8470B2932480AF2A003303B3 /* PasswordTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		8470B2952480AF60003303B3 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		8470B2972480C700003303B3 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				84251A9824BD78310039953F /* EditorAttachmentsView.swift */,
 				84251A9A24BD7A1F0039953F /* EditorAttachmentsGeotagView.swift */,
 				84251A9C24BD9E3E0039953F /* EditorAttachmentViewModel.swift */,
+				846EC9EB24BEB2D900B7394F /* EditorAttachmentCollectionViewCell.swift */,
 			);
 			path = EditorAttachments;
 			sourceTree = "<group>";
@@ -289,7 +292,6 @@
 		844F96F1247B9439008E0BC6 /* FireNote */ = {
 			isa = PBXGroup;
 			children = (
-				8438A4B1247FD5BF00EAAAFB /* Fonts */,
 				844F971C247B97DA008E0BC6 /* UI Components */,
 				844F971B247B97D4008E0BC6 /* Coordination */,
 				844F971A247B97CF008E0BC6 /* Session */,
@@ -297,8 +299,8 @@
 				844F9718247B97C3008E0BC6 /* Modules */,
 				844F9717247B97BE008E0BC6 /* Extensions */,
 				844F9716247B97AD008E0BC6 /* Utils */,
+				846EC9ED24BEB5F400B7394F /* Resources */,
 				844F96F2247B9439008E0BC6 /* AppDelegate.swift */,
-				844F96FB247B943D008E0BC6 /* Assets.xcassets */,
 				844F96FD247B943D008E0BC6 /* LaunchScreen.storyboard */,
 				844F9700247B943D008E0BC6 /* Info.plist */,
 				844F9731247BA177008E0BC6 /* GoogleService-Info.plist */,
@@ -436,6 +438,15 @@
 				8470B2932480AF2A003303B3 /* PasswordTextField.swift */,
 			);
 			path = TextFields;
+			sourceTree = "<group>";
+		};
+		846EC9ED24BEB5F400B7394F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				844F96FB247B943D008E0BC6 /* Assets.xcassets */,
+				8438A4B1247FD5BF00EAAAFB /* Fonts */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		8474AB70249898EA00520D5C /* Sidebar */ = {
@@ -902,6 +913,7 @@
 				84EEDD6D248507400075FAF0 /* APIManager.swift in Sources */,
 				843639F924A353E9001F7757 /* Aztec+Extensions.swift in Sources */,
 				847B24D224874D980016B8FD /* AbstractNavigationController.swift in Sources */,
+				846EC9EC24BEB2D900B7394F /* EditorAttachmentCollectionViewCell.swift in Sources */,
 				8474AB7224989B2000520D5C /* SidebarPresenter.swift in Sources */,
 				84251A9924BD78310039953F /* EditorAttachmentsView.swift in Sources */,
 				8438A4AD247FD00E00EAAAFB /* R.generated.swift in Sources */,
