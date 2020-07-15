@@ -10,6 +10,8 @@ import UIKit
 
 /// A class to process data operations for editor controller
 class EditorControllerViewModel: AbstractControllerViewModel {
+    // MARK: - Definitions
+
     enum AttachmentBarButton: CaseIterable {
         case media, file, geo, graffiti
 
@@ -23,7 +25,30 @@ class EditorControllerViewModel: AbstractControllerViewModel {
         }
     }
 
+    // MARK: - Properties and variables
+
     var attachmentButtons: [AttachmentBarButton] {
         return AttachmentBarButton.allCases.reversed()
+    }
+
+    var attachmentsViewModel: EditorAttachmentsViewModel?
+
+    // MARK: - Initialization
+
+    override init(session: Session) {
+        super.init(session: session)
+
+        fillTestData()
+    }
+
+    // MARK: - Data methods
+
+    private func fillTestData() {
+        attachmentsViewModel = EditorAttachmentsViewModel(geotag: "California, CA", attachments: [
+            EditorAttachment(name: "file1.jpg", type: .image(#imageLiteral(resourceName: "background"))),
+            EditorAttachment(name: "file2.mov", type: .video(#imageLiteral(resourceName: "background"), 343)),
+            EditorAttachment(name: "file3.pdf", type: .file),
+            EditorAttachment(name: "graffiti.jpg", type: .graffiti(#imageLiteral(resourceName: "background")))
+        ])
     }
 }

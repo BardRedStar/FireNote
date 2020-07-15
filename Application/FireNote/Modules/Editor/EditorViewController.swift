@@ -27,7 +27,7 @@ class EditorViewController: AbstractViewController, StoryboardBased {
     @IBOutlet private var formatBarContainerView: UIView!
     @IBOutlet private var bodyTextViewContainerView: UIView!
     @IBOutlet private var attachmentBar: EditorAttachmentsBarView!
-    @IBOutlet private var noteAttachmentsView: UIView!
+    @IBOutlet private var noteAttachmentsView: EditorAttachmentsView!
 
     @IBOutlet private var formatBarTopConstraint: NSLayoutConstraint!
     @IBOutlet private var bodyTextViewHeightConstraint: NSLayoutConstraint!
@@ -75,6 +75,8 @@ class EditorViewController: AbstractViewController, StoryboardBased {
         setupKeyboardTracking()
 
         attachmentBar.delegate = self
+
+        loadData()
     }
 
     override func viewDidLayoutSubviews() {
@@ -123,6 +125,16 @@ class EditorViewController: AbstractViewController, StoryboardBased {
         UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseOut, animations: { [weak self] in
             self?.formatBarTopConstraint.constant = offset
             self?.view.layoutIfNeeded()
+        })
+    }
+
+    private func loadData() {
+        delay(1.0, completion: { [weak self] in
+            if let model = self?.viewModel.attachmentsViewModel {
+                self?.attachmentsViewHeightConstraint.constant
+                    = EditorAttachmentsView.contentHeightFor(model, frameWidth: self?.noteAttachmentsView.frame.width ?? 0)
+                self?.noteAttachmentsView.configureWith(model)
+            }
         })
     }
 
@@ -193,9 +205,7 @@ extension EditorViewController: EditorAttachmentsBarViewDelegate {
 // MARK: - MediaPickerDelegate
 
 extension EditorViewController: MediaPickerDelegate {
-    func mediaPicker(_ picker: MediaPicker, didSelectMedia item: MediaItem) {
-
-    }
+    func mediaPicker(_ picker: MediaPicker, didSelectMedia item: MediaItem) {}
 
     func mediaPickerDidCancel(_ picker: MediaPicker) {}
 }

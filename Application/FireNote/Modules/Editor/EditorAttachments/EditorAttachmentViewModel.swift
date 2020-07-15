@@ -10,7 +10,7 @@ import UIKit
 
 struct EditorAttachmentsViewModel {
     let geotag: String
-    let attachmnets: [EditorAttachment]
+    let attachments: [EditorAttachment]
 }
 
 struct EditorAttachment {
@@ -19,9 +19,13 @@ struct EditorAttachment {
 }
 
 enum AttachmentType {
+    /// Image type
     case image(UIImage)
-    case video(UIImage, TimeInterval)
+    /// Video type. Contains thumbnail image and duration in seconds
+    case video(UIImage, Int)
+    /// File type
     case file
+    /// Graffiti type
     case graffiti(UIImage)
 
     var thumbnailImage: UIImage {

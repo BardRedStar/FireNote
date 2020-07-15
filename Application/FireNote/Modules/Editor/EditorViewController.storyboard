@@ -40,9 +40,9 @@
                                                     <constraint firstAttribute="height" constant="1" id="zky-Kg-86I"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ks-Yy-1dK" userLabel="Attachments View">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ks-Yy-1dK" userLabel="Attachments View" customClass="EditorAttachmentsView" customModule="FireNote" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="175" width="414" height="100"/>
-                                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="eyN-WO-t3e"/>
                                                 </constraints>
@@ -55,7 +55,7 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="eI5-bS-aYY" firstAttribute="top" secondItem="iqB-jc-7Ql" secondAttribute="top" constant="10" id="37F-d4-xcT"/>
                                             <constraint firstAttribute="trailing" secondItem="caD-C4-uky" secondAttribute="trailing" id="3P5-9t-TqG"/>
@@ -121,7 +121,7 @@
                         <outlet property="bodyTextViewHeightConstraint" destination="hyY-5f-LAa" id="8bK-fG-yxd"/>
                         <outlet property="formatBarContainerView" destination="zrL-l6-Buq" id="Zqn-y8-hjM"/>
                         <outlet property="formatBarTopConstraint" destination="KmU-0v-KPW" id="mHT-gu-X2a"/>
-                        <outlet property="noteAttachmentsView" destination="6ks-Yy-1dK" id="yFl-up-3ad"/>
+                        <outlet property="noteAttachmentsView" destination="6ks-Yy-1dK" id="FcK-2d-B9e"/>
                         <outlet property="scrollView" destination="4MI-cM-lKx" id="nKB-tc-swW"/>
                         <outlet property="titleTextField" destination="eI5-bS-aYY" id="gC7-6N-SBw"/>
                     </connections>
