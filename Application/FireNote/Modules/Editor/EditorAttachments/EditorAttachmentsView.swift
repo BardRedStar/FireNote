@@ -12,9 +12,9 @@ class EditorAttachmentsView: SettableView {
     // MARK: - Definitions
 
     enum Constants {
-        static let collectionViewContentInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-        static let collectionViewHeight: CGFloat = 130.0
-        static let cellSideWidthToHeightRatio: CGFloat = 0.75
+        static let collectionViewContentInset = UIEdgeInsets(top: 5, left: 15, bottom: 5, right: 15)
+        static let cellSideHeightToWidthRatio: CGFloat = 1.333
+        static let attachmentsSpacing: CGFloat = 15.0
     }
 
     // MARK: - UI Controls
@@ -25,30 +25,23 @@ class EditorAttachmentsView: SettableView {
         collectionView.dataSource = self
         collectionView.contentInset = Constants.collectionViewContentInset
         collectionView.backgroundColor = .clear
+        collectionView.showsHorizontalScrollIndicator = false
         collectionView.register(cellType: EditorAttachmentCollectionViewCell.self)
 
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.minimumLineSpacing = 4.0
-
-        let itemHeight = (Constants.collectionViewHeight - Constants.collectionViewContentInset.top
-            - Constants.collectionViewContentInset.bottom)
-        let itemWidth = itemHeight * Constants.cellSideWidthToHeightRatio
-        layout.itemSize = CGSize(width: itemWidth, height: itemHeight)
-
+        layout.minimumLineSpacing = Constants.attachmentsSpacing
         collectionView.collectionViewLayout = layout
         return collectionView
-    }()
-
-    private lazy var geotagView: EditorAttachmentsGeotagView = {
-        let geotagView = EditorAttachmentsGeotagView()
-        geotagView.delegate = self
-        return geotagView
     }()
 
     private var separators: [UIView] = []
 
     // MARK: - Properties and variables
+
+    private var attachmentLayout: UICollectionViewFlowLayout {
+        return collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+    }
 
     private var model: EditorAttachmentsViewModel?
 
@@ -58,10 +51,6 @@ class EditorAttachmentsView: SettableView {
         super.setup()
 
         addSubview(collectionView)
-        addSubview(geotagView)
-
-        separators = (0 ... 2).map { _ in self.makeSeparator() }
-        separators.forEach { addSubview($0) }
     }
 
     override func layoutSubviews() {
@@ -73,40 +62,34 @@ class EditorAttachmentsView: SettableView {
     // MARK: - UI Methods
 
     class func contentHeightFor(_ model: EditorAttachmentsViewModel, frameWidth: CGFloat) -> CGFloat {
-        let geotagHeight = EditorAttachmentsGeotagView.contentHeightFor(model.geotag, frameWidth: frameWidth)
-        return geotagHeight + 3 + Constants.collectionViewHeight // Geotag, collection view and 3 separators.
+        let itemSize = itemSizeFor(frameWidth: frameWidth)
+        let collectionViewHeight = model.attachments.isEmpty ? 0.0 :
+            itemSize.height + Constants.collectionViewContentInset.top + Constants.collectionViewContentInset.bottom
+        return collectionViewHeight
+    }
+
+    private class func itemSizeFor(frameWidth: CGFloat) -> CGSize {
+        let contentInsets = Constants.collectionViewContentInset
+        let itemWidth = ceil((frameWidth - contentInsets.left - contentInsets.right) / 3.5)
+        let itemHeight = itemWidth * Constants.cellSideHeightToWidthRatio
+        return CGSize(width: itemWidth, height: itemHeight)
     }
 
     private func updateLayout() {
-        separators[0].frame = CGRect(origin: .zero, size: CGSize(width: frame.width, height: 1))
-
-        let geotagHeight = EditorAttachmentsGeotagView.contentHeightFor(model?.geotag, frameWidth: frame.width)
-        geotagView.frame = CGRect(x: 0, y: separators[0].frame.maxY, width: frame.width, height: geotagHeight)
-
-        separators[1].frame = CGRect(x: 0, y: geotagView.frame.maxY, width: frame.width, height: 1)
-
-        collectionView.frame = CGRect(x: 0, y: separators[1].frame.maxY, width: frame.width, height: Constants.collectionViewHeight)
-
-        separators[2].frame = CGRect(x: 0, y: collectionView.frame.maxY, width: frame.width, height: 1)
+        let collectionViewHeight = EditorAttachmentsView.itemSizeFor(frameWidth: frame.width).height +
+            Constants.collectionViewContentInset.top + Constants.collectionViewContentInset.bottom
+        collectionView.frame = CGRect(x: 0, y: 0, width: frame.width, height: collectionViewHeight)
     }
 
     func configureWith(_ model: EditorAttachmentsViewModel) {
         self.model = model
-
-        geotagView.configureWith(addressText: model.geotag)
         collectionView.reloadData()
-    }
-
-    private func makeSeparator() -> UIView {
-        let view = UIView()
-        view.backgroundColor = .lightGray
-        return view
     }
 }
 
 // MARK: - UICollectionViewDelegate, UICollectionViewDataSource
 
-extension EditorAttachmentsView: UICollectionViewDelegate, UICollectionViewDataSource {
+extension EditorAttachmentsView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return model?.attachments.count ?? 0
     }
@@ -120,16 +103,9 @@ extension EditorAttachmentsView: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Tap attachment at \(indexPath.row)")
     }
-}
 
-// MARK: - EditorAttachmentsGeotagViewDelegate
-
-extension EditorAttachmentsView: EditorAttachmentsGeotagViewDelegate {
-    func geotagViewDidTapRemove(_ geotagView: EditorAttachmentsGeotagView) {
-        print("Remove geotag")
-    }
-
-    func geotagViewDidTapLocation(_ geotagView: EditorAttachmentsGeotagView) {
-        print("Tap geotag")
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return EditorAttachmentsView.itemSizeFor(frameWidth: collectionView.frame.width)
     }
 }

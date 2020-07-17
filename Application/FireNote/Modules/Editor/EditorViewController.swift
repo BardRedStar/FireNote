@@ -28,11 +28,13 @@ class EditorViewController: AbstractViewController, StoryboardBased {
     @IBOutlet private var bodyTextViewContainerView: UIView!
     @IBOutlet private var attachmentBar: EditorAttachmentsBarView!
     @IBOutlet private var noteAttachmentsView: EditorAttachmentsView!
+    @IBOutlet private var geotagView: EditorGeotagView!
 
     @IBOutlet private var formatBarTopConstraint: NSLayoutConstraint!
     @IBOutlet private var bodyTextViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet private var attachmentBarBottomConstraint: NSLayoutConstraint!
     @IBOutlet private var attachmentsViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet private var geotagViewHeightConstraint: NSLayoutConstraint!
 
     // MARK: - UI Controls
 
@@ -56,9 +58,6 @@ class EditorViewController: AbstractViewController, StoryboardBased {
 
     private let keyboardObserver = KeyboardNotificationsObserver()
 
-    private var initialTextViewHeight: CGFloat = 0.0
-    private var isFirstLayout = true
-
     private var viewModel: EditorControllerViewModel!
 
     // MARK: - UI Lifecycle
@@ -75,23 +74,37 @@ class EditorViewController: AbstractViewController, StoryboardBased {
         setupKeyboardTracking()
 
         attachmentBar.delegate = self
+        geotagView.delegate = self
 
         loadData()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        configureAttachmentsBar()
+        configureAttachmentsView()
+        configureGeotagView()
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
 
-        if isFirstLayout {
-            let textViewHeight = view.frame.height - titleTextField.frame.height - attachmentBar.frame.height
-                - noteAttachmentsView.frame.height - 31.0
-            initialTextViewHeight = textViewHeight
-            bodyTextViewHeightConstraint?.constant = textViewHeight
-
-            configureAttachmentsBar()
-
-            isFirstLayout = false
+        var attachmentsViewHeight: CGFloat = 0.0
+        var geotagViewHeight: CGFloat = 0.0
+        if let model = viewModel.attachmentsViewModel {
+            attachmentsViewHeight = EditorAttachmentsView.contentHeightFor(model, frameWidth: noteAttachmentsView.frame.width)
+            geotagViewHeight = EditorGeotagView.contentHeightFor(model.geotag, frameWidth: geotagView.frame.width)
         }
+
+        let textViewHeight = view.frame.height - titleTextField.frame.height - attachmentBar.frame.height -
+            attachmentsViewHeight - geotagViewHeight - 31.0
+
+        let textViewContentHeight = toolsPresenter.textView.sizeThatFits(CGSize(width: toolsPresenter.textView.frame.width,
+                                                                                height: CGFloat.greatestFiniteMagnitude)).height
+        bodyTextViewHeightConstraint?.constant = max(textViewContentHeight, textViewHeight)
+        attachmentsViewHeightConstraint?.constant = attachmentsViewHeight
+        geotagViewHeightConstraint?.constant = geotagViewHeight
     }
 
     // MARK: - UI Methods
@@ -111,6 +124,14 @@ class EditorViewController: AbstractViewController, StoryboardBased {
         attachmentBar.configureWith(models: viewModel.attachmentButtons)
     }
 
+    private func configureAttachmentsView() {
+        noteAttachmentsView.configureWith(viewModel.attachmentsViewModel!)
+    }
+
+    private func configureGeotagView() {
+        geotagView.configureWith(addressText: viewModel.attachmentsViewModel!.geotag)
+    }
+
     private func setupKeyboardTracking() {
         keyboardObserver.onWillHide = { [weak self] _ in
             self?.moveFormatBarWith(offset: -(self?.formatBarContainerView.frame.height ?? 0))
@@ -128,15 +149,7 @@ class EditorViewController: AbstractViewController, StoryboardBased {
         })
     }
 
-    private func loadData() {
-        delay(1.0, completion: { [weak self] in
-            if let model = self?.viewModel.attachmentsViewModel {
-                self?.attachmentsViewHeightConstraint.constant
-                    = EditorAttachmentsView.contentHeightFor(model, frameWidth: self?.noteAttachmentsView.frame.width ?? 0)
-                self?.noteAttachmentsView.configureWith(model)
-            }
-        })
-    }
+    private func loadData() {}
 
     // MARK: - Attachment Bar Actions
 
@@ -161,17 +174,14 @@ class EditorViewController: AbstractViewController, StoryboardBased {
 // MARK: - EditorToolsPresenterTextViewDelegate
 
 extension EditorViewController: EditorToolsPresenterTextViewDelegate {
-    func toolsTextViewDidChange(_ textView: UITextView) {
-        let height = textView.sizeThatFits(CGSize(width: textView.frame.width, height: CGFloat.greatestFiniteMagnitude)).height
-        bodyTextViewHeightConstraint?.constant = max(height, initialTextViewHeight)
-    }
-
     func toolsTextViewDidBeginEditing(_ textView: UITextView) {
         moveFormatBarWith(offset: 0)
+        scrollView.contentInset.bottom = scrollView.frame.maxY - attachmentBar.frame.minY
     }
 
     func toolsTextViewDidEndEditing(_ textView: UITextView) {
         moveFormatBarWith(offset: -formatBarContainerView.frame.height)
+        scrollView.contentInset.bottom = 0
     }
 }
 
@@ -199,6 +209,18 @@ extension EditorViewController: AMKeyboardFrameTrackerDelegate {
 extension EditorViewController: EditorAttachmentsBarViewDelegate {
     func attachmentsBarView(_ attachmentsBarView: EditorAttachmentsBarView, didSelectAttachmentAtIndex index: Int) {
         handleAttachmentAction(for: viewModel.attachmentButtons[index])
+    }
+}
+
+// MARK: - EditorGeotagViewDelegate
+
+extension EditorViewController: EditorGeotagViewDelegate {
+    func geotagViewDidTapRemove(_ geotagView: EditorGeotagView) {
+        print("Remove geotag")
+    }
+
+    func geotagViewDidTapLocation(_ geotagView: EditorGeotagView) {
+        print("Tap geotag")
     }
 }
 

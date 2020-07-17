@@ -9,12 +9,17 @@
 import Reusable
 import UIKit
 
+protocol EditorAttachmentCollectionViewCellDelegate: AnyObject {
+    func attachmentCellDidTapRemove(_ cell: EditorAttachmentCollectionViewCell)
+}
+
 class EditorAttachmentCollectionViewCell: SettableCollectionViewCell, Reusable {
     // MARK: - Definitions
 
     enum Constants {
-        static let contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 3, right: 0)
-        static let innerInset: CGFloat = 3.0
+        static let contentInset = UIEdgeInsets(top: 6, left: 6, bottom: 6, right: 6)
+        static let innerInset: CGFloat = 10.0
+        static let removeButtonSize = CGSize(width: 24, height: 24)
     }
 
     // MARK: - UI Controls
@@ -24,6 +29,7 @@ class EditorAttachmentCollectionViewCell: SettableCollectionViewCell, Reusable {
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFill
         imageView.backgroundColor = R.color.placeholder()
+        imageView.layer.cornerRadius = 3
         return imageView
     }()
 
@@ -32,7 +38,6 @@ class EditorAttachmentCollectionViewCell: SettableCollectionViewCell, Reusable {
         label.numberOfLines = 1
         label.textColor = R.color.text_primary()
         label.font = R.font.baloo2Regular(size: 13)
-        label.textAlignment = .center
         return label
     }()
 
@@ -47,18 +52,55 @@ class EditorAttachmentCollectionViewCell: SettableCollectionViewCell, Reusable {
         return label
     }()
 
+    private lazy var centerImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.clipsToBounds = true
+        imageView.contentMode = .scaleToFill
+        imageView.image = #imageLiteral(resourceName: "ic_play")
+        imageView.tintColor = R.color.attachment_image_tint()
+        return imageView
+    }()
+
+    private lazy var removeButton: UIButton = {
+        let button = UIButton(frame: CGRect(origin: .zero, size: Constants.removeButtonSize))
+        button.setImage(#imageLiteral(resourceName: "ic_close_circle"), for: .normal)
+        button.imageView?.tintColor = .systemRed
+        button.contentEdgeInsets = UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2)
+        button.addTarget(self, action: #selector(removeAction), for: .touchUpInside)
+        return button
+    }()
+
+    private lazy var containerView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
+        view.layer.cornerRadius = 6.0
+        view.clipsToBounds = true
+        return view
+    }()
+
+    // MARK: - Properties and variables
+
+    weak var delegate: EditorAttachmentCollectionViewCellDelegate?
+
     // MARK: - UI Lifecycle
 
     override func setup() {
         super.setup()
 
-        addSubview(imageView)
-        addSubview(nameLabel)
-        addSubview(timeLabel)
+        contentView.addSubview(containerView)
+
+        containerView.addSubview(imageView)
+        containerView.addSubview(nameLabel)
+        containerView.addSubview(timeLabel)
+        containerView.addSubview(centerImageView)
+
+        contentView.addSubview(removeButton)
     }
 
     override func layoutSubviews() {
         super.layoutSubviews()
+
+        containerView.dropShadow()
 
         updateLayout()
     }
@@ -68,6 +110,7 @@ class EditorAttachmentCollectionViewCell: SettableCollectionViewCell, Reusable {
     func configureWith(model: EditorAttachment) {
         nameLabel.text = model.name
         imageView.image = model.type.thumbnailImage
+        centerImageView.image = model.type.centerImage
 
         if case let .video(_, time) = model.type {
             timeLabel.isHidden = false
@@ -80,17 +123,39 @@ class EditorAttachmentCollectionViewCell: SettableCollectionViewCell, Reusable {
     }
 
     private func updateLayout() {
-        let nameLabelHeight = nameLabel.sizeThatFits(CGSize(width: frame.width, height: CGFloat.greatestFiniteMagnitude)).height
-        nameLabel.frame = CGRect(x: Constants.contentInset.left, y: frame.height - nameLabelHeight - Constants.contentInset.bottom,
-                                 width: frame.width - Constants.contentInset.left - Constants.contentInset.right, height: nameLabelHeight)
+        let size = CGSize(width: contentView.frame.width - Constants.removeButtonSize.width / 2,
+                          height: contentView.frame.height - Constants.removeButtonSize.height / 2)
+        containerView.frame = CGRect(origin: CGPoint(x: 0, y: Constants.removeButtonSize.height / 2), size: size)
 
+        // Name
+        let nameLabelHeight = nameLabel.sizeThatFits(CGSize(width: size.width - Constants.contentInset.left - Constants.contentInset.right,
+                                                            height: CGFloat.greatestFiniteMagnitude)).height
+        nameLabel.frame = CGRect(x: Constants.contentInset.left, y: size.height - nameLabelHeight - Constants.contentInset.bottom,
+                                 width: size.width - Constants.contentInset.left - Constants.contentInset.right, height: nameLabelHeight)
+
+        // Thumbnail image
         imageView.frame = CGRect(x: Constants.contentInset.left, y: Constants.contentInset.top,
-                                 width: frame.width - Constants.contentInset.left - Constants.contentInset.right,
+                                 width: size.width - Constants.contentInset.left - Constants.contentInset.right,
                                  height: nameLabel.frame.minY - Constants.innerInset)
 
-        let timeLabelSize = timeLabel.sizeThatFits(CGSize(width: frame.width, height: CGFloat.greatestFiniteMagnitude))
+        // Time label
+        let timeLabelSize = timeLabel.sizeThatFits(CGSize(width: size.width, height: CGFloat.greatestFiniteMagnitude))
         timeLabel.frame = CGRect(x: imageView.frame.maxX - timeLabelSize.width - 4,
-                                 y: imageView.frame.maxY - timeLabelSize.height - 4,
-                                 width: timeLabelSize.width + 4, height: timeLabelSize.height + 4)
+                                 y: imageView.frame.maxY - timeLabelSize.height,
+                                 width: timeLabelSize.width + 4, height: timeLabelSize.height)
+
+        // Play button
+        let centerImageSide = min(imageView.frame.height, imageView.frame.width) / 2
+        centerImageView.frame = CGRect(x: imageView.frame.midX - centerImageSide / 2, y: imageView.frame.midY - centerImageSide / 2,
+                                       width: centerImageSide, height: centerImageSide)
+
+        // Remove button
+        removeButton.frame.origin = CGPoint(x: contentView.frame.maxX - removeButton.frame.width, y: 0)
+    }
+
+    // MARK: - UI Callbacks
+
+    @objc private func removeAction(_ sender: UIButton) {
+        delegate?.attachmentCellDidTapRemove(self)
     }
 }

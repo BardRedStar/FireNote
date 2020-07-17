@@ -28,12 +28,21 @@ enum AttachmentType {
     /// Graffiti type
     case graffiti(UIImage)
 
-    var thumbnailImage: UIImage {
+    var thumbnailImage: UIImage? {
         switch self {
         case let .image(image): return image
         case let .video(previewImage, _): return previewImage
-        case .file: return #imageLiteral(resourceName: "ic_file")
+        case .file: return nil
         case let .graffiti(image): return image
+        }
+    }
+
+    var centerImage: UIImage? {
+        switch self {
+        case .image: return nil
+        case .video: return #imageLiteral(resourceName: "ic_play")
+        case .file: return #imageLiteral(resourceName: "ic_file")
+        case .graffiti: return #imageLiteral(resourceName: "ic_paint")
         }
     }
 }

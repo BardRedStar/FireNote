@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		84251A9524BD65E40039953F /* MediaPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84251A9424BD65E40039953F /* MediaPicker.swift */; };
 		84251A9924BD78310039953F /* EditorAttachmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84251A9824BD78310039953F /* EditorAttachmentsView.swift */; };
-		84251A9B24BD7A1F0039953F /* EditorAttachmentsGeotagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84251A9A24BD7A1F0039953F /* EditorAttachmentsGeotagView.swift */; };
+		84251A9B24BD7A1F0039953F /* EditorGeotagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84251A9A24BD7A1F0039953F /* EditorGeotagView.swift */; };
 		84251A9D24BD9E3E0039953F /* EditorAttachmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84251A9C24BD9E3E0039953F /* EditorAttachmentViewModel.swift */; };
 		843639F924A353E9001F7757 /* Aztec+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843639F824A353E9001F7757 /* Aztec+Extensions.swift */; };
 		8438A4AD247FD00E00EAAAFB /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438A4AC247FD00E00EAAAFB /* R.generated.swift */; };
@@ -65,6 +65,7 @@
 		849907BB2488A04C003FF06F /* HUDLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849907BA2488A04C003FF06F /* HUDLoaderView.swift */; };
 		849907BD2488AC3C003FF06F /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849907BC2488AC3C003FF06F /* UIColor+Extensions.swift */; };
 		8499FF5224C01F580048932D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8499FF5124C01F580048932D /* Colors.xcassets */; };
+		8499FF5424C029850048932D /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8499FF5324C029850048932D /* UIView+Extensions.swift */; };
 		849A406A249B1C4C00018B06 /* TileCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A4069249B1C4C00018B06 /* TileCollectionViewLayout.swift */; };
 		849A406C249B3F1100018B06 /* NoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A406B249B3F1100018B06 /* NoteCollectionViewCell.swift */; };
 		849A406F249B53BE00018B06 /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A406E249B53BE00018B06 /* NoteViewModel.swift */; };
@@ -104,7 +105,7 @@
 		69B1F91E44AEC508567D5DF9 /* Pods_FireNoteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireNoteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84251A9424BD65E40039953F /* MediaPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPicker.swift; sourceTree = "<group>"; };
 		84251A9824BD78310039953F /* EditorAttachmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorAttachmentsView.swift; sourceTree = "<group>"; };
-		84251A9A24BD7A1F0039953F /* EditorAttachmentsGeotagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorAttachmentsGeotagView.swift; sourceTree = "<group>"; };
+		84251A9A24BD7A1F0039953F /* EditorGeotagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorGeotagView.swift; sourceTree = "<group>"; };
 		84251A9C24BD9E3E0039953F /* EditorAttachmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorAttachmentViewModel.swift; sourceTree = "<group>"; };
 		843639F824A353E9001F7757 /* Aztec+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Aztec+Extensions.swift"; sourceTree = "<group>"; };
 		8438A4AC247FD00E00EAAAFB /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -164,6 +165,7 @@
 		849907BA2488A04C003FF06F /* HUDLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDLoaderView.swift; sourceTree = "<group>"; };
 		849907BC2488AC3C003FF06F /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		8499FF5124C01F580048932D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		8499FF5324C029850048932D /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		849A4069249B1C4C00018B06 /* TileCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileCollectionViewLayout.swift; sourceTree = "<group>"; };
 		849A406B249B3F1100018B06 /* NoteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCollectionViewCell.swift; sourceTree = "<group>"; };
 		849A406E249B53BE00018B06 /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
@@ -229,7 +231,6 @@
 			isa = PBXGroup;
 			children = (
 				84251A9824BD78310039953F /* EditorAttachmentsView.swift */,
-				84251A9A24BD7A1F0039953F /* EditorAttachmentsGeotagView.swift */,
 				84251A9C24BD9E3E0039953F /* EditorAttachmentViewModel.swift */,
 				846EC9EB24BEB2D900B7394F /* EditorAttachmentCollectionViewCell.swift */,
 			);
@@ -338,6 +339,7 @@
 				849907BC2488AC3C003FF06F /* UIColor+Extensions.swift */,
 				843639F824A353E9001F7757 /* Aztec+Extensions.swift */,
 				8454685A24A611FC00B98E9A /* CGPoint+Extensions.swift */,
+				8499FF5324C029850048932D /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -480,6 +482,7 @@
 			children = (
 				84251A9724BD781B0039953F /* EditorAttachments */,
 				84F49F0524BC4F25002E7300 /* EditorToolbar */,
+				84251A9A24BD7A1F0039953F /* EditorGeotagView.swift */,
 				84F49F0324BC47E8002E7300 /* EditorAttachmentsBarView.swift */,
 				847E633A249C773700ED1EE5 /* EditorViewController.swift */,
 				847E633C249C774200ED1EE5 /* EditorViewController.storyboard */,
@@ -879,7 +882,7 @@
 				84EEDD632484F1E00075FAF0 /* Profile.swift in Sources */,
 				84F49F0724BC5D30002E7300 /* OrderedButton.swift in Sources */,
 				844F9730247B9BF5008E0BC6 /* Common.swift in Sources */,
-				84251A9B24BD7A1F0039953F /* EditorAttachmentsGeotagView.swift in Sources */,
+				84251A9B24BD7A1F0039953F /* EditorGeotagView.swift in Sources */,
 				84251A9D24BD9E3E0039953F /* EditorAttachmentViewModel.swift in Sources */,
 				84F49F0424BC47E8002E7300 /* EditorAttachmentsBarView.swift in Sources */,
 				846A9DD324A46A3D00A5B0AD /* EditorToolbarOptionsPresenter.swift in Sources */,
@@ -898,6 +901,7 @@
 				84EEDD582484F11A0075FAF0 /* AppSession.swift in Sources */,
 				84EEDD4D2484BBC30075FAF0 /* RegistrationControllerViewModel.swift in Sources */,
 				849A406F249B53BE00018B06 /* NoteViewModel.swift in Sources */,
+				8499FF5424C029850048932D /* UIView+Extensions.swift in Sources */,
 				8474AB7E2498D03300520D5C /* SidebarTableViewCell.swift in Sources */,
 				8470B2962480AF60003303B3 /* String+Extensions.swift in Sources */,
 				84EEDD4B2484BBB70075FAF0 /* RegistrationViewController.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  EditorAttachmentsGeotagView.swift
+//  EditorGeotagView.swift
 //  FireNote
 //
 //  Created by Denis Kovalev on 14.07.2020.
@@ -8,25 +8,24 @@
 
 import UIKit
 
-/// A protocol for EditorAttachmentsGeotagView actions
-protocol EditorAttachmentsGeotagViewDelegate: AnyObject {
+/// A protocol for EditorGeotagView actions
+protocol EditorGeotagViewDelegate: AnyObject {
     /// Called, when the remove button was tapped
-    func geotagViewDidTapRemove(_ geotagView: EditorAttachmentsGeotagView)
+    func geotagViewDidTapRemove(_ geotagView: EditorGeotagView)
     /// Called, when the location was tapped
-    func geotagViewDidTapLocation(_ geotagView: EditorAttachmentsGeotagView)
+    func geotagViewDidTapLocation(_ geotagView: EditorGeotagView)
 }
 
 /// A view class to display the geotag information
-class EditorAttachmentsGeotagView: SettableView {
-
+class EditorGeotagView: SettableView {
     // MARK: - Definitions
 
     enum Constants {
-        static let contentInset = UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2)
+        static let contentInset = UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 15)
         static let innerInset: CGFloat = 8.0
 
         static let imageSize = CGSize(width: 18, height: 18)
-        static let removeButtonSize = CGSize(width: 20, height: 20)
+        static let removeButtonSize = CGSize(width: 25, height: 25)
 
         static let textFont = R.font.baloo2Regular(size: 14.0)
     }
@@ -55,8 +54,8 @@ class EditorAttachmentsGeotagView: SettableView {
 
     private lazy var removeButton: UIButton = {
         let button = UIButton()
-        button.setImage(#imageLiteral(resourceName: "ic_close"), for: .normal)
-        button.imageView?.tintColor = UIColor.darkGray.withAlphaComponent(0.5)
+        button.setImage(#imageLiteral(resourceName: "ic_remove"), for: .normal)
+        button.imageView?.tintColor = .systemRed
         button.contentEdgeInsets = UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3)
         button.addTarget(self, action: #selector(removeAction), for: .touchUpInside)
         return button
@@ -64,7 +63,7 @@ class EditorAttachmentsGeotagView: SettableView {
 
     // MARK: - Properties and variables
 
-    weak var delegate: EditorAttachmentsGeotagViewDelegate?
+    weak var delegate: EditorGeotagViewDelegate?
 
     // MARK: - UI Lifecycle
 
