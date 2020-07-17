@@ -42,6 +42,10 @@ class NotesNavigationController: AbstractNavigationController {
     override func setupRootViewController() -> UIViewController {
         let controller = NotesViewController.instantiate(viewModel: NotesControllerViewModel(session: session))
         sidebarPresenter.setUpSidebarWith(controller: controller, session: session)
+
+        controller.onSelectNote = { [weak self] in
+            self?.showEditor()
+        }
         return controller
     }
 
@@ -58,5 +62,15 @@ class NotesNavigationController: AbstractNavigationController {
         switch item {
         default: return
         }
+    }
+
+    private func showEditor() {
+        makeNavigationBarSolid()
+
+        let controller = EditorViewController.instantiate(viewModel: EditorControllerViewModel(session: session))
+        controller.onBack = { [weak self] in
+            self?.makeNavigationBarTransparent()
+        }
+        pushViewController(controller, animated: true)
     }
 }

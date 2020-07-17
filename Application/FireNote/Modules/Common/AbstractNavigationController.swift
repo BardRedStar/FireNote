@@ -54,6 +54,11 @@ class AbstractNavigationController: UINavigationController {
         view.backgroundColor = .clear
     }
 
+    func makeNavigationBarSolid() {
+        navigationBar.isTranslucent = false
+        view.backgroundColor = .lightGray
+    }
+
     /// Sets up the navbar appearance.
     ///
     /// Note: Override this method to set up navbar for your navigation flow.

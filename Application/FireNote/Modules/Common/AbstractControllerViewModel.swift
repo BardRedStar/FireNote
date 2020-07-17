@@ -8,8 +8,13 @@
 
 import Foundation
 
+/// A class, which contains a common logic for controller view models
 class AbstractControllerViewModel {
+    // MARK: - Properties and variables
+
     let session: Session
+
+    // MARK: - Initialization
 
     init(session: Session) {
         self.session = session

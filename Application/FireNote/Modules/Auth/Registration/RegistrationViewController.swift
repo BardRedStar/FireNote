@@ -10,7 +10,7 @@ import FirebaseUI
 import Reusable
 import UIKit
 
-/// A controller class for splash screen
+/// A controller class for registration screen
 class RegistrationViewController: AbstractViewController, StoryboardBased {
     // MARK: - Outlets
 
