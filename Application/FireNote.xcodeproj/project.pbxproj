@@ -11,6 +11,8 @@
 		84251A9924BD78310039953F /* EditorAttachmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84251A9824BD78310039953F /* EditorAttachmentsView.swift */; };
 		84251A9B24BD7A1F0039953F /* EditorGeotagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84251A9A24BD7A1F0039953F /* EditorGeotagView.swift */; };
 		84251A9D24BD9E3E0039953F /* EditorAttachmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84251A9C24BD9E3E0039953F /* EditorAttachmentViewModel.swift */; };
+		84329E1B24C6FC41008A6321 /* LocationPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84329E1A24C6FC41008A6321 /* LocationPicker.swift */; };
+		84329E1D24C6FF2D008A6321 /* LocationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84329E1C24C6FF2C008A6321 /* LocationPickerView.swift */; };
 		843639F924A353E9001F7757 /* Aztec+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843639F824A353E9001F7757 /* Aztec+Extensions.swift */; };
 		8438A4AD247FD00E00EAAAFB /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438A4AC247FD00E00EAAAFB /* R.generated.swift */; };
 		8438A4AF247FD22600EAAAFB /* PrimaryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438A4AE247FD22600EAAAFB /* PrimaryTextField.swift */; };
@@ -108,6 +110,8 @@
 		84251A9824BD78310039953F /* EditorAttachmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorAttachmentsView.swift; sourceTree = "<group>"; };
 		84251A9A24BD7A1F0039953F /* EditorGeotagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorGeotagView.swift; sourceTree = "<group>"; };
 		84251A9C24BD9E3E0039953F /* EditorAttachmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorAttachmentViewModel.swift; sourceTree = "<group>"; };
+		84329E1A24C6FC41008A6321 /* LocationPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPicker.swift; sourceTree = "<group>"; };
+		84329E1C24C6FF2C008A6321 /* LocationPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerView.swift; sourceTree = "<group>"; };
 		843639F824A353E9001F7757 /* Aztec+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Aztec+Extensions.swift"; sourceTree = "<group>"; };
 		8438A4AC247FD00E00EAAAFB /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		8438A4AE247FD22600EAAAFB /* PrimaryTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTextField.swift; sourceTree = "<group>"; };
@@ -226,6 +230,7 @@
 			children = (
 				84251A9424BD65E40039953F /* MediaPicker.swift */,
 				846A949624C544E9005790D8 /* DocumentPicker.swift */,
+				84329E1A24C6FC41008A6321 /* LocationPicker.swift */,
 			);
 			path = Pickers;
 			sourceTree = "<group>";
@@ -238,6 +243,14 @@
 				846EC9EB24BEB2D900B7394F /* EditorAttachmentCollectionViewCell.swift */,
 			);
 			path = EditorAttachments;
+			sourceTree = "<group>";
+		};
+		84329E1924C6FB4B008A6321 /* EditorGeotag */ = {
+			isa = PBXGroup;
+			children = (
+				84251A9A24BD7A1F0039953F /* EditorGeotagView.swift */,
+			);
+			path = EditorGeotag;
 			sourceTree = "<group>";
 		};
 		843639DB24A3017B001F7757 /* CollectionViewCells */ = {
@@ -483,9 +496,9 @@
 		847E6339249C762600ED1EE5 /* Editor */ = {
 			isa = PBXGroup;
 			children = (
+				84329E1924C6FB4B008A6321 /* EditorGeotag */,
 				84251A9724BD781B0039953F /* EditorAttachments */,
 				84F49F0524BC4F25002E7300 /* EditorToolbar */,
-				84251A9A24BD7A1F0039953F /* EditorGeotagView.swift */,
 				84F49F0324BC47E8002E7300 /* EditorAttachmentsBarView.swift */,
 				847E633A249C773700ED1EE5 /* EditorViewController.swift */,
 				847E633C249C774200ED1EE5 /* EditorViewController.storyboard */,
@@ -516,6 +529,7 @@
 			children = (
 				84EEAE8324B84191006E75A6 /* AMKeyboardFrameTrackerView.swift */,
 				849907BA2488A04C003FF06F /* HUDLoaderView.swift */,
+				84329E1C24C6FF2C008A6321 /* LocationPickerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -882,6 +896,7 @@
 				844F972C247B9A0A008E0BC6 /* NotesControllerViewModel.swift in Sources */,
 				844F96F3247B9439008E0BC6 /* AppDelegate.swift in Sources */,
 				847E633B249C773700ED1EE5 /* EditorViewController.swift in Sources */,
+				84329E1B24C6FC41008A6321 /* LocationPicker.swift in Sources */,
 				84EEDD632484F1E00075FAF0 /* Profile.swift in Sources */,
 				84F49F0724BC5D30002E7300 /* OrderedButton.swift in Sources */,
 				844F9730247B9BF5008E0BC6 /* Common.swift in Sources */,
@@ -896,6 +911,7 @@
 				8474AB7A2498C72C00520D5C /* AbstractControllerViewModel.swift in Sources */,
 				8474AB6F2498831700520D5C /* HUDPresenter.swift in Sources */,
 				847B24DD24879D570016B8FD /* DefaultStorage.swift in Sources */,
+				84329E1D24C6FF2D008A6321 /* LocationPickerView.swift in Sources */,
 				8470B2982480C700003303B3 /* GlobalConstants.swift in Sources */,
 				84EEAE8624B86ECB006E75A6 /* EditorToolsPresenter.swift in Sources */,
 				847B24E12487A0170016B8FD /* AlertPresenter.swift in Sources */,
@@ -1106,7 +1122,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.10x.firenote;
+				PRODUCT_BUNDLE_IDENTIFIER = com.retroblade.firenote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1125,7 +1141,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.10x.firenote;
+				PRODUCT_BUNDLE_IDENTIFIER = com.retroblade.firenote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

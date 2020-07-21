@@ -20,6 +20,7 @@ target 'FireNote' do
   pod 'R.swift'
   pod 'WordPress-Aztec-iOS'
   pod 'KeyboardNotificationsObserver'
+  pod 'GoogleMaps'
 
   # Firebase authentication
   pod 'FirebaseUI/Auth'
