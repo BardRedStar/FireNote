@@ -36,7 +36,7 @@ class EditorAttachmentsBarView: SettableView {
 
     private lazy var separatorView: UIView = {
         let view = UIView()
-        view.backgroundColor = .lightGray
+        view.backgroundColor = R.color.placeholder()
         return view
     }()
 
@@ -63,6 +63,8 @@ class EditorAttachmentsBarView: SettableView {
             separator.right == view.right
             separator.height == 1
         }
+
+        dropShadow(opacity: 0.2, offset: CGSize(width: 0, height: -0.5), radius: 0.5)
     }
 
     // MARK: - UI Methods
