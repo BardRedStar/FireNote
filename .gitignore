@@ -73,3 +73,4 @@ fastlane/test_output
 
 .swiftlint.yml.*
 *.generated.swift
+GoogleService-Info.plist
