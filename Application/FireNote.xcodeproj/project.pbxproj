@@ -13,6 +13,7 @@
 		84251A9D24BD9E3E0039953F /* EditorAttachmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84251A9C24BD9E3E0039953F /* EditorAttachmentViewModel.swift */; };
 		84329E1B24C6FC41008A6321 /* LocationPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84329E1A24C6FC41008A6321 /* LocationPicker.swift */; };
 		84329E1D24C6FF2D008A6321 /* LocationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84329E1C24C6FF2C008A6321 /* LocationPickerView.swift */; };
+		84329E1F24C704BA008A6321 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84329E1E24C704BA008A6321 /* GoogleService-Info.plist */; };
 		843639F924A353E9001F7757 /* Aztec+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843639F824A353E9001F7757 /* Aztec+Extensions.swift */; };
 		8438A4AD247FD00E00EAAAFB /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438A4AC247FD00E00EAAAFB /* R.generated.swift */; };
 		8438A4AF247FD22600EAAAFB /* PrimaryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438A4AE247FD22600EAAAFB /* PrimaryTextField.swift */; };
@@ -111,6 +112,7 @@
 		84251A9C24BD9E3E0039953F /* EditorAttachmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorAttachmentViewModel.swift; sourceTree = "<group>"; };
 		84329E1A24C6FC41008A6321 /* LocationPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPicker.swift; sourceTree = "<group>"; };
 		84329E1C24C6FF2C008A6321 /* LocationPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerView.swift; sourceTree = "<group>"; };
+		84329E1E24C704BA008A6321 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		843639F824A353E9001F7757 /* Aztec+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Aztec+Extensions.swift"; sourceTree = "<group>"; };
 		8438A4AC247FD00E00EAAAFB /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		8438A4AE247FD22600EAAAFB /* PrimaryTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTextField.swift; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 				844F96F2247B9439008E0BC6 /* AppDelegate.swift */,
 				844F96FD247B943D008E0BC6 /* LaunchScreen.storyboard */,
 				844F9700247B943D008E0BC6 /* Info.plist */,
+				84329E1E24C704BA008A6321 /* GoogleService-Info.plist */,
 			);
 			path = FireNote;
 			sourceTree = "<group>";
@@ -720,6 +723,7 @@
 			files = (
 				8499FF5224C01F580048932D /* Colors.xcassets in Resources */,
 				8438A4BC247FD6E500EAAAFB /* Baloo2-Bold.ttf in Resources */,
+				84329E1F24C704BA008A6321 /* GoogleService-Info.plist in Resources */,
 				844F96FF247B943D008E0BC6 /* LaunchScreen.storyboard in Resources */,
 				84EEDD492484BBAC0075FAF0 /* RegistrationViewController.storyboard in Resources */,
 				8438A4B9247FD6E500EAAAFB /* Baloo2-ExtraBold.ttf in Resources */,
