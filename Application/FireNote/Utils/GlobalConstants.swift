@@ -10,6 +10,12 @@ import UIKit
 
 /// A struct for holding global constant values
 struct GlobalConstants {
+    // MARK: - UI Components
+
     /// Text field content padding
     static let textFieldContentInset = UIEdgeInsets(top: 5, left: 20, bottom: 5, right: 20)
+
+    // MARK: - Preferences
+
+    static let googleMapsApiKey = "AIzaSyCr88aQOiGoGkBhe65SilRy2YziC0_QvwI"
 }

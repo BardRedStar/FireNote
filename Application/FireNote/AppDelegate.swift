@@ -8,6 +8,7 @@
 
 import Firebase
 import FirebaseUI
+import GoogleMaps
 import UIKit
 
 @UIApplicationMain
@@ -20,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
 
         FirebaseApp.configure()
+        GMSServices.provideAPIKey(GlobalConstants.googleMapsApiKey)
 
         window = RootWindow()
         window?.session = session
