@@ -37,6 +37,7 @@
 		844F9735247BC400008E0BC6 /* ErrorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F9734247BC400008E0BC6 /* ErrorTextField.swift */; };
 		844F9737247BC429008E0BC6 /* SettableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F9736247BC429008E0BC6 /* SettableView.swift */; };
 		8454685B24A611FC00B98E9A /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454685A24A611FC00B98E9A /* CGPoint+Extensions.swift */; };
+		846A949724C544E9005790D8 /* DocumentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A949624C544E9005790D8 /* DocumentPicker.swift */; };
 		846A9DD124A456D800A5B0AD /* EditorToolbarOptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A9DD024A456D800A5B0AD /* EditorToolbarOptionTableViewCell.swift */; };
 		846A9DD324A46A3D00A5B0AD /* EditorToolbarOptionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A9DD224A46A3D00A5B0AD /* EditorToolbarOptionsPresenter.swift */; };
 		846EC9EC24BEB2D900B7394F /* EditorAttachmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EC9EB24BEB2D900B7394F /* EditorAttachmentCollectionViewCell.swift */; };
@@ -137,6 +138,7 @@
 		844F9734247BC400008E0BC6 /* ErrorTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTextField.swift; sourceTree = "<group>"; };
 		844F9736247BC429008E0BC6 /* SettableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettableView.swift; sourceTree = "<group>"; };
 		8454685A24A611FC00B98E9A /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
+		846A949624C544E9005790D8 /* DocumentPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPicker.swift; sourceTree = "<group>"; };
 		846A9DD024A456D800A5B0AD /* EditorToolbarOptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorToolbarOptionTableViewCell.swift; sourceTree = "<group>"; };
 		846A9DD224A46A3D00A5B0AD /* EditorToolbarOptionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorToolbarOptionsPresenter.swift; sourceTree = "<group>"; };
 		846EC9EB24BEB2D900B7394F /* EditorAttachmentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorAttachmentCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				84251A9424BD65E40039953F /* MediaPicker.swift */,
+				846A949624C544E9005790D8 /* DocumentPicker.swift */,
 			);
 			path = Pickers;
 			sourceTree = "<group>";
@@ -913,6 +916,7 @@
 				847B24D524875CD80016B8FD /* PrimaryButton.swift in Sources */,
 				849A406C249B3F1100018B06 /* NoteCollectionViewCell.swift in Sources */,
 				847B24DB248793020016B8FD /* APIManager+Firebase.swift in Sources */,
+				846A949724C544E9005790D8 /* DocumentPicker.swift in Sources */,
 				8454685B24A611FC00B98E9A /* CGPoint+Extensions.swift in Sources */,
 				849A406A249B1C4C00018B06 /* TileCollectionViewLayout.swift in Sources */,
 				84EEDD522484E1070075FAF0 /* RootWindow.swift in Sources */,

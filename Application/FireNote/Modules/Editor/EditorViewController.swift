@@ -52,6 +52,11 @@ class EditorViewController: AbstractViewController, StoryboardBased {
         return mediaPicker
     }()
 
+    private lazy var documentPicker: DocumentPicker = {
+        let documentPicker = DocumentPicker(presentationController: self, delegate: self)
+        return documentPicker
+    }()
+
     // MARK: - Output
 
     // MARK: - Properties and variables
@@ -158,7 +163,7 @@ class EditorViewController: AbstractViewController, StoryboardBased {
         case .media:
             handleMediaAttachment()
         case .file:
-            break
+            documentPicker.present()
         case .geo:
             break
         case .graffiti:
@@ -227,7 +232,23 @@ extension EditorViewController: EditorGeotagViewDelegate {
 // MARK: - MediaPickerDelegate
 
 extension EditorViewController: MediaPickerDelegate {
-    func mediaPicker(_ picker: MediaPicker, didSelectMedia item: MediaItem) {}
+    func mediaPicker(_ picker: MediaPicker, didSelectMedia item: MediaItem) {
+        print("did select image at \(item.localURL)")
+    }
 
-    func mediaPickerDidCancel(_ picker: MediaPicker) {}
+    func mediaPickerDidCancel(_ picker: MediaPicker) {
+        print("media picker cancel")
+    }
+}
+
+// MARK: - DocumentPickerDelegate
+
+extension EditorViewController: DocumentPickerDelegate {
+    func documentPicker(_ picker: DocumentPicker, didSelect file: FileItem) {
+        print("did select file at \(file.localUrl)")
+    }
+
+    func documentPickerDidCancel(_ picker: DocumentPicker) {
+        print("document picker cancel")
+    }
 }
