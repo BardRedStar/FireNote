@@ -10,10 +10,32 @@ import Foundation
 
 enum APIError: Error {
     case firebaseError(Error)
+    case googleMapsError(Error)
+    case locationError(CommonError)
+    case permissionError(CommonError)
 
     var localizedDescription: String {
         switch self {
-        case let .firebaseError(error): return error.localizedDescription
+        // Cases with Error type
+        case let .firebaseError(error), let .googleMapsError(error):
+            return error.localizedDescription
+        // Cases with CommonError type
+        case let .locationError(error), let .permissionError(error):
+            return error.localizedDescription
         }
+    }
+}
+
+/// Describes the error with text description, which can be initialized directly
+struct CommonError: Error {
+    /// Error message
+    let localizedDescription: String
+
+    init(_ localizedDescription: String) {
+        self.localizedDescription = localizedDescription
+    }
+
+    init(_ error: Error) {
+        localizedDescription = error.localizedDescription
     }
 }

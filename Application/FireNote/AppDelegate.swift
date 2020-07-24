@@ -9,6 +9,7 @@
 import Firebase
 import FirebaseUI
 import GoogleMaps
+import GooglePlaces
 import UIKit
 
 @UIApplicationMain
@@ -22,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         FirebaseApp.configure()
         GMSServices.provideAPIKey(GlobalConstants.googleMapsApiKey)
+        GMSPlacesClient.provideAPIKey(GlobalConstants.googleMapsApiKey)
 
         window = RootWindow()
         window?.session = session

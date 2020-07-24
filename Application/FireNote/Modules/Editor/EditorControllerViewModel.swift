@@ -33,6 +33,8 @@ class EditorControllerViewModel: AbstractControllerViewModel {
 
     var attachmentsViewModel: EditorAttachmentsViewModel?
 
+    var geotag: LocationItem?
+
     // MARK: - Initialization
 
     override init(session: Session) {

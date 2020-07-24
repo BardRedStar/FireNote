@@ -17,5 +17,6 @@ struct GlobalConstants {
 
     // MARK: - Preferences
 
+    /// An API key for Google Maps API. Use it with "key" query parameter in requests.
     static let googleMapsApiKey = "AIzaSyCr88aQOiGoGkBhe65SilRy2YziC0_QvwI"
 }
