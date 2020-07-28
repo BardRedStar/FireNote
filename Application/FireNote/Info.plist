@@ -27,11 +27,11 @@
 			</array>
 		</dict>
 	</array>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>googlechromes</string>
-        <string>comgooglemaps</string>
-    </array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>googlechromes</string>
+		<string>comgooglemaps</string>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -44,6 +44,8 @@
 	<string>Access to Microphone is needed to add the sound to the attached videos.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Access to Photos is needed to attach chosen photos or videos to the note.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Access to Location is needed to make a geotag for your notes.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Baloo2-Bold.ttf</string>

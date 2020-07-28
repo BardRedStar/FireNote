@@ -264,6 +264,7 @@ extension EditorViewController: LocationPickerDelegate {
     func locationPicker(_ picker: LocationPicker, didSelectLocation item: LocationItem) {
         geotagView.configureWith(addressText: item.formattedAddress)
         viewModel.geotag = item
+        picker.dismiss()
     }
 
     func locationPickerDidCancel(_ picker: LocationPicker) {

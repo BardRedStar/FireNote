@@ -24,9 +24,12 @@ struct LocationSuggestionItem {
     }
 
     init?(_ prediction: GMSAutocompletePrediction) {
-        if let address = prediction.attributedSecondaryText?.string {
-            self.init(placeId: prediction.placeID, address: address)
+        let address = prediction.attributedFullText.string
+
+        if address.isEmpty {
+            return nil
         }
-        return nil
+
+        self.init(placeId: prediction.placeID, address: address)
     }
 }

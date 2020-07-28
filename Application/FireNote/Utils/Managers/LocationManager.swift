@@ -9,7 +9,9 @@
 import GoogleMaps
 import GooglePlaces
 
+/// A protocol to provide the events of LocationManager class
 protocol LocationManagerDelegate: AnyObject {
+    /// Called, when the user's location was updated by request
     func locationManager(_ manager: LocationManager, didUpdateUserLocation result: Result<CLLocationCoordinate2D, APIError>)
 }
 
@@ -31,6 +33,7 @@ class LocationManager: NSObject {
     /// Google Maps session token.
     private lazy var gmsSessionToken = GMSAutocompleteSessionToken()
 
+    /// Google Maps geocoder
     private lazy var gmsGeocoder = GMSGeocoder()
 
     /// Delegate to provide callbacks
@@ -67,6 +70,7 @@ class LocationManager: NSObject {
         }
     }
 
+    /// Gets the formatted address from coordinates (via Google Maps Geocoding API)
     func fetchAddressFrom(_ coordinate: CLLocationCoordinate2D, completion: @escaping (Result<String, APIError>) -> Void) {
         gmsGeocoder.reverseGeocodeCoordinate(coordinate) { response, error in
             if let error = error {
@@ -81,8 +85,11 @@ class LocationManager: NSObject {
                 completion(.success("\(coordinate.latitude), \(coordinate.longitude)"))
             }
         }
+        
     }
 
+
+    /// Checks user's location permission and gets location or shows the request permission alert
     func requestUserLocation() {
         if CLLocationManager.locationServicesEnabled() {
             switch CLLocationManager.authorizationStatus() {

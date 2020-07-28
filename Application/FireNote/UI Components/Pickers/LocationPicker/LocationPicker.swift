@@ -134,6 +134,7 @@ class LocationPicker: NSObject {
 extension LocationPicker: LocationPickerViewDelegate {
     func locationPickerViewDidTapLocate(_ view: LocationPickerView) {
         locationManager.requestUserLocation()
+        view.updateLocationButtonState(isEnabled: false)
     }
 
     func locationPickerViewDidClose(_ view: LocationPickerView) {
@@ -171,12 +172,17 @@ extension LocationPicker: LocationPickerViewDelegate {
             locationManager.fetchSuggestionsFor(text: text) { [weak self] result in
                 switch result {
                 case let .success(suggestions):
-                    self?.pickerView.updateSuggestionsWith(suggestions: suggestions.compactMap { LocationSuggestionItem($0) })
+                    let items = suggestions.compactMap { LocationSuggestionItem($0) }
+                    self?.pickerView.updateSuggestionsWith(suggestions: items)
                 case let .failure(error):
                     self?.showError(message: error.localizedDescription)
                 }
             }
         }
+    }
+
+    func locationPickerView(_ view: LocationPickerView, didSearchAddress address: String) {
+        
     }
 }
 
@@ -190,5 +196,6 @@ extension LocationPicker: LocationManagerDelegate {
         case let .failure(error):
             showError(message: error.localizedDescription)
         }
+        pickerView.updateLocationButtonState(isEnabled: true)
     }
 }
