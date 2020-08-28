@@ -62,11 +62,12 @@ class LocationPicker: NSObject {
 
     // MARK: - Initializaion
 
-    init(presentationController: UIViewController, delegate: LocationPickerDelegate) {
+    init(apiManager: APIManager, presentationController: UIViewController, delegate: LocationPickerDelegate) {
+        super.init()
+
         self.presentationController = presentationController
         self.delegate = delegate
-
-        super.init()
+        locationManager.apiManager = apiManager
     }
 
     // MARK: - UI Methods
@@ -159,7 +160,7 @@ extension LocationPicker: LocationPickerViewDelegate {
             locationManager.fetchPlaceInfoFor(placeId: placeId) { [weak self] result in
                 switch result {
                 case let .success(place):
-                    self?.pickerView.updateMapCenterWith(coordinate: place.coordinate)
+                    view.updateMapCenterWith(coordinate: place.coordinate)
                 case let .failure(error):
                     self?.showError(message: error.localizedDescription)
                 }
@@ -173,7 +174,7 @@ extension LocationPicker: LocationPickerViewDelegate {
                 switch result {
                 case let .success(suggestions):
                     let items = suggestions.compactMap { LocationSuggestionItem($0) }
-                    self?.pickerView.updateSuggestionsWith(suggestions: items)
+                    view.updateSuggestionsWith(suggestions: items)
                 case let .failure(error):
                     self?.showError(message: error.localizedDescription)
                 }
@@ -182,7 +183,17 @@ extension LocationPicker: LocationPickerViewDelegate {
     }
 
     func locationPickerView(_ view: LocationPickerView, didSearchAddress address: String) {
-        
+        if !address.isEmpty {
+            locationManager.fetchCoordinatesFrom(address) { [weak self] result in
+                guard let self = self else { return }
+                switch result {
+                case let .success(location):
+                    view.updateMapCenterWith(coordinate: location)
+                case let .failure(error):
+                    self.showError(message: error.localizedDescription)
+                }
+            }
+        }
     }
 }
 

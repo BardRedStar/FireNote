@@ -58,7 +58,7 @@ class EditorViewController: AbstractViewController, StoryboardBased {
     }()
 
     private lazy var locationPicker: LocationPicker = {
-        let locationPicker = LocationPicker(presentationController: self, delegate: self)
+        let locationPicker = LocationPicker(apiManager: self.viewModel.session.apiManager, presentationController: self, delegate: self)
         return locationPicker
     }()
 

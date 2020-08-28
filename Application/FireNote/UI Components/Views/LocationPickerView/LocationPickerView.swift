@@ -233,6 +233,7 @@ class LocationPickerView: SettableView {
 
     /// Moves the map center to the coordinates
     func updateMapCenterWith(coordinate: CLLocationCoordinate2D) {
+        mapView.animate(toZoom: 13.0)
         mapView.animate(toLocation: coordinate)
     }
 
@@ -329,6 +330,7 @@ extension LocationPickerView: UITextFieldDelegate {
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if let text = textField.text, !text.isEmpty {
+            textField.resignFirstResponder()
             delegate?.locationPickerView(self, didSearchAddress: text)
         }
         return true

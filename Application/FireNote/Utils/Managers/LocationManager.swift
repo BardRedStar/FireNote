@@ -36,6 +36,8 @@ class LocationManager: NSObject {
     /// Google Maps geocoder
     private lazy var gmsGeocoder = GMSGeocoder()
 
+    var apiManager: APIManager?
+
     /// Delegate to provide callbacks
     weak var delegate: LocationManagerDelegate?
 
@@ -45,7 +47,7 @@ class LocationManager: NSObject {
     func fetchSuggestionsFor(text: String, completion: @escaping (Result<[GMSAutocompletePrediction], APIError>) -> Void) {
         placesClient.findAutocompletePredictions(fromQuery: text, filter: nil, sessionToken: gmsSessionToken) { results, error in
             if let error = error {
-                completion(.failure(.googleMapsError(error)))
+                completion(.failure(.googleMaps(error)))
             }
             if let results = results {
                 completion(.success(results))
@@ -61,7 +63,7 @@ class LocationManager: NSObject {
 
         placesClient.fetchPlace(fromPlaceID: placeId, placeFields: fields, sessionToken: gmsSessionToken) { [weak self] place, error in
             if let error = error {
-                completion(.failure(.googleMapsError(error)))
+                completion(.failure(.googleMaps(error)))
             }
             if let place = place {
                 completion(.success(place))
@@ -74,20 +76,42 @@ class LocationManager: NSObject {
     func fetchAddressFrom(_ coordinate: CLLocationCoordinate2D, completion: @escaping (Result<String, APIError>) -> Void) {
         gmsGeocoder.reverseGeocodeCoordinate(coordinate) { response, error in
             if let error = error {
-                completion(.failure(.googleMapsError(error)))
+                completion(.failure(.googleMaps(error)))
                 return
             }
 
             if let address = response?.firstResult()?.lines?.first {
-                print(response?.firstResult()?.lines)
                 completion(.success(address))
             } else {
                 completion(.success("\(coordinate.latitude), \(coordinate.longitude)"))
             }
         }
-        
     }
 
+    /// Gets the location according to address string
+    func fetchCoordinatesFrom(_ address: String, completion: @escaping (Result<CLLocationCoordinate2D, APIError>) -> Void) {
+        guard let apiManager = apiManager else {
+            completion(.failure(.googleMaps(CommonError("API Manager is not provided!"))))
+            return
+        }
+
+        var parameters = RequestParameters<GoogleMapsGeocodingKey>()
+        parameters[.address] = address
+        parameters[.key] = GlobalConstants.googleMapsApiKey
+
+        apiManager.requestDecoded(GoogleMapsTarget.geocoding(parameters.parameters), to: GoogleMapsGeocodingResponseModel.self) { result in
+            switch result {
+            case let .success(response):
+                if let location = response.firstResult?.geometry.location {
+                    completion(.success(CLLocationCoordinate2D(latitude: location.lat, longitude: location.lng)))
+                } else {
+                    completion(.failure(.googleMaps(CommonError("Sorry, address can't be found :("))))
+                }
+            case let .failure(error):
+                completion(.failure(error))
+            }
+        }
+    }
 
     /// Checks user's location permission and gets location or shows the request permission alert
     func requestUserLocation() {
@@ -121,8 +145,8 @@ extension LocationManager: CLLocationManagerDelegate {
             return
         }
 
-        let error = CommonError("Permission was denied :(")
-        delegate?.locationManager(self, didUpdateUserLocation: .failure(.locationError(error)))
+        let error = CommonError("Oops, permission was denied. Please, enable the location in privacy settings to use it.")
+        delegate?.locationManager(self, didUpdateUserLocation: .failure(.location(error)))
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -132,10 +156,10 @@ extension LocationManager: CLLocationManagerDelegate {
         }
 
         let error = CommonError("Can't get user location.")
-        delegate?.locationManager(self, didUpdateUserLocation: .failure(.locationError(error)))
+        delegate?.locationManager(self, didUpdateUserLocation: .failure(.location(error)))
     }
 
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        delegate?.locationManager(self, didUpdateUserLocation: .failure(.locationError(CommonError(error))))
+        delegate?.locationManager(self, didUpdateUserLocation: .failure(.location(CommonError(error))))
     }
 }

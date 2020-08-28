@@ -15,7 +15,10 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: RootWindow?
-    lazy var session: Session = Session(apiManager: APIManager(), dataManager: DataManager(), defaultStorage: DefaultStorage())
+    lazy var defaultStorage = DefaultStorage()
+    lazy var session: Session = Session(apiManager: APIManager(defaultStorage: defaultStorage),
+                                        dataManager: DataManager(),
+                                        defaultStorage: defaultStorage)
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

@@ -7,27 +7,34 @@ target 'FireNote' do
   use_frameworks!
 
   # Pods for FireNote
-  pod 'Firebase/Analytics'
 
+  # Codebase
   pod 'SwiftLint', '~> 0.38'
   pod 'SwiftFormat/CLI', '~> 0.43'
+  pod 'R.swift'
 
+  # UI
   pod 'Reusable'
   pod 'Cartography'
   pod 'Kingfisher'
   pod 'TPKeyboardAvoiding'
-  pod 'SwiftKeychainWrapper'
-  pod 'R.swift'
   pod 'WordPress-Aztec-iOS'
   pod 'KeyboardNotificationsObserver'
+
+  # Storage
+  pod 'SwiftKeychainWrapper'
+
+  # Networking
+  pod 'Moya'
 
   # Google Maps
   pod 'GoogleMaps'
   pod 'GooglePlaces'
 
-  # Firebase authentication
+  # Firebase
   pod 'FirebaseUI/Auth'
   pod 'FirebaseUI/Google'
+  pod 'Firebase/Analytics'
 
   target 'FireNoteTests' do
     inherit! :search_paths
