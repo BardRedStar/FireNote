@@ -11,6 +11,16 @@
 		84251A9924BD78310039953F /* EditorAttachmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84251A9824BD78310039953F /* EditorAttachmentsView.swift */; };
 		84251A9B24BD7A1F0039953F /* EditorGeotagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84251A9A24BD7A1F0039953F /* EditorGeotagView.swift */; };
 		84251A9D24BD9E3E0039953F /* EditorAttachmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84251A9C24BD9E3E0039953F /* EditorAttachmentViewModel.swift */; };
+		84329E1B24C6FC41008A6321 /* LocationPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84329E1A24C6FC41008A6321 /* LocationPicker.swift */; };
+		84329E1D24C6FF2D008A6321 /* LocationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84329E1C24C6FF2C008A6321 /* LocationPickerView.swift */; };
+		84329E1F24C704BA008A6321 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84329E1E24C704BA008A6321 /* GoogleService-Info.plist */; };
+		8432A58324CFD90A0038B00E /* GoogleMapsTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432A58224CFD90A0038B00E /* GoogleMapsTarget.swift */; };
+		8432A58524CFDEE10038B00E /* RequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432A58424CFDEE10038B00E /* RequestParameters.swift */; };
+		8432A58824CFE1220038B00E /* GoogleMapsGeocodingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432A58724CFE1220038B00E /* GoogleMapsGeocodingKey.swift */; };
+		8432A58C24CFEF470038B00E /* GoogleMapsGeocodingResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432A58B24CFEF470038B00E /* GoogleMapsGeocodingResponseModel.swift */; };
+		8432A58F24D015000038B00E /* GoogleMapsBaseResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432A58E24D015000038B00E /* GoogleMapsBaseResponseModel.swift */; };
+		8432A59224D01AA00038B00E /* APIRequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432A59124D01AA00038B00E /* APIRequestInterceptor.swift */; };
+		8432A59424D01B7A0038B00E /* APIToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432A59324D01B7A0038B00E /* APIToken.swift */; };
 		843639F924A353E9001F7757 /* Aztec+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843639F824A353E9001F7757 /* Aztec+Extensions.swift */; };
 		8438A4AD247FD00E00EAAAFB /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438A4AC247FD00E00EAAAFB /* R.generated.swift */; };
 		8438A4AF247FD22600EAAAFB /* PrimaryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438A4AE247FD22600EAAAFB /* PrimaryTextField.swift */; };
@@ -35,6 +45,8 @@
 		844F9730247B9BF5008E0BC6 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F972F247B9BF5008E0BC6 /* Common.swift */; };
 		844F9735247BC400008E0BC6 /* ErrorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F9734247BC400008E0BC6 /* ErrorTextField.swift */; };
 		844F9737247BC429008E0BC6 /* SettableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844F9736247BC429008E0BC6 /* SettableView.swift */; };
+		845211D724CEA17E00A9CF21 /* LocationCenterMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845211D624CEA17E00A9CF21 /* LocationCenterMarkerView.swift */; };
+		845211D924CEEDDA00A9CF21 /* BlurredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845211D824CEEDDA00A9CF21 /* BlurredView.swift */; };
 		8454685B24A611FC00B98E9A /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454685A24A611FC00B98E9A /* CGPoint+Extensions.swift */; };
 		846A949724C544E9005790D8 /* DocumentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A949624C544E9005790D8 /* DocumentPicker.swift */; };
 		846A9DD124A456D800A5B0AD /* EditorToolbarOptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A9DD024A456D800A5B0AD /* EditorToolbarOptionTableViewCell.swift */; };
@@ -43,6 +55,8 @@
 		8470B2942480AF2A003303B3 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470B2932480AF2A003303B3 /* PasswordTextField.swift */; };
 		8470B2962480AF60003303B3 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470B2952480AF60003303B3 /* String+Extensions.swift */; };
 		8470B2982480C700003303B3 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8470B2972480C700003303B3 /* GlobalConstants.swift */; };
+		84711CC424CAC5420021BF12 /* GoogleMaps+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84711CC324CAC5420021BF12 /* GoogleMaps+Extensions.swift */; };
+		847195EE24C7E803007DD68F /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847195ED24C7E803007DD68F /* SearchTextField.swift */; };
 		8474AB6F2498831700520D5C /* HUDPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474AB6E2498831700520D5C /* HUDPresenter.swift */; };
 		8474AB7224989B2000520D5C /* SidebarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474AB7124989B2000520D5C /* SidebarPresenter.swift */; };
 		8474AB762498C34600520D5C /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474AB752498C34600520D5C /* SidebarViewController.swift */; };
@@ -69,6 +83,9 @@
 		849A406A249B1C4C00018B06 /* TileCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A4069249B1C4C00018B06 /* TileCollectionViewLayout.swift */; };
 		849A406C249B3F1100018B06 /* NoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A406B249B3F1100018B06 /* NoteCollectionViewCell.swift */; };
 		849A406F249B53BE00018B06 /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A406E249B53BE00018B06 /* NoteViewModel.swift */; };
+		84EE4FD824C9402A00F45FD3 /* LocationPickerModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE4FD724C9402A00F45FD3 /* LocationPickerModels.swift */; };
+		84EE4FDB24C9423D00F45FD3 /* LocationSuggestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE4FDA24C9423D00F45FD3 /* LocationSuggestionTableViewCell.swift */; };
+		84EE4FDD24C9804100F45FD3 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE4FDC24C9804100F45FD3 /* LocationManager.swift */; };
 		84EEAE8424B84191006E75A6 /* AMKeyboardFrameTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEAE8324B84191006E75A6 /* AMKeyboardFrameTrackerView.swift */; };
 		84EEAE8624B86ECB006E75A6 /* EditorToolsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEAE8524B86ECB006E75A6 /* EditorToolsPresenter.swift */; };
 		84EEDD492484BBAC0075FAF0 /* RegistrationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84EEDD482484BBAC0075FAF0 /* RegistrationViewController.storyboard */; };
@@ -79,7 +96,6 @@
 		84EEDD552484E1470075FAF0 /* DeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDD542484E1470075FAF0 /* DeepLink.swift */; };
 		84EEDD582484F11A0075FAF0 /* AppSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDD572484F11A0075FAF0 /* AppSession.swift */; };
 		84EEDD5A2484F1550075FAF0 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDD592484F1550075FAF0 /* DataManager.swift */; };
-		84EEDD632484F1E00075FAF0 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDD622484F1E00075FAF0 /* Profile.swift */; };
 		84EEDD682484F7860075FAF0 /* AuthNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDD672484F7860075FAF0 /* AuthNavigationController.swift */; };
 		84EEDD6D248507400075FAF0 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDD6C248507400075FAF0 /* APIManager.swift */; };
 		84EEDD6F248508BD0075FAF0 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDD6E248508BD0075FAF0 /* APIError.swift */; };
@@ -107,6 +123,16 @@
 		84251A9824BD78310039953F /* EditorAttachmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorAttachmentsView.swift; sourceTree = "<group>"; };
 		84251A9A24BD7A1F0039953F /* EditorGeotagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorGeotagView.swift; sourceTree = "<group>"; };
 		84251A9C24BD9E3E0039953F /* EditorAttachmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorAttachmentViewModel.swift; sourceTree = "<group>"; };
+		84329E1A24C6FC41008A6321 /* LocationPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPicker.swift; sourceTree = "<group>"; };
+		84329E1C24C6FF2C008A6321 /* LocationPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerView.swift; sourceTree = "<group>"; };
+		84329E1E24C704BA008A6321 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8432A58224CFD90A0038B00E /* GoogleMapsTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsTarget.swift; sourceTree = "<group>"; };
+		8432A58424CFDEE10038B00E /* RequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestParameters.swift; sourceTree = "<group>"; };
+		8432A58724CFE1220038B00E /* GoogleMapsGeocodingKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsGeocodingKey.swift; sourceTree = "<group>"; };
+		8432A58B24CFEF470038B00E /* GoogleMapsGeocodingResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsGeocodingResponseModel.swift; sourceTree = "<group>"; };
+		8432A58E24D015000038B00E /* GoogleMapsBaseResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsBaseResponseModel.swift; sourceTree = "<group>"; };
+		8432A59124D01AA00038B00E /* APIRequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestInterceptor.swift; sourceTree = "<group>"; };
+		8432A59324D01B7A0038B00E /* APIToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIToken.swift; sourceTree = "<group>"; };
 		843639F824A353E9001F7757 /* Aztec+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Aztec+Extensions.swift"; sourceTree = "<group>"; };
 		8438A4AC247FD00E00EAAAFB /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		8438A4AE247FD22600EAAAFB /* PrimaryTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTextField.swift; sourceTree = "<group>"; };
@@ -135,6 +161,8 @@
 		844F972F247B9BF5008E0BC6 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		844F9734247BC400008E0BC6 /* ErrorTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTextField.swift; sourceTree = "<group>"; };
 		844F9736247BC429008E0BC6 /* SettableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettableView.swift; sourceTree = "<group>"; };
+		845211D624CEA17E00A9CF21 /* LocationCenterMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCenterMarkerView.swift; sourceTree = "<group>"; };
+		845211D824CEEDDA00A9CF21 /* BlurredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurredView.swift; sourceTree = "<group>"; };
 		8454685A24A611FC00B98E9A /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
 		846A949624C544E9005790D8 /* DocumentPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPicker.swift; sourceTree = "<group>"; };
 		846A9DD024A456D800A5B0AD /* EditorToolbarOptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorToolbarOptionTableViewCell.swift; sourceTree = "<group>"; };
@@ -143,6 +171,8 @@
 		8470B2932480AF2A003303B3 /* PasswordTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		8470B2952480AF60003303B3 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		8470B2972480C700003303B3 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
+		84711CC324CAC5420021BF12 /* GoogleMaps+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GoogleMaps+Extensions.swift"; sourceTree = "<group>"; };
+		847195ED24C7E803007DD68F /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		8474AB6E2498831700520D5C /* HUDPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDPresenter.swift; sourceTree = "<group>"; };
 		8474AB7124989B2000520D5C /* SidebarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarPresenter.swift; sourceTree = "<group>"; };
 		8474AB752498C34600520D5C /* SidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +199,9 @@
 		849A4069249B1C4C00018B06 /* TileCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileCollectionViewLayout.swift; sourceTree = "<group>"; };
 		849A406B249B3F1100018B06 /* NoteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCollectionViewCell.swift; sourceTree = "<group>"; };
 		849A406E249B53BE00018B06 /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
+		84EE4FD724C9402A00F45FD3 /* LocationPickerModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerModels.swift; sourceTree = "<group>"; };
+		84EE4FDA24C9423D00F45FD3 /* LocationSuggestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSuggestionTableViewCell.swift; sourceTree = "<group>"; };
+		84EE4FDC24C9804100F45FD3 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		84EEAE8324B84191006E75A6 /* AMKeyboardFrameTrackerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMKeyboardFrameTrackerView.swift; sourceTree = "<group>"; };
 		84EEAE8524B86ECB006E75A6 /* EditorToolsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorToolsPresenter.swift; sourceTree = "<group>"; };
 		84EEDD482484BBAC0075FAF0 /* RegistrationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegistrationViewController.storyboard; sourceTree = "<group>"; };
@@ -179,7 +212,6 @@
 		84EEDD542484E1470075FAF0 /* DeepLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLink.swift; sourceTree = "<group>"; };
 		84EEDD572484F11A0075FAF0 /* AppSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSession.swift; sourceTree = "<group>"; };
 		84EEDD592484F1550075FAF0 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		84EEDD622484F1E00075FAF0 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		84EEDD672484F7860075FAF0 /* AuthNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavigationController.swift; sourceTree = "<group>"; };
 		84EEDD6C248507400075FAF0 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		84EEDD6E248508BD0075FAF0 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -222,6 +254,7 @@
 		84251A9624BD66C10039953F /* Pickers */ = {
 			isa = PBXGroup;
 			children = (
+				84EE4FD624C93FC600F45FD3 /* LocationPicker */,
 				84251A9424BD65E40039953F /* MediaPicker.swift */,
 				846A949624C544E9005790D8 /* DocumentPicker.swift */,
 			);
@@ -236,6 +269,39 @@
 				846EC9EB24BEB2D900B7394F /* EditorAttachmentCollectionViewCell.swift */,
 			);
 			path = EditorAttachments;
+			sourceTree = "<group>";
+		};
+		84329E1924C6FB4B008A6321 /* EditorGeotag */ = {
+			isa = PBXGroup;
+			children = (
+				84251A9A24BD7A1F0039953F /* EditorGeotagView.swift */,
+			);
+			path = EditorGeotag;
+			sourceTree = "<group>";
+		};
+		8432A58624CFE1010038B00E /* GoogleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				8432A58724CFE1220038B00E /* GoogleMapsGeocodingKey.swift */,
+			);
+			path = GoogleMaps;
+			sourceTree = "<group>";
+		};
+		8432A58924CFEF010038B00E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8432A59324D01B7A0038B00E /* APIToken.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		8432A58A24CFEF130038B00E /* GoogleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				8432A58E24D015000038B00E /* GoogleMapsBaseResponseModel.swift */,
+				8432A58B24CFEF470038B00E /* GoogleMapsGeocodingResponseModel.swift */,
+			);
+			path = GoogleMaps;
 			sourceTree = "<group>";
 		};
 		843639DB24A3017B001F7757 /* CollectionViewCells */ = {
@@ -307,6 +373,7 @@
 				844F96F2247B9439008E0BC6 /* AppDelegate.swift */,
 				844F96FD247B943D008E0BC6 /* LaunchScreen.storyboard */,
 				844F9700247B943D008E0BC6 /* Info.plist */,
+				84329E1E24C704BA008A6321 /* GoogleService-Info.plist */,
 			);
 			path = FireNote;
 			sourceTree = "<group>";
@@ -340,6 +407,7 @@
 				843639F824A353E9001F7757 /* Aztec+Extensions.swift */,
 				8454685A24A611FC00B98E9A /* CGPoint+Extensions.swift */,
 				8499FF5324C029850048932D /* UIView+Extensions.swift */,
+				84711CC324CAC5420021BF12 /* GoogleMaps+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -360,6 +428,8 @@
 		844F9719247B97C9008E0BC6 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				84EEDD6E248508BD0075FAF0 /* APIError.swift */,
+				8432A59124D01AA00038B00E /* APIRequestInterceptor.swift */,
 				84EEDD6B248507320075FAF0 /* API Manager */,
 				84EEDD5D2484F1990075FAF0 /* Request Keys */,
 				84EEDD5C2484F1940075FAF0 /* Targets */,
@@ -440,6 +510,7 @@
 				844F9734247BC400008E0BC6 /* ErrorTextField.swift */,
 				8438A4AE247FD22600EAAAFB /* PrimaryTextField.swift */,
 				8470B2932480AF2A003303B3 /* PasswordTextField.swift */,
+				847195ED24C7E803007DD68F /* SearchTextField.swift */,
 			);
 			path = TextFields;
 			sourceTree = "<group>";
@@ -480,9 +551,9 @@
 		847E6339249C762600ED1EE5 /* Editor */ = {
 			isa = PBXGroup;
 			children = (
+				84329E1924C6FB4B008A6321 /* EditorGeotag */,
 				84251A9724BD781B0039953F /* EditorAttachments */,
 				84F49F0524BC4F25002E7300 /* EditorToolbar */,
-				84251A9A24BD7A1F0039953F /* EditorGeotagView.swift */,
 				84F49F0324BC47E8002E7300 /* EditorAttachmentsBarView.swift */,
 				847E633A249C773700ED1EE5 /* EditorViewController.swift */,
 				847E633C249C774200ED1EE5 /* EditorViewController.storyboard */,
@@ -504,6 +575,7 @@
 			isa = PBXGroup;
 			children = (
 				847B24DE24879E290016B8FD /* KeychainManager.swift */,
+				84EE4FDC24C9804100F45FD3 /* LocationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -511,8 +583,11 @@
 		849907B92488A02F003FF06F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				845211D624CEA17E00A9CF21 /* LocationCenterMarkerView.swift */,
+				84EE4FD924C9422900F45FD3 /* LocationPickerView */,
 				84EEAE8324B84191006E75A6 /* AMKeyboardFrameTrackerView.swift */,
 				849907BA2488A04C003FF06F /* HUDLoaderView.swift */,
+				845211D824CEEDDA00A9CF21 /* BlurredView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -523,6 +598,24 @@
 				849A4069249B1C4C00018B06 /* TileCollectionViewLayout.swift */,
 			);
 			path = CollectionViewLayouts;
+			sourceTree = "<group>";
+		};
+		84EE4FD624C93FC600F45FD3 /* LocationPicker */ = {
+			isa = PBXGroup;
+			children = (
+				84329E1A24C6FC41008A6321 /* LocationPicker.swift */,
+				84EE4FD724C9402A00F45FD3 /* LocationPickerModels.swift */,
+			);
+			path = LocationPicker;
+			sourceTree = "<group>";
+		};
+		84EE4FD924C9422900F45FD3 /* LocationPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				84329E1C24C6FF2C008A6321 /* LocationPickerView.swift */,
+				84EE4FDA24C9423D00F45FD3 /* LocationSuggestionTableViewCell.swift */,
+			);
+			path = LocationPickerView;
 			sourceTree = "<group>";
 		};
 		84EEDD462484BB690075FAF0 /* Login */ = {
@@ -566,7 +659,8 @@
 		84EEDD5B2484F18F0075FAF0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				84EEDD622484F1E00075FAF0 /* Profile.swift */,
+				8432A58924CFEF010038B00E /* Common */,
+				8432A58A24CFEF130038B00E /* GoogleMaps */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -574,6 +668,7 @@
 		84EEDD5C2484F1940075FAF0 /* Targets */ = {
 			isa = PBXGroup;
 			children = (
+				8432A58224CFD90A0038B00E /* GoogleMapsTarget.swift */,
 			);
 			path = Targets;
 			sourceTree = "<group>";
@@ -581,6 +676,8 @@
 		84EEDD5D2484F1990075FAF0 /* Request Keys */ = {
 			isa = PBXGroup;
 			children = (
+				8432A58424CFDEE10038B00E /* RequestParameters.swift */,
+				8432A58624CFE1010038B00E /* GoogleMaps */,
 			);
 			path = "Request Keys";
 			sourceTree = "<group>";
@@ -589,7 +686,6 @@
 			isa = PBXGroup;
 			children = (
 				84EEDD6C248507400075FAF0 /* APIManager.swift */,
-				84EEDD6E248508BD0075FAF0 /* APIError.swift */,
 				847B24DA248793020016B8FD /* APIManager+Firebase.swift */,
 			);
 			path = "API Manager";
@@ -706,6 +802,7 @@
 			files = (
 				8499FF5224C01F580048932D /* Colors.xcassets in Resources */,
 				8438A4BC247FD6E500EAAAFB /* Baloo2-Bold.ttf in Resources */,
+				84329E1F24C704BA008A6321 /* GoogleService-Info.plist in Resources */,
 				844F96FF247B943D008E0BC6 /* LaunchScreen.storyboard in Resources */,
 				84EEDD492484BBAC0075FAF0 /* RegistrationViewController.storyboard in Resources */,
 				8438A4B9247FD6E500EAAAFB /* Baloo2-ExtraBold.ttf in Resources */,
@@ -876,9 +973,10 @@
 				844F96F7247B9439008E0BC6 /* NotesViewController.swift in Sources */,
 				849907BD2488AC3C003FF06F /* UIColor+Extensions.swift in Sources */,
 				844F972C247B9A0A008E0BC6 /* NotesControllerViewModel.swift in Sources */,
+				8432A59424D01B7A0038B00E /* APIToken.swift in Sources */,
 				844F96F3247B9439008E0BC6 /* AppDelegate.swift in Sources */,
 				847E633B249C773700ED1EE5 /* EditorViewController.swift in Sources */,
-				84EEDD632484F1E00075FAF0 /* Profile.swift in Sources */,
+				84329E1B24C6FC41008A6321 /* LocationPicker.swift in Sources */,
 				84F49F0724BC5D30002E7300 /* OrderedButton.swift in Sources */,
 				844F9730247B9BF5008E0BC6 /* Common.swift in Sources */,
 				84251A9B24BD7A1F0039953F /* EditorGeotagView.swift in Sources */,
@@ -886,33 +984,45 @@
 				84F49F0424BC47E8002E7300 /* EditorAttachmentsBarView.swift in Sources */,
 				846A9DD324A46A3D00A5B0AD /* EditorToolbarOptionsPresenter.swift in Sources */,
 				844F9728247B99F1008E0BC6 /* LoginViewController.swift in Sources */,
+				8432A58324CFD90A0038B00E /* GoogleMapsTarget.swift in Sources */,
 				847B24D924876EE80016B8FD /* TextButton.swift in Sources */,
 				844F972E247B9A2E008E0BC6 /* SplashControllerViewModel.swift in Sources */,
+				8432A58C24CFEF470038B00E /* GoogleMapsGeocodingResponseModel.swift in Sources */,
 				8438A4AF247FD22600EAAAFB /* PrimaryTextField.swift in Sources */,
 				8474AB7A2498C72C00520D5C /* AbstractControllerViewModel.swift in Sources */,
 				8474AB6F2498831700520D5C /* HUDPresenter.swift in Sources */,
+				8432A58524CFDEE10038B00E /* RequestParameters.swift in Sources */,
 				847B24DD24879D570016B8FD /* DefaultStorage.swift in Sources */,
+				84329E1D24C6FF2D008A6321 /* LocationPickerView.swift in Sources */,
 				8470B2982480C700003303B3 /* GlobalConstants.swift in Sources */,
+				847195EE24C7E803007DD68F /* SearchTextField.swift in Sources */,
 				84EEAE8624B86ECB006E75A6 /* EditorToolsPresenter.swift in Sources */,
 				847B24E12487A0170016B8FD /* AlertPresenter.swift in Sources */,
 				844F9735247BC400008E0BC6 /* ErrorTextField.swift in Sources */,
 				84251A9524BD65E40039953F /* MediaPicker.swift in Sources */,
+				84EE4FDB24C9423D00F45FD3 /* LocationSuggestionTableViewCell.swift in Sources */,
 				84EEDD582484F11A0075FAF0 /* AppSession.swift in Sources */,
 				84EEDD4D2484BBC30075FAF0 /* RegistrationControllerViewModel.swift in Sources */,
 				849A406F249B53BE00018B06 /* NoteViewModel.swift in Sources */,
 				8499FF5424C029850048932D /* UIView+Extensions.swift in Sources */,
+				84711CC424CAC5420021BF12 /* GoogleMaps+Extensions.swift in Sources */,
 				8474AB7E2498D03300520D5C /* SidebarTableViewCell.swift in Sources */,
+				8432A58824CFE1220038B00E /* GoogleMapsGeocodingKey.swift in Sources */,
 				8470B2962480AF60003303B3 /* String+Extensions.swift in Sources */,
+				8432A58F24D015000038B00E /* GoogleMapsBaseResponseModel.swift in Sources */,
 				84EEDD4B2484BBB70075FAF0 /* RegistrationViewController.swift in Sources */,
 				844F972A247B99FB008E0BC6 /* LoginControllerViewModel.swift in Sources */,
 				84EEDD682484F7860075FAF0 /* AuthNavigationController.swift in Sources */,
+				84EE4FD824C9402A00F45FD3 /* LocationPickerModels.swift in Sources */,
 				8470B2942480AF2A003303B3 /* PasswordTextField.swift in Sources */,
 				844F9726247B99E6008E0BC6 /* SplashViewController.swift in Sources */,
 				847B24D7248766150016B8FD /* SecondaryButton.swift in Sources */,
 				847B24D524875CD80016B8FD /* PrimaryButton.swift in Sources */,
 				849A406C249B3F1100018B06 /* NoteCollectionViewCell.swift in Sources */,
 				847B24DB248793020016B8FD /* APIManager+Firebase.swift in Sources */,
+				8432A59224D01AA00038B00E /* APIRequestInterceptor.swift in Sources */,
 				846A949724C544E9005790D8 /* DocumentPicker.swift in Sources */,
+				845211D924CEEDDA00A9CF21 /* BlurredView.swift in Sources */,
 				8454685B24A611FC00B98E9A /* CGPoint+Extensions.swift in Sources */,
 				849A406A249B1C4C00018B06 /* TileCollectionViewLayout.swift in Sources */,
 				84EEDD522484E1070075FAF0 /* RootWindow.swift in Sources */,
@@ -920,6 +1030,7 @@
 				847B24E32487A9070016B8FD /* NotesNavigationController.swift in Sources */,
 				84EEDD6D248507400075FAF0 /* APIManager.swift in Sources */,
 				843639F924A353E9001F7757 /* Aztec+Extensions.swift in Sources */,
+				84EE4FDD24C9804100F45FD3 /* LocationManager.swift in Sources */,
 				847B24D224874D980016B8FD /* AbstractNavigationController.swift in Sources */,
 				846EC9EC24BEB2D900B7394F /* EditorAttachmentCollectionViewCell.swift in Sources */,
 				8474AB7224989B2000520D5C /* SidebarPresenter.swift in Sources */,
@@ -929,6 +1040,7 @@
 				849907BB2488A04C003FF06F /* HUDLoaderView.swift in Sources */,
 				84EEDD552484E1470075FAF0 /* DeepLink.swift in Sources */,
 				847B24DF24879E290016B8FD /* KeychainManager.swift in Sources */,
+				845211D724CEA17E00A9CF21 /* LocationCenterMarkerView.swift in Sources */,
 				84EEAE8424B84191006E75A6 /* AMKeyboardFrameTrackerView.swift in Sources */,
 				84EEDD5A2484F1550075FAF0 /* DataManager.swift in Sources */,
 				84EEDD502484C8370075FAF0 /* AbstractViewController.swift in Sources */,
@@ -1102,7 +1214,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.10x.firenote;
+				PRODUCT_BUNDLE_IDENTIFIER = com.retroblade.firenote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1121,7 +1233,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.10x.firenote;
+				PRODUCT_BUNDLE_IDENTIFIER = com.retroblade.firenote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

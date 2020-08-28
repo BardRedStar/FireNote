@@ -57,6 +57,11 @@ class EditorViewController: AbstractViewController, StoryboardBased {
         return documentPicker
     }()
 
+    private lazy var locationPicker: LocationPicker = {
+        let locationPicker = LocationPicker(apiManager: self.viewModel.session.apiManager, presentationController: self, delegate: self)
+        return locationPicker
+    }()
+
     // MARK: - Output
 
     // MARK: - Properties and variables
@@ -225,7 +230,7 @@ extension EditorViewController: EditorGeotagViewDelegate {
     }
 
     func geotagViewDidTapLocation(_ geotagView: EditorGeotagView) {
-        print("Tap geotag")
+        locationPicker.present()
     }
 }
 
@@ -250,5 +255,19 @@ extension EditorViewController: DocumentPickerDelegate {
 
     func documentPickerDidCancel(_ picker: DocumentPicker) {
         print("document picker cancel")
+    }
+}
+
+// MARK: - LocationPickerDelegate
+
+extension EditorViewController: LocationPickerDelegate {
+    func locationPicker(_ picker: LocationPicker, didSelectLocation item: LocationItem) {
+        geotagView.configureWith(addressText: item.formattedAddress)
+        viewModel.geotag = item
+        picker.dismiss()
+    }
+
+    func locationPickerDidCancel(_ picker: LocationPicker) {
+        picker.dismiss()
     }
 }

@@ -27,10 +27,25 @@
 			</array>
 		</dict>
 	</array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>googlechromes</string>
+		<string>comgooglemaps</string>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Access to Camera is needed to attach photos or videos from camera directly to the note.</string>
+	<key>NSFileProviderPresenceUsageDescription</key>
+	<string>Access to Files is needed to attach documetns to the note.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Access to Microphone is needed to add the sound to the attached videos.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Access to Photos is needed to attach chosen photos or videos to the note.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Access to Location is needed to make a geotag for your notes.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Baloo2-Bold.ttf</string>
@@ -58,13 +73,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Access to Photos is needed to attach chosen photos or videos to the note.</string>
-	<key>NSCameraUsageDescription</key>
-	<string>Access to Camera is needed to attach photos or videos from camera directly to the note.</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>Access to Microphone is needed to add the sound to the attached videos.</string>
-	<key>NSFileProviderPresenceUsageDescription</key>
-	<string>Access to Files is needed to attach documetns to the note.</string>
 </dict>
 </plist>

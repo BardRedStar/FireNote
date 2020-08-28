@@ -8,18 +8,25 @@
 
 import Firebase
 import FirebaseUI
+import GoogleMaps
+import GooglePlaces
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: RootWindow?
-    lazy var session: Session = Session(apiManager: APIManager(), dataManager: DataManager(), defaultStorage: DefaultStorage())
+    lazy var defaultStorage = DefaultStorage()
+    lazy var session: Session = Session(apiManager: APIManager(defaultStorage: defaultStorage),
+                                        dataManager: DataManager(),
+                                        defaultStorage: defaultStorage)
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
         FirebaseApp.configure()
+        GMSServices.provideAPIKey(GlobalConstants.googleMapsApiKey)
+        GMSPlacesClient.provideAPIKey(GlobalConstants.googleMapsApiKey)
 
         window = RootWindow()
         window?.session = session

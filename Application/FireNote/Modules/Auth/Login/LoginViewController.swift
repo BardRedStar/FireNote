@@ -38,6 +38,11 @@ class LoginViewController: AbstractViewController, StoryboardBased {
         super.viewDidLoad()
 
         setupUI()
+
+        #if DEBUG
+        emailTextField.text = "denis.kovalev@saritasa.com"
+        passwordTextField.currentText = "passworD123@"
+        #endif
     }
 
     // MARK: - UI Methods
@@ -54,17 +59,18 @@ class LoginViewController: AbstractViewController, StoryboardBased {
     // MARK: - API methods
 
     private func login(email: String, password: String) {
+        onLogin?()
         // HUD.show(.customView(view: HUDLoaderView.shared))
-        viewModel.loginWith(email: email, password: password) { [weak self] result in
-            guard let self = self else { return }
-            // HUD.hide()
-            switch result {
-            case .success:
-                self.onLogin?()
-            case let .failure(error):
-                AlertPresenter.presentErrorAlert(message: error.localizedDescription, target: self, buttonAction: nil)
-            }
-        }
+//        viewModel.loginWith(email: email, password: password) { [weak self] result in
+//            guard let self = self else { return }
+//            // HUD.hide()
+//            switch result {
+//            case .success:
+//                self.onLogin?()
+//            case let .failure(error):
+//                AlertPresenter.presentErrorAlert(message: error.localizedDescription, target: self, buttonAction: nil)
+//            }
+//        }
     }
 
     // MARK: - UI Callbacks

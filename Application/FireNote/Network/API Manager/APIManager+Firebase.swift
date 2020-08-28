@@ -16,7 +16,7 @@ extension APIManager {
                 completion(.success(()))
             }
             if let error = error {
-                completion(.failure(.firebaseError(error)))
+                completion(.failure(.firebase(error)))
             }
         })
     }
@@ -24,11 +24,10 @@ extension APIManager {
     func loginWith(email: String, password: String, completion: @escaping (Result<Void, APIError>) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password, completion: { result, error in
             if result?.user != nil {
-                result?.user
                 completion(.success(()))
             }
             if let error = error {
-                completion(.failure(.firebaseError(error)))
+                completion(.failure(.firebase(error)))
             }
         })
     }

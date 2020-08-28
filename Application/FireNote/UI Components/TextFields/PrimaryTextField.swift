@@ -16,9 +16,16 @@ protocol PrimaryTextFieldDelegate: AnyObject {
 
 /// A class, which represents primary text field with rounded corners and edge insets
 class PrimaryTextField: ErrorTextField {
+    // MARK: - Definitions
+
+    enum Constants {
+        /// Text field content padding
+        static let textFieldContentInset = UIEdgeInsets(top: 5, left: 20, bottom: 5, right: 20)
+    }
+
     // MARK: - Properties and variables
 
-    var contentInset = GlobalConstants.textFieldContentInset
+    var contentInset = Constants.textFieldContentInset
 
     weak var primaryDelegate: PrimaryTextFieldDelegate?
 
