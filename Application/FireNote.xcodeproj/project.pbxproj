@@ -11,6 +11,9 @@
 		84251A9924BD78310039953F /* EditorAttachmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84251A9824BD78310039953F /* EditorAttachmentsView.swift */; };
 		84251A9B24BD7A1F0039953F /* EditorGeotagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84251A9A24BD7A1F0039953F /* EditorGeotagView.swift */; };
 		84251A9D24BD9E3E0039953F /* EditorAttachmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84251A9C24BD9E3E0039953F /* EditorAttachmentViewModel.swift */; };
+		842BE00424F8C40B0002356D /* GraffitiEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842BE00324F8C40B0002356D /* GraffitiEditorViewController.swift */; };
+		842BE00824F8D8890002356D /* GraffitiEditorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842BE00724F8D8890002356D /* GraffitiEditorViewController.storyboard */; };
+		842BE00A24F8E3B20002356D /* GraffitiPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842BE00924F8E3B20002356D /* GraffitiPicker.swift */; };
 		84329E1B24C6FC41008A6321 /* LocationPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84329E1A24C6FC41008A6321 /* LocationPicker.swift */; };
 		84329E1D24C6FF2D008A6321 /* LocationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84329E1C24C6FF2C008A6321 /* LocationPickerView.swift */; };
 		84329E1F24C704BA008A6321 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84329E1E24C704BA008A6321 /* GoogleService-Info.plist */; };
@@ -123,6 +126,9 @@
 		84251A9824BD78310039953F /* EditorAttachmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorAttachmentsView.swift; sourceTree = "<group>"; };
 		84251A9A24BD7A1F0039953F /* EditorGeotagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorGeotagView.swift; sourceTree = "<group>"; };
 		84251A9C24BD9E3E0039953F /* EditorAttachmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorAttachmentViewModel.swift; sourceTree = "<group>"; };
+		842BE00324F8C40B0002356D /* GraffitiEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraffitiEditorViewController.swift; sourceTree = "<group>"; };
+		842BE00724F8D8890002356D /* GraffitiEditorViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GraffitiEditorViewController.storyboard; sourceTree = "<group>"; };
+		842BE00924F8E3B20002356D /* GraffitiPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraffitiPicker.swift; sourceTree = "<group>"; };
 		84329E1A24C6FC41008A6321 /* LocationPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPicker.swift; sourceTree = "<group>"; };
 		84329E1C24C6FF2C008A6321 /* LocationPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerView.swift; sourceTree = "<group>"; };
 		84329E1E24C704BA008A6321 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -257,6 +263,7 @@
 				84EE4FD624C93FC600F45FD3 /* LocationPicker */,
 				84251A9424BD65E40039953F /* MediaPicker.swift */,
 				846A949624C544E9005790D8 /* DocumentPicker.swift */,
+				842BE00924F8E3B20002356D /* GraffitiPicker.swift */,
 			);
 			path = Pickers;
 			sourceTree = "<group>";
@@ -269,6 +276,15 @@
 				846EC9EB24BEB2D900B7394F /* EditorAttachmentCollectionViewCell.swift */,
 			);
 			path = EditorAttachments;
+			sourceTree = "<group>";
+		};
+		842BE00024F8C3460002356D /* GraffitiEditor */ = {
+			isa = PBXGroup;
+			children = (
+				842BE00324F8C40B0002356D /* GraffitiEditorViewController.swift */,
+				842BE00724F8D8890002356D /* GraffitiEditorViewController.storyboard */,
+			);
+			path = GraffitiEditor;
 			sourceTree = "<group>";
 		};
 		84329E1924C6FB4B008A6321 /* EditorGeotag */ = {
@@ -421,6 +437,7 @@
 				844F971F247B98AC008E0BC6 /* Auth */,
 				844F971E247B9828008E0BC6 /* Notes */,
 				847E6339249C762600ED1EE5 /* Editor */,
+				842BE00024F8C3460002356D /* GraffitiEditor */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -800,6 +817,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842BE00824F8D8890002356D /* GraffitiEditorViewController.storyboard in Resources */,
 				8499FF5224C01F580048932D /* Colors.xcassets in Resources */,
 				8438A4BC247FD6E500EAAAFB /* Baloo2-Bold.ttf in Resources */,
 				84329E1F24C704BA008A6321 /* GoogleService-Info.plist in Resources */,
@@ -978,6 +996,7 @@
 				847E633B249C773700ED1EE5 /* EditorViewController.swift in Sources */,
 				84329E1B24C6FC41008A6321 /* LocationPicker.swift in Sources */,
 				84F49F0724BC5D30002E7300 /* OrderedButton.swift in Sources */,
+				842BE00A24F8E3B20002356D /* GraffitiPicker.swift in Sources */,
 				844F9730247B9BF5008E0BC6 /* Common.swift in Sources */,
 				84251A9B24BD7A1F0039953F /* EditorGeotagView.swift in Sources */,
 				84251A9D24BD9E3E0039953F /* EditorAttachmentViewModel.swift in Sources */,
@@ -989,6 +1008,7 @@
 				844F972E247B9A2E008E0BC6 /* SplashControllerViewModel.swift in Sources */,
 				8432A58C24CFEF470038B00E /* GoogleMapsGeocodingResponseModel.swift in Sources */,
 				8438A4AF247FD22600EAAAFB /* PrimaryTextField.swift in Sources */,
+				842BE00424F8C40B0002356D /* GraffitiEditorViewController.swift in Sources */,
 				8474AB7A2498C72C00520D5C /* AbstractControllerViewModel.swift in Sources */,
 				8474AB6F2498831700520D5C /* HUDPresenter.swift in Sources */,
 				8432A58524CFDEE10038B00E /* RequestParameters.swift in Sources */,

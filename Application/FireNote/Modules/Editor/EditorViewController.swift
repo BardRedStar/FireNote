@@ -62,6 +62,11 @@ class EditorViewController: AbstractViewController, StoryboardBased {
         return locationPicker
     }()
 
+    private lazy var graffitiPicker: GraffitiPicker = {
+        let graffitiPicker = GraffitiPicker(presentationController: self, delegate: self)
+        return graffitiPicker
+    }()
+
     // MARK: - Output
 
     // MARK: - Properties and variables
@@ -170,9 +175,9 @@ class EditorViewController: AbstractViewController, StoryboardBased {
         case .file:
             documentPicker.present()
         case .geo:
-            break
+            locationPicker.present()
         case .graffiti:
-            break
+            graffitiPicker.present()
         }
     }
 
@@ -269,5 +274,17 @@ extension EditorViewController: LocationPickerDelegate {
 
     func locationPickerDidCancel(_ picker: LocationPicker) {
         picker.dismiss()
+    }
+}
+
+// MARK: - GraffitiPickerDelegate
+
+extension EditorViewController: GraffitiPickerDelegate {
+    func graffitiPickerDidClose(picker: GraffitiPicker) {
+        print("graffiti picker closed")
+    }
+
+    func graffitiPicker(picker: GraffitiPicker, didSaveGraffiti item: GraffitiItem) {
+        print("Created graffiti with url: \(item.localUrl.absoluteString)")
     }
 }

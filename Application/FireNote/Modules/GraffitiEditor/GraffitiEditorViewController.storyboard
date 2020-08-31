@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sRh-KQ-EfQ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Graffiti Editor View Controller-->
+        <scene sceneID="et6-eq-rNi">
+            <objects>
+                <viewController storyboardIdentifier="GraffitiEditorViewController" id="sRh-KQ-EfQ" customClass="GraffitiEditorViewController" customModule="FireNote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tre-i9-8jq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZy-Va-uIF">
+                                <rect key="frame" x="20" y="64" width="40" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="B8N-FP-rGI"/>
+                                    <constraint firstAttribute="width" constant="40" id="hQp-99-eOE"/>
+                                </constraints>
+                                <color key="tintColor" name="main_normal"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveAction:" destination="sRh-KQ-EfQ" eventType="touchUpInside" id="vXs-N4-H6s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7d-Mk-VJA" userLabel="Undo">
+                                <rect key="frame" x="314" y="64" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="GAh-PX-GPH"/>
+                                    <constraint firstAttribute="width" constant="30" id="lYb-st-gPI"/>
+                                </constraints>
+                                <color key="tintColor" name="main_normal"/>
+                                <inset key="contentEdgeInsets" minX="3" minY="3" maxX="3" maxY="3"/>
+                                <state key="normal" image="ic_undo"/>
+                                <connections>
+                                    <action selector="undoAction:" destination="sRh-KQ-EfQ" eventType="touchUpInside" id="wAf-Zu-qRx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQ3-fY-1FX" userLabel="Redo">
+                                <rect key="frame" x="359" y="64" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="TAH-Ct-fw9"/>
+                                    <constraint firstAttribute="height" constant="30" id="qcO-md-PXN"/>
+                                </constraints>
+                                <color key="tintColor" name="main_normal"/>
+                                <inset key="contentEdgeInsets" minX="3" minY="3" maxX="3" maxY="3"/>
+                                <state key="normal" image="ic_redo"/>
+                                <connections>
+                                    <action selector="redoAction:" destination="sRh-KQ-EfQ" eventType="touchUpInside" id="9ZJ-uQ-FIP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPk-cp-MB0">
+                                <rect key="frame" x="259" y="64" width="40" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="JOb-nh-mrA"/>
+                                    <constraint firstAttribute="height" constant="30" id="ghu-rC-TW9"/>
+                                </constraints>
+                                <color key="tintColor" name="main_normal"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearAction:" destination="sRh-KQ-EfQ" eventType="touchUpInside" id="goD-dJ-geK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="LZy-Va-uIF" firstAttribute="top" secondItem="Kwm-1F-Y7E" secondAttribute="top" constant="20" id="9NV-Ty-A84"/>
+                            <constraint firstItem="LZy-Va-uIF" firstAttribute="leading" secondItem="Kwm-1F-Y7E" secondAttribute="leading" constant="20" id="RF9-kJ-cbX"/>
+                            <constraint firstItem="Kwm-1F-Y7E" firstAttribute="trailing" secondItem="WQ3-fY-1FX" secondAttribute="trailing" constant="25" id="SZy-3r-2DZ"/>
+                            <constraint firstItem="wPk-cp-MB0" firstAttribute="centerY" secondItem="Y7d-Mk-VJA" secondAttribute="centerY" id="i8B-Ig-NqH"/>
+                            <constraint firstItem="Y7d-Mk-VJA" firstAttribute="centerY" secondItem="WQ3-fY-1FX" secondAttribute="centerY" id="t7L-zt-Zay"/>
+                            <constraint firstItem="Y7d-Mk-VJA" firstAttribute="leading" secondItem="wPk-cp-MB0" secondAttribute="trailing" constant="15" id="w5I-N6-MtF"/>
+                            <constraint firstItem="WQ3-fY-1FX" firstAttribute="top" secondItem="Kwm-1F-Y7E" secondAttribute="top" constant="20" id="x0Y-YS-IwI"/>
+                            <constraint firstItem="WQ3-fY-1FX" firstAttribute="leading" secondItem="Y7d-Mk-VJA" secondAttribute="trailing" constant="15" id="xPq-QG-BmK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kwm-1F-Y7E"/>
+                    </view>
+                    <connections>
+                        <outlet property="undoButton" destination="Y7d-Mk-VJA" id="t4E-5g-pN1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vOE-6Y-cPF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-700" y="61.607142857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_redo" width="40" height="40"/>
+        <image name="ic_undo" width="40" height="40"/>
+        <namedColor name="main_normal">
+            <color red="1" green="0.85000002384185791" blue="0.42800000309944153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
