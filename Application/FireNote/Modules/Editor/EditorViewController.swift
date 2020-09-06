@@ -8,7 +8,6 @@
 
 import Aztec
 import Cartography
-import KeyboardNotificationsObserver
 import Reusable
 import UIKit
 
@@ -29,16 +28,17 @@ class EditorViewController: AbstractViewController, StoryboardBased {
     @IBOutlet private var attachmentBar: EditorAttachmentsBarView!
     @IBOutlet private var noteAttachmentsView: EditorAttachmentsView!
     @IBOutlet private var geotagView: EditorGeotagView!
+    @IBOutlet private(set) var galleryView: EditorGalleryView!
 
-    @IBOutlet private var formatBarTopConstraint: NSLayoutConstraint!
+    @IBOutlet private var formatBarBottomConstraint: NSLayoutConstraint!
     @IBOutlet private var bodyTextViewHeightConstraint: NSLayoutConstraint!
-    @IBOutlet private var attachmentBarBottomConstraint: NSLayoutConstraint!
     @IBOutlet private var attachmentsViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet private var geotagViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet private var galleryViewHeightConstraint: NSLayoutConstraint!
 
     // MARK: - UI Controls
 
-    private let keyboardFrameTrackerView = AMKeyboardFrameTrackerView(height: 0)
+    private let keyboardFrameTrackerView = AMKeyboardFrameTrackerView(height: 44)
 
     private lazy var toolsPresenter: EditorToolsPresenter = {
         let presenter = EditorToolsPresenter(parentViewController: self)
@@ -67,13 +67,15 @@ class EditorViewController: AbstractViewController, StoryboardBased {
         return graffitiPicker
     }()
 
-    // MARK: - Output
-
     // MARK: - Properties and variables
 
-    private let keyboardObserver = KeyboardNotificationsObserver()
-
     private var viewModel: EditorControllerViewModel!
+
+    /// Pop-up transition variables
+    var presentingAnimator: PopImagePresentingAnimator?
+    var dismissingAnimator: PopImageDismissingAnimator?
+    var selectedImageIndex: UIImage?
+    var selectedImageRect: CGRect?
 
     // MARK: - UI Lifecycle
 
@@ -90,6 +92,7 @@ class EditorViewController: AbstractViewController, StoryboardBased {
 
         attachmentBar.delegate = self
         geotagView.delegate = self
+        galleryView.delegate = self
 
         loadData()
     }
@@ -100,6 +103,7 @@ class EditorViewController: AbstractViewController, StoryboardBased {
         configureAttachmentsBar()
         configureAttachmentsView()
         configureGeotagView()
+        configureGalleryView()
     }
 
     override func viewDidLayoutSubviews() {
@@ -107,10 +111,14 @@ class EditorViewController: AbstractViewController, StoryboardBased {
 
         var attachmentsViewHeight: CGFloat = 0.0
         var geotagViewHeight: CGFloat = 0.0
+        var galleryViewHeight: CGFloat = 0.0
+
         if let model = viewModel.attachmentsViewModel {
             attachmentsViewHeight = EditorAttachmentsView.contentHeightFor(model, frameWidth: noteAttachmentsView.frame.width)
             geotagViewHeight = EditorGeotagView.contentHeightFor(model.geotag, frameWidth: geotagView.frame.width)
         }
+
+        galleryViewHeight = viewModel.galleryImages.count > 2 ? 250.0 : 125.0
 
         let textViewHeight = view.frame.height - titleTextField.frame.height - attachmentBar.frame.height -
             attachmentsViewHeight - geotagViewHeight - 31.0
@@ -118,8 +126,10 @@ class EditorViewController: AbstractViewController, StoryboardBased {
         let textViewContentHeight = toolsPresenter.textView.sizeThatFits(CGSize(width: toolsPresenter.textView.frame.width,
                                                                                 height: CGFloat.greatestFiniteMagnitude)).height
         bodyTextViewHeightConstraint?.constant = max(textViewContentHeight, textViewHeight)
+
         attachmentsViewHeightConstraint?.constant = attachmentsViewHeight
         geotagViewHeightConstraint?.constant = geotagViewHeight
+        galleryViewHeightConstraint?.constant = galleryViewHeight
     }
 
     // MARK: - UI Methods
@@ -147,21 +157,14 @@ class EditorViewController: AbstractViewController, StoryboardBased {
         geotagView.configureWith(addressText: viewModel.attachmentsViewModel!.geotag)
     }
 
-    private func setupKeyboardTracking() {
-        keyboardObserver.onWillHide = { [weak self] _ in
-            self?.moveFormatBarWith(offset: -(self?.formatBarContainerView.frame.height ?? 0))
-        }
+    private func configureGalleryView() {
+        galleryView.configureWith(images: viewModel.galleryImages, numberOfColumns: viewModel.galleryImages.count > 2 ? 2 : 1)
+    }
 
+    private func setupKeyboardTracking() {
         keyboardFrameTrackerView.delegate = self
         toolsPresenter.textView.inputAccessoryView = keyboardFrameTrackerView
         titleTextField.inputAccessoryView = keyboardFrameTrackerView
-    }
-
-    private func moveFormatBarWith(offset: CGFloat) {
-        UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseOut, animations: { [weak self] in
-            self?.formatBarTopConstraint.constant = offset
-            self?.view.layoutIfNeeded()
-        })
     }
 
     private func loadData() {}
@@ -190,12 +193,10 @@ class EditorViewController: AbstractViewController, StoryboardBased {
 
 extension EditorViewController: EditorToolsPresenterTextViewDelegate {
     func toolsTextViewDidBeginEditing(_ textView: UITextView) {
-        moveFormatBarWith(offset: 0)
         scrollView.contentInset.bottom = scrollView.frame.maxY - attachmentBar.frame.minY
     }
 
     func toolsTextViewDidEndEditing(_ textView: UITextView) {
-        moveFormatBarWith(offset: -formatBarContainerView.frame.height)
         scrollView.contentInset.bottom = 0
     }
 }
@@ -212,9 +213,9 @@ extension EditorViewController: EditorToolsPresenterFormatBarDelegate {
 
 extension EditorViewController: AMKeyboardFrameTrackerDelegate {
     func keyboardFrameDidChange(with frame: CGRect) {
-        let bottomSpacing = UIScreen.main.bounds.height - frame.origin.y
+        let bottomSpacing = UIScreen.main.bounds.height - frame.origin.y - 44
 
-        attachmentBarBottomConstraint.constant = max(bottomSpacing, 0)
+        formatBarBottomConstraint.constant = bottomSpacing
         view.layoutIfNeeded()
     }
 }
@@ -286,5 +287,15 @@ extension EditorViewController: GraffitiPickerDelegate {
 
     func graffitiPicker(picker: GraffitiPicker, didSaveGraffiti item: GraffitiItem) {
         print("Created graffiti with url: \(item.localUrl.absoluteString)")
+    }
+}
+
+// MARK: - EditorGalleryViewDelegate
+
+extension EditorViewController: EditorGalleryViewDelegate {
+    func galleryView(view: EditorGalleryView, didSelectImageAt index: Int, withRect rect: CGRect?) {
+        print("Selected \(index)")
+        selectedImageIndex = index
+        selectedImageRect = rect
     }
 }

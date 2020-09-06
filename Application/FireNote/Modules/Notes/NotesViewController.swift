@@ -16,7 +16,7 @@ class NotesViewController: AbstractViewController, StoryboardBased {
     enum Constants {
         /// Number of columns in collection view
         static let numberOfColumns = 2
-        /// Inner paddin for each note cell
+        /// Inner padding for each note cell
         static let notePadding: CGFloat = 5.0
     }
 
@@ -77,6 +77,7 @@ class NotesViewController: AbstractViewController, StoryboardBased {
 
         if let layout = collectionView.collectionViewLayout as? TileCollectionViewLayout {
             layout.delegate = self
+            layout.scrollDirection = .vertical
             layout.numberOfColumns = Constants.numberOfColumns
             layout.cellPadding = Constants.notePadding
         }
@@ -114,7 +115,11 @@ extension NotesViewController: UICollectionViewDelegate, UICollectionViewDataSou
 // MARK: - TileCollectionViewLayoutDelegate
 
 extension NotesViewController: TileCollectionViewLayoutDelegate {
-    func collectionView(_ collectionView: UICollectionView, heightForTileAtIndexPath indexPath: IndexPath) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, heightForTileAtIndexPath indexPath: IndexPath,
+                        withDirection direction: TileCollectionViewLayout.Direction) -> CGFloat {
+        if direction == .horizontal {
+            return 0.0
+        }
         return NoteCollectionViewCell.calculateHeightFor(width: itemWidth, model: viewModel.items[indexPath.row])
     }
 }

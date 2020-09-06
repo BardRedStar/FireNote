@@ -14,6 +14,7 @@
 		842BE00424F8C40B0002356D /* GraffitiEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842BE00324F8C40B0002356D /* GraffitiEditorViewController.swift */; };
 		842BE00824F8D8890002356D /* GraffitiEditorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842BE00724F8D8890002356D /* GraffitiEditorViewController.storyboard */; };
 		842BE00A24F8E3B20002356D /* GraffitiPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842BE00924F8E3B20002356D /* GraffitiPicker.swift */; };
+		842BE00F24F920590002356D /* EditorGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842BE00E24F920590002356D /* EditorGalleryView.swift */; };
 		84329E1B24C6FC41008A6321 /* LocationPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84329E1A24C6FC41008A6321 /* LocationPicker.swift */; };
 		84329E1D24C6FF2D008A6321 /* LocationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84329E1C24C6FF2C008A6321 /* LocationPickerView.swift */; };
 		84329E1F24C704BA008A6321 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84329E1E24C704BA008A6321 /* GoogleService-Info.plist */; };
@@ -51,6 +52,8 @@
 		845211D724CEA17E00A9CF21 /* LocationCenterMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845211D624CEA17E00A9CF21 /* LocationCenterMarkerView.swift */; };
 		845211D924CEEDDA00A9CF21 /* BlurredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845211D824CEEDDA00A9CF21 /* BlurredView.swift */; };
 		8454685B24A611FC00B98E9A /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454685A24A611FC00B98E9A /* CGPoint+Extensions.swift */; };
+		84671A5024FCBB13007D1A74 /* EditorGalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84671A4F24FCBB13007D1A74 /* EditorGalleryCollectionViewCell.swift */; };
+		84671A5324FD1244007D1A74 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84671A5224FD1244007D1A74 /* GalleryViewController.swift */; };
 		846A949724C544E9005790D8 /* DocumentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A949624C544E9005790D8 /* DocumentPicker.swift */; };
 		846A9DD124A456D800A5B0AD /* EditorToolbarOptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A9DD024A456D800A5B0AD /* EditorToolbarOptionTableViewCell.swift */; };
 		846A9DD324A46A3D00A5B0AD /* EditorToolbarOptionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A9DD224A46A3D00A5B0AD /* EditorToolbarOptionsPresenter.swift */; };
@@ -79,6 +82,14 @@
 		847E633B249C773700ED1EE5 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E633A249C773700ED1EE5 /* EditorViewController.swift */; };
 		847E633D249C774200ED1EE5 /* EditorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847E633C249C774200ED1EE5 /* EditorViewController.storyboard */; };
 		847E633F249C774D00ED1EE5 /* EditorControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E633E249C774D00ED1EE5 /* EditorControllerViewModel.swift */; };
+		84896C5F24FF4A58008A9ED6 /* PopImageDismissingAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84896C5E24FF4A58008A9ED6 /* PopImageDismissingAnimator.swift */; };
+		848E8BFA24FDFF2500D9E1CC /* PopImagePresentingAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E8BF924FDFF2500D9E1CC /* PopImagePresentingAnimator.swift */; };
+		848E8BFF24FE384400D9E1CC /* EditorViewController+Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E8BFE24FE384400D9E1CC /* EditorViewController+Transition.swift */; };
+		848E8C0124FE432000D9E1CC /* GalleryControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E8C0024FE432000D9E1CC /* GalleryControllerViewModel.swift */; };
+		848E8C0324FE43FF00D9E1CC /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E8C0224FE43FF00D9E1CC /* GalleryCollectionViewCell.swift */; };
+		848E8C0624FE56B800D9E1CC /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E8C0524FE56B800D9E1CC /* GalleryView.swift */; };
+		848E8C0824FE58B200D9E1CC /* GalleryViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E8C0724FE58B200D9E1CC /* GalleryViewCollectionViewCell.swift */; };
+		848E8C0B24FE6B7C00D9E1CC /* PanDirectionGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E8C0A24FE6B7C00D9E1CC /* PanDirectionGestureRecognizer.swift */; };
 		849907BB2488A04C003FF06F /* HUDLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849907BA2488A04C003FF06F /* HUDLoaderView.swift */; };
 		849907BD2488AC3C003FF06F /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849907BC2488AC3C003FF06F /* UIColor+Extensions.swift */; };
 		8499FF5224C01F580048932D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8499FF5124C01F580048932D /* Colors.xcassets */; };
@@ -129,6 +140,7 @@
 		842BE00324F8C40B0002356D /* GraffitiEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraffitiEditorViewController.swift; sourceTree = "<group>"; };
 		842BE00724F8D8890002356D /* GraffitiEditorViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GraffitiEditorViewController.storyboard; sourceTree = "<group>"; };
 		842BE00924F8E3B20002356D /* GraffitiPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraffitiPicker.swift; sourceTree = "<group>"; };
+		842BE00E24F920590002356D /* EditorGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorGalleryView.swift; sourceTree = "<group>"; };
 		84329E1A24C6FC41008A6321 /* LocationPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPicker.swift; sourceTree = "<group>"; };
 		84329E1C24C6FF2C008A6321 /* LocationPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerView.swift; sourceTree = "<group>"; };
 		84329E1E24C704BA008A6321 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -170,6 +182,8 @@
 		845211D624CEA17E00A9CF21 /* LocationCenterMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCenterMarkerView.swift; sourceTree = "<group>"; };
 		845211D824CEEDDA00A9CF21 /* BlurredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurredView.swift; sourceTree = "<group>"; };
 		8454685A24A611FC00B98E9A /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
+		84671A4F24FCBB13007D1A74 /* EditorGalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorGalleryCollectionViewCell.swift; sourceTree = "<group>"; };
+		84671A5224FD1244007D1A74 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		846A949624C544E9005790D8 /* DocumentPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPicker.swift; sourceTree = "<group>"; };
 		846A9DD024A456D800A5B0AD /* EditorToolbarOptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorToolbarOptionTableViewCell.swift; sourceTree = "<group>"; };
 		846A9DD224A46A3D00A5B0AD /* EditorToolbarOptionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorToolbarOptionsPresenter.swift; sourceTree = "<group>"; };
@@ -198,6 +212,14 @@
 		847E633A249C773700ED1EE5 /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
 		847E633C249C774200ED1EE5 /* EditorViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditorViewController.storyboard; sourceTree = "<group>"; };
 		847E633E249C774D00ED1EE5 /* EditorControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorControllerViewModel.swift; sourceTree = "<group>"; };
+		84896C5E24FF4A58008A9ED6 /* PopImageDismissingAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopImageDismissingAnimator.swift; sourceTree = "<group>"; };
+		848E8BF924FDFF2500D9E1CC /* PopImagePresentingAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopImagePresentingAnimator.swift; sourceTree = "<group>"; };
+		848E8BFE24FE384400D9E1CC /* EditorViewController+Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditorViewController+Transition.swift"; sourceTree = "<group>"; };
+		848E8C0024FE432000D9E1CC /* GalleryControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryControllerViewModel.swift; sourceTree = "<group>"; };
+		848E8C0224FE43FF00D9E1CC /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
+		848E8C0524FE56B800D9E1CC /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
+		848E8C0724FE58B200D9E1CC /* GalleryViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewCollectionViewCell.swift; sourceTree = "<group>"; };
+		848E8C0A24FE6B7C00D9E1CC /* PanDirectionGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanDirectionGestureRecognizer.swift; sourceTree = "<group>"; };
 		849907BA2488A04C003FF06F /* HUDLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDLoaderView.swift; sourceTree = "<group>"; };
 		849907BC2488AC3C003FF06F /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		8499FF5124C01F580048932D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -285,6 +307,15 @@
 				842BE00724F8D8890002356D /* GraffitiEditorViewController.storyboard */,
 			);
 			path = GraffitiEditor;
+			sourceTree = "<group>";
+		};
+		842BE00D24F920450002356D /* EditorGallery */ = {
+			isa = PBXGroup;
+			children = (
+				842BE00E24F920590002356D /* EditorGalleryView.swift */,
+				84671A4F24FCBB13007D1A74 /* EditorGalleryCollectionViewCell.swift */,
+			);
+			path = EditorGallery;
 			sourceTree = "<group>";
 		};
 		84329E1924C6FB4B008A6321 /* EditorGeotag */ = {
@@ -438,6 +469,7 @@
 				844F971E247B9828008E0BC6 /* Notes */,
 				847E6339249C762600ED1EE5 /* Editor */,
 				842BE00024F8C3460002356D /* GraffitiEditor */,
+				84671A5124FD121B007D1A74 /* Gallery */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -484,6 +516,8 @@
 				843639DB24A3017B001F7757 /* CollectionViewCells */,
 				849A4068249B1BEC00018B06 /* CollectionViewLayouts */,
 				84251A9624BD66C10039953F /* Pickers */,
+				848E8C0924FE6B6300D9E1CC /* GestureRecognizers */,
+				848E8BF824FDFF0900D9E1CC /* Animators */,
 			);
 			path = "UI Components";
 			sourceTree = "<group>";
@@ -532,6 +566,16 @@
 			path = TextFields;
 			sourceTree = "<group>";
 		};
+		84671A5124FD121B007D1A74 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				84671A5224FD1244007D1A74 /* GalleryViewController.swift */,
+				848E8C0024FE432000D9E1CC /* GalleryControllerViewModel.swift */,
+				848E8C0224FE43FF00D9E1CC /* GalleryCollectionViewCell.swift */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
 		846EC9ED24BEB5F400B7394F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -568,15 +612,51 @@
 		847E6339249C762600ED1EE5 /* Editor */ = {
 			isa = PBXGroup;
 			children = (
+				842BE00D24F920450002356D /* EditorGallery */,
 				84329E1924C6FB4B008A6321 /* EditorGeotag */,
 				84251A9724BD781B0039953F /* EditorAttachments */,
 				84F49F0524BC4F25002E7300 /* EditorToolbar */,
 				84F49F0324BC47E8002E7300 /* EditorAttachmentsBarView.swift */,
 				847E633A249C773700ED1EE5 /* EditorViewController.swift */,
+				848E8BFE24FE384400D9E1CC /* EditorViewController+Transition.swift */,
 				847E633C249C774200ED1EE5 /* EditorViewController.storyboard */,
 				847E633E249C774D00ED1EE5 /* EditorControllerViewModel.swift */,
 			);
 			path = Editor;
+			sourceTree = "<group>";
+		};
+		84896C5D24FF4634008A9ED6 /* PopImageAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				848E8BF924FDFF2500D9E1CC /* PopImagePresentingAnimator.swift */,
+				84896C5E24FF4A58008A9ED6 /* PopImageDismissingAnimator.swift */,
+			);
+			path = PopImageAnimator;
+			sourceTree = "<group>";
+		};
+		848E8BF824FDFF0900D9E1CC /* Animators */ = {
+			isa = PBXGroup;
+			children = (
+				84896C5D24FF4634008A9ED6 /* PopImageAnimator */,
+			);
+			path = Animators;
+			sourceTree = "<group>";
+		};
+		848E8C0424FE56A800D9E1CC /* GalleryView */ = {
+			isa = PBXGroup;
+			children = (
+				848E8C0524FE56B800D9E1CC /* GalleryView.swift */,
+				848E8C0724FE58B200D9E1CC /* GalleryViewCollectionViewCell.swift */,
+			);
+			path = GalleryView;
+			sourceTree = "<group>";
+		};
+		848E8C0924FE6B6300D9E1CC /* GestureRecognizers */ = {
+			isa = PBXGroup;
+			children = (
+				848E8C0A24FE6B7C00D9E1CC /* PanDirectionGestureRecognizer.swift */,
+			);
+			path = GestureRecognizers;
 			sourceTree = "<group>";
 		};
 		849907B4248893DB003FF06F /* Presenters */ = {
@@ -600,8 +680,9 @@
 		849907B92488A02F003FF06F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				845211D624CEA17E00A9CF21 /* LocationCenterMarkerView.swift */,
 				84EE4FD924C9422900F45FD3 /* LocationPickerView */,
+				848E8C0424FE56A800D9E1CC /* GalleryView */,
+				845211D624CEA17E00A9CF21 /* LocationCenterMarkerView.swift */,
 				84EEAE8324B84191006E75A6 /* AMKeyboardFrameTrackerView.swift */,
 				849907BA2488A04C003FF06F /* HUDLoaderView.swift */,
 				845211D824CEEDDA00A9CF21 /* BlurredView.swift */,
@@ -988,17 +1069,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				846A9DD124A456D800A5B0AD /* EditorToolbarOptionTableViewCell.swift in Sources */,
+				848E8C0824FE58B200D9E1CC /* GalleryViewCollectionViewCell.swift in Sources */,
 				844F96F7247B9439008E0BC6 /* NotesViewController.swift in Sources */,
 				849907BD2488AC3C003FF06F /* UIColor+Extensions.swift in Sources */,
 				844F972C247B9A0A008E0BC6 /* NotesControllerViewModel.swift in Sources */,
 				8432A59424D01B7A0038B00E /* APIToken.swift in Sources */,
 				844F96F3247B9439008E0BC6 /* AppDelegate.swift in Sources */,
+				848E8C0B24FE6B7C00D9E1CC /* PanDirectionGestureRecognizer.swift in Sources */,
 				847E633B249C773700ED1EE5 /* EditorViewController.swift in Sources */,
 				84329E1B24C6FC41008A6321 /* LocationPicker.swift in Sources */,
 				84F49F0724BC5D30002E7300 /* OrderedButton.swift in Sources */,
 				842BE00A24F8E3B20002356D /* GraffitiPicker.swift in Sources */,
 				844F9730247B9BF5008E0BC6 /* Common.swift in Sources */,
 				84251A9B24BD7A1F0039953F /* EditorGeotagView.swift in Sources */,
+				848E8BFF24FE384400D9E1CC /* EditorViewController+Transition.swift in Sources */,
 				84251A9D24BD9E3E0039953F /* EditorAttachmentViewModel.swift in Sources */,
 				84F49F0424BC47E8002E7300 /* EditorAttachmentsBarView.swift in Sources */,
 				846A9DD324A46A3D00A5B0AD /* EditorToolbarOptionsPresenter.swift in Sources */,
@@ -1008,6 +1092,7 @@
 				844F972E247B9A2E008E0BC6 /* SplashControllerViewModel.swift in Sources */,
 				8432A58C24CFEF470038B00E /* GoogleMapsGeocodingResponseModel.swift in Sources */,
 				8438A4AF247FD22600EAAAFB /* PrimaryTextField.swift in Sources */,
+				848E8C0124FE432000D9E1CC /* GalleryControllerViewModel.swift in Sources */,
 				842BE00424F8C40B0002356D /* GraffitiEditorViewController.swift in Sources */,
 				8474AB7A2498C72C00520D5C /* AbstractControllerViewModel.swift in Sources */,
 				8474AB6F2498831700520D5C /* HUDPresenter.swift in Sources */,
@@ -1029,6 +1114,8 @@
 				8474AB7E2498D03300520D5C /* SidebarTableViewCell.swift in Sources */,
 				8432A58824CFE1220038B00E /* GoogleMapsGeocodingKey.swift in Sources */,
 				8470B2962480AF60003303B3 /* String+Extensions.swift in Sources */,
+				84896C5F24FF4A58008A9ED6 /* PopImageDismissingAnimator.swift in Sources */,
+				84671A5324FD1244007D1A74 /* GalleryViewController.swift in Sources */,
 				8432A58F24D015000038B00E /* GoogleMapsBaseResponseModel.swift in Sources */,
 				84EEDD4B2484BBB70075FAF0 /* RegistrationViewController.swift in Sources */,
 				844F972A247B99FB008E0BC6 /* LoginControllerViewModel.swift in Sources */,
@@ -1040,13 +1127,16 @@
 				847B24D524875CD80016B8FD /* PrimaryButton.swift in Sources */,
 				849A406C249B3F1100018B06 /* NoteCollectionViewCell.swift in Sources */,
 				847B24DB248793020016B8FD /* APIManager+Firebase.swift in Sources */,
+				848E8BFA24FDFF2500D9E1CC /* PopImagePresentingAnimator.swift in Sources */,
 				8432A59224D01AA00038B00E /* APIRequestInterceptor.swift in Sources */,
 				846A949724C544E9005790D8 /* DocumentPicker.swift in Sources */,
 				845211D924CEEDDA00A9CF21 /* BlurredView.swift in Sources */,
 				8454685B24A611FC00B98E9A /* CGPoint+Extensions.swift in Sources */,
 				849A406A249B1C4C00018B06 /* TileCollectionViewLayout.swift in Sources */,
 				84EEDD522484E1070075FAF0 /* RootWindow.swift in Sources */,
+				848E8C0624FE56B800D9E1CC /* GalleryView.swift in Sources */,
 				847E633F249C774D00ED1EE5 /* EditorControllerViewModel.swift in Sources */,
+				848E8C0324FE43FF00D9E1CC /* GalleryCollectionViewCell.swift in Sources */,
 				847B24E32487A9070016B8FD /* NotesNavigationController.swift in Sources */,
 				84EEDD6D248507400075FAF0 /* APIManager.swift in Sources */,
 				843639F924A353E9001F7757 /* Aztec+Extensions.swift in Sources */,
@@ -1055,10 +1145,12 @@
 				846EC9EC24BEB2D900B7394F /* EditorAttachmentCollectionViewCell.swift in Sources */,
 				8474AB7224989B2000520D5C /* SidebarPresenter.swift in Sources */,
 				84251A9924BD78310039953F /* EditorAttachmentsView.swift in Sources */,
+				84671A5024FCBB13007D1A74 /* EditorGalleryCollectionViewCell.swift in Sources */,
 				8438A4AD247FD00E00EAAAFB /* R.generated.swift in Sources */,
 				8474AB762498C34600520D5C /* SidebarViewController.swift in Sources */,
 				849907BB2488A04C003FF06F /* HUDLoaderView.swift in Sources */,
 				84EEDD552484E1470075FAF0 /* DeepLink.swift in Sources */,
+				842BE00F24F920590002356D /* EditorGalleryView.swift in Sources */,
 				847B24DF24879E290016B8FD /* KeychainManager.swift in Sources */,
 				845211D724CEA17E00A9CF21 /* LocationCenterMarkerView.swift in Sources */,
 				84EEAE8424B84191006E75A6 /* AMKeyboardFrameTrackerView.swift in Sources */,

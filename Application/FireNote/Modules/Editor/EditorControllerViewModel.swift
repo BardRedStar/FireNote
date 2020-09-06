@@ -33,6 +33,8 @@ class EditorControllerViewModel: AbstractControllerViewModel {
 
     var attachmentsViewModel: EditorAttachmentsViewModel?
 
+    var galleryImages: [UIImage] = []
+
     var geotag: LocationItem?
 
     // MARK: - Initialization
@@ -52,5 +54,7 @@ class EditorControllerViewModel: AbstractControllerViewModel {
             EditorAttachment(name: "file3.pdf", type: .file),
             EditorAttachment(name: "graffiti.jpg", type: .graffiti(#imageLiteral(resourceName: "background")))
         ])
+
+        galleryImages = (1 ... 10).map { _ -> UIImage in #imageLiteral(resourceName: "placeholder\(Int.random(in: 1 ... 4))") }
     }
 }
